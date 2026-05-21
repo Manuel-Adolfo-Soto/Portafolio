@@ -1,0 +1,252 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "sobre-mi": "About Me",
+    "habilidades": "Skills",
+    "experiencia": "Experience",
+    "proyectos": "Projects",
+    "contacto": "Contact",
+    "cv": "Download CV",
+    "cvShort": "CV"
+  },
+  "hero": {
+    "available": "Available for opportunities",
+    "description": "I build full-stack solutions with Angular, NestJS, TypeScript and PostgreSQL. Real experience building commercial systems for real users.",
+    "viewProjects": "View projects",
+    "mainStack": "Main Stack",
+    "roles": [
+      "Full Stack Developer",
+      "Angular Developer",
+      "NestJS Developer",
+      "Software Engineer",
+      "Problem Solver"
+    ]
+  },
+  "about": {
+    "title": "About Me",
+    "metrics": [
+      { "label": "Experience", "value": "2+ years", "sub": "full-stack development" },
+      { "label": "Projects", "value": "6+", "sub": "complete systems" },
+      { "label": "Stack", "value": "Full Stack", "sub": "Angular + NestJS" },
+      { "label": "Status", "value": "Available", "sub": "for opportunities" }
+    ],
+    "bio": [
+      "I'm Manuel Adolfo Soto, a Full Stack developer and last semester student of Computer Engineering at USFX, Sucre, Bolivia.",
+      "Since 2024 I've been working as a Full Stack intern at Afer Bolivia, building an e-commerce system for home appliances. I've worked on role-based authentication, CRUDs, inventory, orders, admin panel and reports, collaborating with a multidisciplinary team of design, systems, commercial and economics.",
+      "I'm currently completing my mandatory university internship and studying intensive English (A1 level). I'm looking for remote work opportunities to keep growing professionally."
+    ],
+    "timeline": {
+      "title": "Timeline",
+      "items": [
+        { "year": "2022", "label": "Started at USFX", "desc": "Began Computer Engineering", "icon": "🎓" },
+        { "year": "2024", "label": "Afer Bolivia", "desc": "Full Stack Intern — real development", "icon": "💼" },
+        { "year": "2025", "label": "Completed projects", "desc": "Pharmacy, Burger Shop, Cafeteria", "icon": "🛠️" },
+        { "year": "2026", "label": "Last semester", "desc": "About to graduate + formal internship", "icon": "🎯" }
+      ]
+    },
+    "methodology": {
+      "title": "Methodology",
+      "items": [
+        { "label": "Git/GitHub", "desc": "Daily version control" },
+        { "label": "Documentation", "desc": "Read errors and docs before asking" },
+        { "label": "Collaboration", "desc": "Multidisciplinary teamwork" },
+        { "label": "AI as support", "desc": "A tool, not a dependency" }
+      ]
+    },
+    "interests": {
+      "title": "Interests",
+      "items": ["Web Development", "Backend", "API REST", "E-commerce", "Commercial Systems", "Architecture", "Cloud", "Databases"]
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Databases",
+      "tools": "Tools",
+      "networking": "Networking"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "types": {
+      "internship": "Internship",
+      "academic": "Academic"
+    },
+    "items": [
+      {
+        "title": "Full Stack Intern",
+        "company": "Afer Bolivia",
+        "period": "2024 - Present",
+        "description": "Active participation in the complete development of an e-commerce system for home appliances. Full stack development with Angular and NestJS, including role-based authentication, product CRUD, inventory, order management, admin panel, reports and user/client interfaces. Multidisciplinary teamwork with design (Figma), systems, commercial and economics departments. Direct coordination for inventory management, sales and system improvements. Project nearing deployment, replacing a previous system."
+      },
+      {
+        "title": "University Internship (Directed Work Modality)",
+        "company": "Afer Bolivia",
+        "period": "3 months (Current)",
+        "description": "Mandatory last semester university internship, formalizing the full stack development work done at the company. Developing features for the e-commerce system and preparing for production deployment."
+      },
+      {
+        "title": "University Projects",
+        "company": "USFX - Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca",
+        "period": "2023 - 2025",
+        "description": "Development of complete systems as part of academic training, including pharmacy, cafeteria, computer store and ordering systems with various technologies and architectures."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Featured projects from GitHub — real experience in a multidisciplinary team",
+    "featured": "Featured project",
+    "viewAll": "View all on GitHub",
+    "code": "Code",
+    "comingSoon": "Coming soon",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "items": {
+      "afer": {
+        "name": "Afer Bolivia",
+        "description": "Home appliance e-commerce with a complete online store system. Includes role-based authentication (admin/user/client), product and inventory CRUD, order management, shopping cart, admin panel with reports and sales module. Built for real users, nearing deployment. Replaces and improves a previous existing system.",
+        "status": "In development (nearing deploy)",
+        "category": "E-commerce / Commercial System",
+        "details": [
+          "Login and role-based authentication",
+          "Complete product and inventory CRUD",
+          "Order management and shopping cart",
+          "Admin panel with reports",
+          "User and client interfaces",
+          "Multidisciplinary teamwork"
+        ]
+      },
+      "farmacia": {
+        "name": "Pharmacy Management System",
+        "description": "Pharmacy management system with inventory control, medication expiry tracking, sales, reports and administration module. University project with layered architecture.",
+        "status": "Completed",
+        "category": "Inventory System"
+      },
+      "hamburgueseria": {
+        "name": "Burger Shop - Order System",
+        "description": "Online ordering system for a restaurant with interactive menu, product customization, order management and admin panel. Full-stack architecture with REST API and Vue frontend.",
+        "status": "Completed",
+        "category": "Online Orders / Restaurant"
+      },
+      "cafeteria": {
+        "name": "Cafeteria System",
+        "description": "Sales and management system for a cafeteria with inventory control, product registration, orders and billing.",
+        "status": "Completed",
+        "category": "Sales System"
+      },
+      "tienda": {
+        "name": "Computer Store",
+        "description": "Web application for computer equipment sales with product catalog, shopping cart and order processing.",
+        "status": "Completed",
+        "category": "Online Store"
+      },
+      "api": {
+        "name": "REST API with NestJS",
+        "description": "RESTful API backend for a management system with JWT authentication, CRUD operations, PostgreSQL database and Docker.",
+        "status": "Completed",
+        "category": "Backend / API"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Testimonials"
+  },
+  "github": {
+    "title": "GitHub",
+    "repos": "Repositories",
+    "followers": "Followers",
+    "following": "Following",
+    "activity": "Recent Activity",
+    "languages": "Most Used Languages",
+    "loading": "Loading languages..."
+  },
+  "whyme": {
+    "title": "Why Hire Me",
+    "items": [
+      {
+        "title": "Real production experience",
+        "desc": "2 years as Full Stack intern at Afer Bolivia, building an e-commerce system for real users, not just academic projects.",
+        "icon": "experience"
+      },
+      {
+        "title": "Multidisciplinary teamwork",
+        "desc": "Direct collaboration with design (Figma), systems, commercial and economics teams. Coordination for inventory, sales and improvements.",
+        "icon": "team"
+      },
+      {
+        "title": "Last semester CS student",
+        "desc": "About to graduate from USFX. Solid foundation in development, databases, networking and software architecture.",
+        "icon": "study"
+      },
+      {
+        "title": "Modern & versatile stack",
+        "desc": "Angular, NestJS, TypeScript, PostgreSQL, Docker, Git. Fast learner — quick to adapt to new technologies.",
+        "icon": "stack"
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "badge": "Last semester — About to graduate",
+    "english": {
+      "title": "English",
+      "level": "Current level",
+      "badge": "A1 — Basic",
+      "description": "Currently studying English intensively. Goal: reach B1 level."
+    }
+  },
+  "certificates": {
+    "title": "Certifications",
+    "suggestions": ["AWS Cloud Practitioner", "Meta Front-End Developer", "Google IT Support", "Azure Fundamentals"],
+    "hint": "Suggested certifications that would strengthen your profile"
+  },
+  "blog": {
+    "title": "Technical Blog",
+    "viewCode": "View code",
+    "post": {
+      "tag": "NestJS • Security",
+      "date": "May 2026",
+      "title": "JWT Authentication with roles in NestJS",
+      "intro": "At Afer Bolivia I implemented a role-based authentication system (admin, user, client) using JWT in NestJS. Each role has specific permissions over resources like products, orders and reports.",
+      "sections": [
+        {
+          "heading": "Role structure",
+          "body": "I defined a role enum (admin, user, client) and a custom guard that checks the authenticated user's role before allowing access to each endpoint. This allows reusing the same logic across all controllers."
+        },
+        {
+          "heading": "Token generation",
+          "body": "On login, the server validates credentials and generates a JWT with the user's ID and role. The token is sent to the frontend (Angular) which stores it and attaches it to every request."
+        },
+        {
+          "heading": "Route protection",
+          "body": "I used NestJS guards with custom decorators to protect routes by role. For example, only admin can access the reports panel, while client can view their order history."
+        }
+      ],
+      "conclusion": "This system taught me the importance of designing security from the start and how NestJS makes it easy with clean, reusable guards and decorators.",
+      "tags": ["NestJS", "JWT", "Auth", "Roles", "TypeScript"]
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "letsTalk": "Let's Talk",
+    "description": "Have a job opportunity, freelance project or just want to connect? I'm open to internships, junior positions and collaborations.",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "form": {
+      "title": "Send a message",
+      "name": "Your name",
+      "email": "your@email.com",
+      "message": "Write your message...",
+      "send": "Send message"
+    }
+  },
+  "footer": {
+    "subtitle": "Full Stack Developer",
+    "madeWith": "Built with"
+  }
+}

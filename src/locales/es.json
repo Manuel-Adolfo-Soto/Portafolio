@@ -1,0 +1,252 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "sobre-mi": "Sobre mí",
+    "habilidades": "Habilidades",
+    "experiencia": "Experiencia",
+    "proyectos": "Proyectos",
+    "contacto": "Contacto",
+    "cv": "Descargar CV",
+    "cvShort": "CV"
+  },
+  "hero": {
+    "available": "Disponible para oportunidades",
+    "description": "Desarrollo soluciones full-stack con Angular, NestJS, TypeScript y PostgreSQL. Experiencia real en sistemas comerciales para usuarios reales.",
+    "viewProjects": "Ver proyectos",
+    "mainStack": "Stack principal",
+    "roles": [
+      "Full Stack Developer",
+      "Angular Developer",
+      "NestJS Developer",
+      "Software Engineer",
+      "Problem Solver"
+    ]
+  },
+  "about": {
+    "title": "Sobre mí",
+    "metrics": [
+      { "label": "Experiencia", "value": "2+ años", "sub": "desarrollo full-stack" },
+      { "label": "Proyectos", "value": "6+", "sub": "sistemas completos" },
+      { "label": "Stack", "value": "Full Stack", "sub": "Angular + NestJS" },
+      { "label": "Estado", "value": "Disponible", "sub": "para oportunidades" }
+    ],
+    "bio": [
+      "Soy Manuel Adolfo Soto, desarrollador Full Stack y estudiante de último semestre de Ingeniería Informática en la USFX, Sucre, Bolivia.",
+      "Desde 2024 trabajo como pasante Full Stack en Afer Bolivia, desarrollando un sistema e-commerce de electrodomésticos. He participado en autenticación con roles, CRUDs, inventarios, pedidos, panel administrador y reportes, trabajando con un equipo multidisciplinario de diseño, sistemas, comercial y economía.",
+      "Actualmente realizo mi pasantía universitaria obligatoria y estudio inglés intensivo (nivel A1). Busco oportunidades laborales remotas para seguir creciendo profesionalmente."
+    ],
+    "timeline": {
+      "title": "Trayectoria",
+      "items": [
+        { "year": "2022", "label": "Ingreso a USFX", "desc": "Inicio de Ingeniería Informática", "icon": "🎓" },
+        { "year": "2024", "label": "Afer Bolivia", "desc": "Pasante Full Stack — desarrollo real", "icon": "💼" },
+        { "year": "2025", "label": "Proyectos completos", "desc": "Farmacia, Hamburguesería, Cafetería", "icon": "🛠️" },
+        { "year": "2026", "label": "Último semestre", "desc": "Próximo a egresar + pasantía formal", "icon": "🎯" }
+      ]
+    },
+    "methodology": {
+      "title": "Metodología",
+      "items": [
+        { "label": "Git/GitHub", "desc": "Control de versiones diario" },
+        { "label": "Documentación", "desc": "Lectura de errores y docs antes de preguntar" },
+        { "label": "Colaboración", "desc": "Trabajo en equipo multidisciplinario" },
+        { "label": "IA como apoyo", "desc": "Herramienta, no dependencia" }
+      ]
+    },
+    "interests": {
+      "title": "Intereses",
+      "items": ["Desarrollo Web", "Backend", "API REST", "E-commerce", "Sistemas Comerciales", "Arquitectura", "Cloud", "Bases de Datos"]
+    }
+  },
+  "skills": {
+    "title": "Habilidades",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Bases de Datos",
+      "tools": "Herramientas",
+      "networking": "Redes"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "types": {
+      "internship": "Pasantía",
+      "academic": "Académico"
+    },
+    "items": [
+      {
+        "title": "Pasante Full Stack",
+        "company": "Afer Bolivia",
+        "period": "2024 - Actualidad",
+        "description": "Participación activa en el desarrollo completo de un sistema e-commerce de electrodomésticos. Desarrollo full stack con Angular y NestJS, incluyendo autenticación con roles, CRUD de productos, inventarios, gestión de pedidos, panel administrador, reportes e interfaces de usuario/cliente. Trabajo en equipo multidisciplinario con áreas de diseño (Figma), sistemas, comercial y economía. Coordinación directa para levantamiento de inventarios, ventas y mejoras del sistema. Proyecto próximo a despliegue que reemplaza un sistema previo."
+      },
+      {
+        "title": "Pasantía Universitaria (Modalidad Trabajo Dirigido)",
+        "company": "Afer Bolivia",
+        "period": "3 meses (Actual)",
+        "description": "Pasantía universitaria obligatoria de último semestre, formalizando el trabajo de desarrollo full stack realizado en la empresa. Desarrollo de funcionalidades para el sistema e-commerce y preparación para despliegue en producción."
+      },
+      {
+        "title": "Proyectos Universitarios",
+        "company": "USFX - Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca",
+        "period": "2023 - 2025",
+        "description": "Desarrollo de sistemas completos como parte de la formación académica, incluyendo farmacia, cafetería, tienda de computadoras y sistemas de pedidos con diversas tecnologías y arquitecturas."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Proyectos destacados de GitHub — experiencia real en equipo multidisciplinario",
+    "featured": "Proyecto destacado",
+    "viewAll": "Ver todos en GitHub",
+    "code": "Código",
+    "comingSoon": "Próximamente",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "items": {
+      "afer": {
+        "name": "Afer Bolivia",
+        "description": "E-commerce de electrodomésticos con sistema completo de tienda online. Incluye autenticación con roles (admin/usuario/cliente), CRUD de productos e inventarios, gestión de pedidos, carrito de compras, panel administrador con reportes y módulo de ventas. Proyecto desarrollado para usuarios reales, próximo a despliegue. Reemplaza y mejora un sistema previo existente.",
+        "status": "En desarrollo (próximo a deploy)",
+        "category": "E-commerce / Sistema comercial",
+        "details": [
+          "Login y autenticación con roles",
+          "CRUD completo de productos e inventarios",
+          "Gestión de pedidos y carrito de compras",
+          "Panel administrador con reportes",
+          "Interfaces para usuario y cliente",
+          "Trabajo en equipo multidisciplinario"
+        ]
+      },
+      "farmacia": {
+        "name": "Sistema de Gestión para Farmacia",
+        "description": "Sistema de gestión farmacéutica con control de inventarios, registro de medicamentos con caducidad, ventas, reportes y módulo de administración. Proyecto universitario con arquitectura de capas.",
+        "status": "Completado",
+        "category": "Sistema de inventarios"
+      },
+      "hamburgueseria": {
+        "name": "Hamburguesería - Sistema de Pedidos",
+        "description": "Sistema de pedidos online para restaurante con menú interactivo, personalización de productos, gestión de órdenes y panel administrativo. Arquitectura full-stack con API REST y frontend Vue.",
+        "status": "Completado",
+        "category": "Pedidos online / Restaurante"
+      },
+      "cafeteria": {
+        "name": "Sistema de Cafetería",
+        "description": "Sistema de ventas y gestión para cafetería con control de inventario, registro de productos, pedidos y facturación.",
+        "status": "Completado",
+        "category": "Sistema de ventas"
+      },
+      "tienda": {
+        "name": "Tienda de Computadoras",
+        "description": "Aplicación web para venta de equipos de computación con catálogo de productos, carrito de compras y procesamiento de pedidos.",
+        "status": "Completado",
+        "category": "Tienda online"
+      },
+      "api": {
+        "name": "API REST con NestJS",
+        "description": "Backend de API RESTful para sistema de gestión con autenticación JWT, operaciones CRUD, base de datos PostgreSQL y Docker.",
+        "status": "Completado",
+        "category": "Backend / API"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Testimonios"
+  },
+  "github": {
+    "title": "GitHub",
+    "repos": "Repositorios",
+    "followers": "Seguidores",
+    "following": "Siguiendo",
+    "activity": "Actividad Reciente",
+    "languages": "Lenguajes más usados",
+    "loading": "Cargando lenguajes..."
+  },
+  "whyme": {
+    "title": "Por qué contratarme",
+    "items": [
+      {
+        "title": "Experiencia real en producción",
+        "desc": "2 años como pasante Full Stack en Afer Bolivia, desarrollando sistema e-commerce para usuarios reales, no solo proyectos académicos.",
+        "icon": "experience"
+      },
+      {
+        "title": "Trabajo en equipo multidisciplinario",
+        "desc": "Colaboración directa con áreas de diseño (Figma), sistemas, comercial y economía. Coordinación para inventarios, ventas y mejoras.",
+        "icon": "team"
+      },
+      {
+        "title": "Último semestre de Ing. Informática",
+        "desc": "Próximo a egresar de la USFX. Formación sólida en desarrollo, bases de datos, redes y arquitectura de software.",
+        "icon": "study"
+      },
+      {
+        "title": "Stack moderno y versátil",
+        "desc": "Angular, NestJS, TypeScript, PostgreSQL, Docker, Git. Capacidad de adaptarme rápido a nuevas tecnologías.",
+        "icon": "stack"
+      }
+    ]
+  },
+  "education": {
+    "title": "Educación",
+    "badge": "Último semestre — Próximo a egresar",
+    "english": {
+      "title": "Inglés",
+      "level": "Nivel actual",
+      "badge": "A1 — Básico",
+      "description": "Actualmente estudiando inglés de forma intensiva. Objetivo: alcanzar nivel B1."
+    }
+  },
+  "certificates": {
+    "title": "Certificaciones",
+    "suggestions": ["AWS Cloud Practitioner", "Meta Front-End Developer", "Google IT Support", "Azure Fundamentals"],
+    "hint": "Sugerencias de certificaciones que fortalecerían tu perfil"
+  },
+  "blog": {
+    "title": "Blog Técnico",
+    "viewCode": "Ver código",
+    "post": {
+      "tag": "NestJS • Seguridad",
+      "date": "Mayo 2026",
+      "title": "Autenticación JWT con roles en NestJS",
+      "intro": "En Afer Bolivia implementé un sistema de autenticación con roles (admin, usuario, cliente) usando JWT en NestJS. Cada rol tiene permisos específicos sobre recursos como productos, pedidos y reportes.",
+      "sections": [
+        {
+          "heading": "Estructura de roles",
+          "body": "Definí un enum de roles (admin, user, client) y un guard personalizado que verifica el rol del usuario autenticado antes de permitir acceso a cada endpoint. Esto permite reutilizar la misma lógica en todos los controladores."
+        },
+        {
+          "heading": "Generación del token",
+          "body": "Al iniciar sesión, el servidor valida credenciales y genera un JWT con el ID y rol del usuario. El token se envía al frontend (Angular) que lo almacena y lo adjunta en cada petición."
+        },
+        {
+          "heading": "Protección de rutas",
+          "body": "Usé guards de NestJS combinados con decoradores personalizados para proteger rutas según el rol. Por ejemplo, solo admin puede acceder al panel de reportes, mientras que client puede ver su historial de pedidos."
+        }
+      ],
+      "conclusion": "Este sistema me enseñó la importancia de diseñar la seguridad desde el inicio y cómo NestJS facilita la implementación con guards y decoradores limpios y reutilizables.",
+      "tags": ["NestJS", "JWT", "Auth", "Roles", "TypeScript"]
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "letsTalk": "Hablemos",
+    "description": "¿Tienes una oportunidad laboral, proyecto freelance o simplemente quieres conectar? Estoy abierto a pasantías, posiciones junior y colaboraciones.",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "form": {
+      "title": "Enviar mensaje",
+      "name": "Tu nombre",
+      "email": "tu@email.com",
+      "message": "Escribe tu mensaje...",
+      "send": "Enviar mensaje"
+    }
+  },
+  "footer": {
+    "subtitle": "Full Stack Developer",
+    "madeWith": "Hecho con"
+  }
+}
