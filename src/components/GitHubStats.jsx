@@ -30,13 +30,6 @@ export default function GitHubStats() {
   const [langs, setLangs] = useState([]);
 
   useEffect(() => {
-    fetch('https://api.github.com/users/khiomaru')
-      .then((r) => r.json())
-      .then(setStats)
-      .catch(() => {});
-  }, []);
-
-  useEffect(() => {
     fetch('https://api.github.com/users/khiomaru/repos?per_page=100')
       .then((r) => r.json())
       .then(async (repos) => {
@@ -98,17 +91,25 @@ export default function GitHubStats() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="grid grid-cols-3 gap-4 mb-8"
         >
-          {items.map((item) => (
-            <div key={item.label} className="glass rounded-xl p-6 text-center card-hover">
-              <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-cyan-500/10 flex items-center justify-center">
-                <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={icons[item.icon]} />
-                </svg>
-              </div>
-              <div className="text-3xl font-bold text-white font-mono">{item.value ?? '—'}</div>
-              <div className="text-sm text-slate-400 mt-1">{item.label}</div>
-            </div>
-          ))}
+          {stats
+            ? items.map((item) => (
+                <div key={item.label} className="glass rounded-xl p-6 text-center card-hover">
+                  <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={icons[item.icon]} />
+                    </svg>
+                  </div>
+                  <div className="text-3xl font-bold text-white font-mono">{item.value}</div>
+                  <div className="text-sm text-slate-400 mt-1">{item.label}</div>
+                </div>
+              ))
+            : Array.from({ length: 3 }).map((_, i) => (
+                <div key={i} className="glass rounded-xl p-6 text-center animate-pulse">
+                  <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-slate-700" />
+                  <div className="h-8 w-16 bg-slate-700 rounded mx-auto mb-1" />
+                  <div className="h-4 w-20 bg-slate-700 rounded mx-auto" />
+                </div>
+              ))}
         </motion.div>
 
         {/* Activity graph */}
@@ -119,12 +120,21 @@ export default function GitHubStats() {
           className="glass rounded-xl p-6 card-hover"
         >
           <h3 className="text-white font-semibold mb-4">{t('github.activity')}</h3>
-          <img
-            src="https://github-readme-activity-graph.vercel.app/graph?username=khiomaru&theme=react-dark&hide_border=true&bg_color=0f172a&color=06b6d4&line=8b5cf6&point=ffffff"
-            alt="GitHub Activity Graph"
-            className="w-full rounded-lg"
-            loading="lazy"
-          />
+          <div className="relative">
+            <div className="absolute inset-0 rounded-lg bg-slate-800 animate-pulse flex items-center justify-center">
+              <svg className="w-8 h-8 text-slate-600 animate-spin" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+              </svg>
+            </div>
+            <img
+              src="https://github-readme-activity-graph.vercel.app/graph?username=khiomaru&theme=react-dark&hide_border=true&bg_color=0f172a&color=06b6d4&line=8b5cf6&point=ffffff"
+              alt="GitHub Activity Graph"
+              className="w-full rounded-lg relative z-10"
+              loading="lazy"
+              onLoad={(e) => { e.target.previousElementSibling.style.display = 'none' }}
+            />
+          </div>
         </motion.div>
 
         {/* Top langs */}
@@ -166,7 +176,22 @@ export default function GitHubStats() {
               })}
             </div>
           ) : (
-            <p className="text-slate-500 text-sm">{t('github.loading')}</p>
+            <div className="space-y-4 animate-pulse">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <div key={i}>
+                  <div className="flex justify-between mb-1">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2.5 h-2.5 rounded-full bg-slate-700" />
+                      <div className="h-4 w-24 bg-slate-700 rounded" />
+                    </div>
+                    <div className="h-4 w-16 bg-slate-700 rounded" />
+                  </div>
+                  <div className="h-1.5 bg-slate-800 rounded-full">
+                    <div className="h-full w-3/5 rounded-full bg-slate-700" />
+                  </div>
+                </div>
+              ))}
+            </div>
           )}
         </motion.div>
 
