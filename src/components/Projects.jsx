@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects } from '../data/projects';
@@ -210,7 +210,21 @@ function ProjectCard({ project, index, featured }) {
 export default function Projects() {
   const { t } = useTranslation();
   const { ref, isVisible } = useInView(0.1);
-  const [featured, ...rest] = projects;
+  const [filter, setFilter] = useState('All');
+
+  const allTechs = useMemo(() => {
+    const techSet = new Set();
+    projects.forEach((p) => p.techs.forEach((tech) => techSet.add(tech)));
+    return ['All', ...Array.from(techSet).sort()];
+  }, []);
+
+  const filtered = useMemo(() => {
+    if (filter === 'All') return projects;
+    return projects.filter((p) => p.techs.some((tech) => tech === filter));
+  }, [filter]);
+
+  const featuredFiltered = filtered.filter((p) => p.featured)[0] || projects[0];
+  const restFiltered = filtered.filter((p) => !p.featured);
 
   const container = {
     hidden: { opacity: 0 },
@@ -233,18 +247,42 @@ export default function Projects() {
             <span className="text-gradient">/</span> {t('projects.title')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-3" />
-          <p className="text-slate-400 mb-10 max-w-2xl">
+          <p className="text-slate-400 mb-6 max-w-2xl">
             {t('projects.subtitle')}
           </p>
         </motion.div>
 
+        {/* Tech filter */}
+        <motion.div variants={{ hidden: {}, visible: { opacity: 1, y: 0 } }} className="mb-8">
+          <div className="flex flex-wrap gap-2">
+            {allTechs.map((tech) => (
+              <button
+                key={tech}
+                onClick={() => setFilter(tech)}
+                className={`px-3 py-1.5 text-xs font-mono rounded-lg border transition-all ${
+                  filter === tech
+                    ? 'text-cyan-400 border-cyan-500/50 bg-cyan-500/10'
+                    : 'text-slate-500 border-slate-700 hover:text-slate-300 hover:border-slate-600 bg-slate-800/50'
+                }`}
+              >
+                {tech}
+              </button>
+            ))}
+          </div>
+        </motion.div>
+
         <div className="space-y-6">
-          <ProjectCard project={featured} index={0} featured />
+          {featuredFiltered.id === projects[0].id && (
+            <ProjectCard project={featuredFiltered} index={0} featured />
+          )}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {rest.map((project, i) => (
+            {restFiltered.map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i + 1} />
             ))}
           </div>
+          {restFiltered.length === 0 && !featuredFiltered.featured && (
+            <p className="text-center text-slate-500 py-12">{t('projects.noResults')}</p>
+          )}
         </div>
 
         <motion.div

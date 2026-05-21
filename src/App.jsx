@@ -14,6 +14,7 @@ import WhyHireMe from './components/WhyHireMe';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SplashScreen from './components/SplashScreen';
+import BackToTop from './components/BackToTop';
 import CVModal from './components/CVModal';
 import { CVModalProvider } from './context/CVModalContext';
 
@@ -45,6 +46,7 @@ export default function App() {
           <Contact />
         </main>
         <Footer />
+        <BackToTop />
         <CVModal />
       </div>
     </CVModalProvider>

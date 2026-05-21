@@ -98,6 +98,7 @@
   "projects": {
     "title": "Proyectos",
     "subtitle": "Proyectos destacados de GitHub — experiencia real en equipo multidisciplinario",
+    "noResults": "No hay proyectos con esa tecnología",
     "featured": "Proyecto destacado",
     "viewAll": "Ver todos en GitHub",
     "code": "Código",
