@@ -34,7 +34,7 @@ export default function Navbar() {
         const el = document.getElementById(section);
         if (el) {
           const rect = el.getBoundingClientRect();
-          if (rect.top <= 150) {
+          if (rect.top <= window.innerHeight * 0.15) {
             setActiveSection(`#${section}`);
             break;
           }

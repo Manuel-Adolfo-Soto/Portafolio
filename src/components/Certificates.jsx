@@ -7,7 +7,6 @@ import { useInView } from '../hooks/useInView';
 export default function Certificates() {
   const { t } = useTranslation();
   const { ref, isVisible } = useInView(0.1);
-  const suggestions = t('certificates.suggestions', { returnObjects: true });
   const [preview, setPreview] = useState(null);
 
   return (
@@ -32,49 +31,31 @@ export default function Certificates() {
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-12" />
         </motion.div>
 
-        {certificates.map((cert, i) => (
+        {certificates.filter(cert => !cert.pending).map((cert, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 30 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            {cert.pending ? (
-              <div className="glass rounded-xl p-8 card-hover text-center border border-dashed border-slate-700/50">
-                <div className="text-5xl mb-4 opacity-40">🏆</div>
-                <h3 className="text-xl font-semibold text-white mb-2">{cert.name}</h3>
-                <p className="text-slate-400 mb-6">{cert.description}</p>
-                <div className="flex flex-wrap justify-center gap-3">
-                  {suggestions.map((sug) => (
-                    <span key={sug} className="px-3 py-1.5 text-xs text-slate-500 bg-slate-800/50 rounded-full border border-dashed border-slate-700">
-                      {sug}
-                    </span>
-                  ))}
+            <button onClick={() => setPreview(cert.link)} className="w-full text-left glass rounded-xl overflow-hidden card-hover border border-slate-700/50">
+              <div className="flex flex-col sm:flex-row">
+                <div className="sm:w-48 h-48 sm:h-auto bg-slate-800 shrink-0">
+                  <img
+                    src={cert.link}
+                    alt={cert.name}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
-                <p className="text-xs text-slate-600 mt-4">
-                  {t('certificates.hint')}
-                </p>
+                <div className="p-6 flex flex-col justify-center">
+                  <h3 className="text-lg font-semibold text-white mb-1">{cert.name}</h3>
+                  <p className="text-cyan-400 text-sm mb-2">{cert.issuer}</p>
+                  <p className="text-slate-400 text-sm">{cert.description}</p>
+                  <span className="mt-3 text-xs text-cyan-400/70 hover:text-cyan-400 transition-colors">Click para ver completo →</span>
+                </div>
               </div>
-            ) : (
-              <button onClick={() => setPreview(cert.link)} className="w-full text-left glass rounded-xl overflow-hidden card-hover border border-slate-700/50">
-                <div className="flex flex-col sm:flex-row">
-                  <div className="sm:w-48 h-48 sm:h-auto bg-slate-800 shrink-0">
-                    <img
-                      src={cert.link}
-                      alt={cert.name}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col justify-center">
-                    <h3 className="text-lg font-semibold text-white mb-1">{cert.name}</h3>
-                    <p className="text-cyan-400 text-sm mb-2">{cert.issuer}</p>
-                    <p className="text-slate-400 text-sm">{cert.description}</p>
-                    <span className="mt-3 text-xs text-cyan-400/70 hover:text-cyan-400 transition-colors">Click para ver completo →</span>
-                  </div>
-                </div>
-              </button>
-            )}
+            </button>
           </motion.div>
         ))}
       </motion.div>

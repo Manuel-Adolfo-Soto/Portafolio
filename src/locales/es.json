@@ -199,13 +199,12 @@
     }
   },
   "certificates": {
-    "title": "Certificaciones",
-    "suggestions": ["AWS Cloud Practitioner", "Meta Front-End Developer", "Google IT Support", "Azure Fundamentals"],
-    "hint": "Sugerencias de certificaciones que fortalecerían tu perfil"
+    "title": "Certificaciones"
   },
   "blog": {
     "title": "Blog Técnico",
     "viewCode": "Ver código",
+    "nextPost": "📝 Más artículos próximamente — escribiendo sobre Angular, Docker y más",
     "post": {
       "tag": "NestJS • Seguridad",
       "date": "Mayo 2026",

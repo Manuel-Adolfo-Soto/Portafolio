@@ -13,7 +13,6 @@ import Testimonials from './components/Testimonials';
 import WhyHireMe from './components/WhyHireMe';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ParticleBackground from './components/ParticleBackground';
 import SplashScreen from './components/SplashScreen';
 import CVModal from './components/CVModal';
 import { CVModalProvider } from './context/CVModalContext';
@@ -22,7 +21,7 @@ export default function App() {
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowSplash(false), 2000);
+    const timer = setTimeout(() => setShowSplash(false), 1000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -30,7 +29,6 @@ export default function App() {
     <CVModalProvider>
       <SplashScreen isVisible={showSplash} />
       <div className="min-h-screen bg-slate-950 text-white">
-        <ParticleBackground />
         <Navbar />
         <main>
           <Hero />

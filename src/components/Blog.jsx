@@ -97,6 +97,17 @@ export default function Blog() {
             </div>
           </div>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-8"
+        >
+          <div className="glass rounded-xl p-6 text-center border border-dashed border-slate-700/50">
+            <p className="text-slate-500 text-sm font-mono">{t('blog.nextPost')}</p>
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );
