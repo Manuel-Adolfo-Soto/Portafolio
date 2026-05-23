@@ -84,15 +84,18 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="glass rounded-xl p-6 card-hover space-y-4">
               <h3 className="text-lg font-semibold text-white mb-2">{t('contact.form.title')}</h3>
               <div>
-                <input type="text" name="name" required placeholder={t('contact.form.name')}
+                <label htmlFor="contact-name" className="sr-only">{t('contact.form.name')}</label>
+                <input id="contact-name" type="text" name="name" required placeholder={t('contact.form.name')}
                   className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white text-sm placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors" />
               </div>
               <div>
-                <input type="email" name="email" required placeholder={t('contact.form.email')}
+                <label htmlFor="contact-email" className="sr-only">{t('contact.form.email')}</label>
+                <input id="contact-email" type="email" name="email" required placeholder={t('contact.form.email')}
                   className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white text-sm placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors" />
               </div>
               <div>
-                <textarea name="message" required rows={4} placeholder={t('contact.form.message')}
+                <label htmlFor="contact-message" className="sr-only">{t('contact.form.message')}</label>
+                <textarea id="contact-message" name="message" required rows={4} placeholder={t('contact.form.message')}
                   className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white text-sm placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors resize-none" />
               </div>
               <button type="submit"

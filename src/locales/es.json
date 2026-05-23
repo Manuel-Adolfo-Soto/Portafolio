@@ -155,15 +155,6 @@
   "testimonials": {
     "title": "Testimonios"
   },
-  "github": {
-    "title": "GitHub",
-    "repos": "Repositorios",
-    "followers": "Seguidores",
-    "following": "Siguiendo",
-    "activity": "Actividad Reciente",
-    "languages": "Lenguajes más usados",
-    "loading": "Cargando lenguajes..."
-  },
   "whyme": {
     "title": "Por qué contratarme",
     "items": [
