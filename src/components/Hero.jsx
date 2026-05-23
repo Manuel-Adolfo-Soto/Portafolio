@@ -107,7 +107,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Badges */}
-        <motion.div variants={itemVariants} className="mb-6 flex flex-wrap justify-center gap-3">
+        <motion.div variants={itemVariants} className="mb-6 flex flex-wrap justify-center gap-4">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 text-xs font-medium text-cyan-400 bg-cyan-500/10 rounded-full border border-cyan-500/30 backdrop-blur-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             {t('hero.available')}

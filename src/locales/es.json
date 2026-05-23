@@ -11,14 +11,14 @@
   },
   "hero": {
     "available": "Disponible para oportunidades",
-    "description": "Desarrollo soluciones full-stack con Angular, NestJS, TypeScript y PostgreSQL. Experiencia real en sistemas comerciales para usuarios reales. Basado en Sucre, Bolivia.",
+    "description": "Full Stack Developer especializado en Angular y NestJS. Desarrollo sistemas comerciales con TypeScript, PostgreSQL y Docker. Experiencia real en producción para usuarios reales. Basado en Sucre, Bolivia.",
     "viewProjects": "Ver proyectos",
     "mainStack": "Stack principal",
     "roles": [
-      "Practicante de Desarrollo Web Full Stack",
-      "Full Stack Developer",
+      "Full Stack Developer (Angular + NestJS)",
       "Angular Developer",
       "NestJS Developer",
+      "TypeScript Developer",
       "Problem Solver"
     ]
   },
@@ -246,7 +246,7 @@
     }
   },
   "footer": {
-    "subtitle": "Full Stack Developer",
+    "subtitle": "Full Stack Developer (Angular + NestJS)",
     "madeWith": "Hecho con"
   }
 }
