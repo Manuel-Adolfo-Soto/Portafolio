@@ -86,7 +86,7 @@ export default function Blog() {
                   ))}
                 </div>
                 <a
-                  href="https://github.com/khiomaru/Afer-Bolivia-backend"
+                  href="https://github.com/Manuel-Adolfo-Soto/Afer-Bolivia-backend"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-1.5 text-xs text-cyan-400 hover:underline"
