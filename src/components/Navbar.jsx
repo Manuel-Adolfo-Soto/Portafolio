@@ -14,10 +14,10 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '#inicio', label: t('nav.inicio') },
-    { href: '#sobre-mi', label: t('nav.sobre-mi') },
-    { href: '#habilidades', label: t('nav.habilidades') },
     { href: '#experiencia', label: t('nav.experiencia') },
     { href: '#proyectos', label: t('nav.proyectos') },
+    { href: '#habilidades', label: t('nav.habilidades') },
+    { href: '#sobre-mi', label: t('nav.sobre-mi') },
     { href: '#contacto', label: t('nav.contacto') },
   ];
 

@@ -1,20 +1,19 @@
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import WhyHireMe from './components/WhyHireMe';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Achievements from './components/Achievements';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
 import AboutMe from './components/AboutMe';
 import Education from './components/Education';
 import Certificates from './components/Certificates';
+import WhyHireMe from './components/WhyHireMe';
+import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SplashScreen from './components/SplashScreen';
 import BackToTop from './components/BackToTop';
-import Testimonials from './components/Testimonials';
-import Blog from './components/Blog';
 import CVModal from './components/CVModal';
 import { CVModalProvider } from './context/CVModalContext';
 
@@ -33,16 +32,15 @@ export default function App() {
         <Navbar />
         <main>
           <Hero />
-          <WhyHireMe />
-          <Projects />
-          <Skills />
           <Experience />
           <Achievements />
+          <Projects />
+          <Skills />
           <AboutMe />
-          <Testimonials />
-          <Blog />
           <Education />
           <Certificates />
+          <WhyHireMe />
+          <Blog />
           <Contact />
         </main>
         <Footer />
