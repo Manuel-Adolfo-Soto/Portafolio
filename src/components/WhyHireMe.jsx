@@ -43,18 +43,18 @@ export default function WhyHireMe() {
         </motion.div>
 
         <div className="grid sm:grid-cols-2 gap-6">
-          {items.map((item, i) => (
+          {items.map((entry, i) => (
             <motion.div key={i} variants={item}>
               <div className="glass rounded-xl p-6 card-hover h-full group">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-violet-500/20 flex items-center justify-center shrink-0 group-hover:from-cyan-500/30 group-hover:to-violet-500/30 transition-all">
                     <svg className="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={icons[item.icon] || icons.stack} />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={icons[entry.icon] || icons.stack} />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-1">{item.title}</h3>
-                    <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="text-white font-semibold mb-1">{entry.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{entry.desc}</p>
                   </div>
                 </div>
               </div>

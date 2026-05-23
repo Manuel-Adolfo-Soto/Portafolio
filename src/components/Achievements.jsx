@@ -43,22 +43,22 @@ export default function Achievements() {
         </motion.div>
 
         <div className="grid sm:grid-cols-2 gap-6">
-          {items.map((item, i) => (
+          {items.map((entry, i) => (
             <motion.div key={i} variants={item}>
               <div className="glass rounded-xl p-6 card-hover h-full group relative overflow-hidden">
                 <div className="absolute -top-10 -right-10 w-24 h-24 bg-gradient-to-br from-cyan-500/5 to-violet-500/5 rounded-full blur-2xl group-hover:from-cyan-500/10 group-hover:to-violet-500/10 transition-all" />
                 <div className="relative flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-violet-500/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                     <svg className="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={iconMap[item.icon] || iconMap.code} />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={iconMap[entry.icon] || iconMap.code} />
                     </svg>
                   </div>
                   <div>
                     <div className="flex items-baseline gap-2 mb-1">
-                      <span className="text-2xl font-bold text-gradient">{item.value}</span>
-                      <span className="text-white font-semibold">{item.label}</span>
+                      <span className="text-2xl font-bold text-gradient">{entry.value}</span>
+                      <span className="text-white font-semibold">{entry.label}</span>
                     </div>
-                    <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+                    <p className="text-slate-400 text-sm leading-relaxed">{entry.desc}</p>
                   </div>
                 </div>
               </div>
