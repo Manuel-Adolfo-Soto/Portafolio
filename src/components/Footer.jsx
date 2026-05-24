@@ -31,10 +31,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-6 border-t border-slate-800/30 text-center">
           <p className="text-slate-600 text-xs">
-            © {year} Manuel Adolfo Soto · {t('footer.madeWith')}{' '}
-            <span className="text-cyan-400">React</span> +{' '}
-            <span className="text-violet-400">Tailwind</span> +{' '}
-            <span className="text-cyan-400">Three.js</span>
+            © {year} Manuel Adolfo Soto · {t('footer.tagline')}
           </p>
         </div>
       </div>
