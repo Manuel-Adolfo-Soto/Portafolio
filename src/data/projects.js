@@ -147,11 +147,11 @@ export const certificates = [
     pending: false,
   },
   {
-    name: "Certificado de Desarrollo Web Completo",
-    issuer: "Plataforma de formación online",
-    date: "2026",
+    name: "Certificado de Participación - Dev Fest Sucre",
+    issuer: "Dev Fest Sucre · Google Developer Group",
+    date: "Mayo 2025",
     link: "/images/desarrollo-certificado.png",
-    description: "Formación complementaria en desarrollo web full stack.",
+    description: "Certificado por destacada participación en el evento de desarrollo celebrado el 30 de mayo de 2025.",
     pending: false,
   },
   {
