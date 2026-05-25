@@ -155,6 +155,14 @@ export const certificates = [
     pending: false,
   },
   {
+    name: "Certificado de iniciación al desarrollo con IA",
+    issuer: "Big School · Brais Moure (Director Máster en IA)",
+    date: "Mayo 2026",
+    link: "/images/certificado-ia.jpg",
+    description: "Por participación en las jornadas formativas 'Desarrollo con IA: De 0 a Producción' de Big School, el 25 de mayo de 2026.",
+    pending: false,
+  },
+  {
     name: "Próximamente — Cursos y certificaciones",
     issuer: "",
     date: "",
