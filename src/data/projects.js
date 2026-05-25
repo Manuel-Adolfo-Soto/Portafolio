@@ -150,7 +150,7 @@ export const certificates = [
     name: "Certificado de Participación - DevFest Sucre 2024",
     issuer: "Google Developer Groups · Women Techmakers · USFX",
     date: "Noviembre 2024",
-    link: "/images/Manuel_Adolfo_Soto_Certificado_de_Participación_Certificate.pdf",
+    link: "/images/Manuel_Adolfo_Soto_Certificado_de_Participación_Certificate.jpg",
     description: "Certificado por destacada participación y contribución como participante en DevFest Sucre 2024, celebrado el 16 de noviembre de 2024.",
     pending: false,
   },
