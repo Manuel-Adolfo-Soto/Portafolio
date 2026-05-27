@@ -11,7 +11,7 @@ export default function Certificates() {
 
   return (
     <section id="certificados" className="relative py-28 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-slate-950/60 pointer-events-none" />
+      <div className="absolute inset-0 bg-slate-50/80 dark:bg-slate-950/60 pointer-events-none" />
 
       <motion.div
         ref={ref}
@@ -38,9 +38,9 @@ export default function Certificates() {
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <button onClick={() => setPreview(cert.link)} className="w-full text-left glass rounded-xl overflow-hidden card-hover border border-slate-700/50">
+            <button onClick={() => setPreview(cert.link)} className="w-full text-left glass rounded-xl overflow-hidden card-hover border border-slate-200/50 dark:border-slate-700/50">
               <div className="flex flex-col sm:flex-row">
-                <div className="sm:w-48 h-48 sm:h-auto bg-slate-800 shrink-0 flex items-center justify-center">
+                <div className="sm:w-48 h-48 sm:h-auto bg-slate-100 dark:bg-slate-800 shrink-0 flex items-center justify-center">
                   {cert.link.endsWith('.pdf') ? (
                     <svg className="w-12 h-12 text-cyan-400/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -55,9 +55,9 @@ export default function Certificates() {
                   )}
                 </div>
                 <div className="p-6 flex flex-col justify-center">
-                  <h3 className="text-lg font-semibold text-white mb-1">{cert.name}</h3>
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-1">{cert.name}</h3>
                   <p className="text-cyan-400 text-sm mb-2">{cert.issuer}</p>
-                  <p className="text-slate-400 text-sm">{cert.description}</p>
+                  <p className="text-slate-500 dark:text-slate-400 text-sm">{cert.description}</p>
                   <span className="mt-3 text-xs text-cyan-400/70 hover:text-cyan-400 transition-colors">Click para ver completo →</span>
                 </div>
               </div>
@@ -85,7 +85,7 @@ export default function Certificates() {
             >
               <button
                 onClick={() => setPreview(null)}
-                className="absolute -top-10 right-0 text-slate-400 hover:text-white transition-colors text-sm"
+                className="absolute -top-10 right-0 text-slate-500 dark:text-slate-400 hover:text-white transition-colors text-sm"
               >
                 Cerrar ✕
               </button>

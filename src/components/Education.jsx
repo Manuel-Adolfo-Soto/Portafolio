@@ -9,7 +9,7 @@ export default function Education() {
 
   return (
     <section id="educacion" className="relative py-28 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/30 to-slate-950 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-100/50 to-slate-50 dark:from-slate-950 dark:via-slate-900/30 dark:to-slate-950 pointer-events-none" />
 
       <motion.div
         ref={ref}
@@ -42,17 +42,17 @@ export default function Education() {
                   <div className="inline-flex items-center gap-2 px-3 py-1 mb-3 text-xs font-medium text-emerald-400 bg-emerald-500/10 rounded-full border border-emerald-500/20">
                     {t('education.badge')}
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{edu.degree}</h3>
+                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{edu.degree}</h3>
                   <p className="text-cyan-400">{edu.institution}</p>
                 </div>
-                <span className="px-3 py-1 text-sm text-slate-400 bg-slate-800 rounded-full border border-slate-700 font-mono">
+                <span className="px-3 py-1 text-sm text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700 font-mono">
                   {edu.period}
                 </span>
               </div>
-              <p className="text-slate-300 mb-4">{edu.description}</p>
+              <p className="text-slate-600 dark:text-slate-300 mb-4">{edu.description}</p>
               <ul className="space-y-2">
                 {edu.highlights.map((item, j) => (
-                  <li key={j} className="flex items-start gap-3 text-slate-400 text-sm">
+                  <li key={j} className="flex items-start gap-3 text-slate-500 dark:text-slate-400 text-sm">
                     <span className="text-cyan-400 mt-1">▹</span>
                     {item}
                   </li>
@@ -70,20 +70,20 @@ export default function Education() {
           <div className="glass rounded-xl p-6 mt-6 card-hover">
             <div className="flex items-center gap-3 mb-3">
               <span className="text-2xl">🇬🇧</span>
-              <h3 className="text-lg font-semibold text-white">{t('education.english.title')}</h3>
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{t('education.english.title')}</h3>
             </div>
             <div className="flex items-center gap-4">
               <div className="flex-1">
                 <div className="flex justify-between text-sm mb-1">
-                  <span className="text-slate-300">{t('education.english.level')}</span>
+                  <span className="text-slate-600 dark:text-slate-300">{t('education.english.level')}</span>
                   <span className="text-amber-400 font-mono text-xs">{t('education.english.badge')}</span>
                 </div>
-                <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
+                <div className="h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
                   <div className="h-full w-[25%] bg-gradient-to-r from-amber-500 to-amber-400 rounded-full" />
                 </div>
               </div>
             </div>
-            <p className="text-slate-400 text-sm mt-3">
+            <p className="text-slate-500 dark:text-slate-400 text-sm mt-3">
               {t('education.english.description')}
             </p>
           </div>

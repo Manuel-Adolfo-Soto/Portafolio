@@ -39,8 +39,8 @@ function ProjectCard({ project, index, featured }) {
         transition={{ duration: 0.7, ease: 'easeOut' }}
       >
         <TiltCard intensity={6} glare>
-          <div className="glass rounded-xl overflow-hidden md:flex border border-slate-700/50">
-            <div className={`md:w-2/5 h-52 md:h-auto ${hasImages ? '' : `bg-gradient-to-br ${gradient}`} flex items-center justify-center border-b md:border-b-0 md:border-r border-slate-700/50 relative overflow-hidden group`}>
+          <div className="glass rounded-xl overflow-hidden md:flex border border-slate-200/50 dark:border-slate-700/50">
+            <div className={`md:w-2/5 h-52 md:h-auto ${hasImages ? '' : `bg-gradient-to-br ${gradient}`} flex items-center justify-center border-b md:border-b-0 md:border-r border-slate-200/50 dark:border-slate-700/50 relative overflow-hidden group`}>
               {hasImages ? (
                 <div className="w-full h-full relative">
                   <AnimatePresence mode="wait">
@@ -111,26 +111,26 @@ function ProjectCard({ project, index, featured }) {
                 <span className={`px-2.5 py-1 text-xs font-medium rounded-full border ${statusColor}`}>
                   {p.status}
                 </span>
-                <span className="text-slate-500 text-xs font-mono">{p.category}</span>
+                <span className="text-slate-400 dark:text-slate-500 text-xs font-mono">{p.category}</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{p.name}</h3>
-              <p className="text-slate-300 text-sm leading-relaxed mb-4">{p.description}</p>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{p.name}</h3>
+              <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">{p.description}</p>
               {p.problem && (
                 <div className="mb-3 p-3 bg-amber-500/5 border border-amber-500/10 rounded-lg">
                   <p className="text-xs font-semibold text-amber-400 mb-1 uppercase tracking-wider">Problema</p>
-                  <p className="text-sm text-slate-400">{p.problem}</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">{p.problem}</p>
                 </div>
               )}
               {p.result && (
                 <div className="mb-4 p-3 bg-emerald-500/5 border border-emerald-500/10 rounded-lg">
                   <p className="text-xs font-semibold text-emerald-400 mb-1 uppercase tracking-wider">Resultado</p>
-                  <p className="text-sm text-slate-400">{p.result}</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">{p.result}</p>
                 </div>
               )}
               {p.details && (
                 <ul className="space-y-1.5 mb-4">
                   {p.details.map((d, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-slate-400">
+                    <li key={i} className="flex items-start gap-2 text-sm text-slate-500 dark:text-slate-400">
                       <span className="text-cyan-400 mt-0.5 shrink-0">▹</span>
                       {d}
                     </li>
@@ -147,23 +147,30 @@ function ProjectCard({ project, index, featured }) {
               <div className="flex gap-4">
                 {project.repoBack && (
                   <a href={project.repoBack} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-cyan-400 transition-colors">
+                    className="flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400 hover:text-cyan-400 transition-colors">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     {t('projects.backend')}
                   </a>
                 )}
                 {!project.repoBack && (
                 <a href={project.repo} target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-cyan-400 transition-colors">
+                  className="flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400 hover:text-cyan-400 transition-colors">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                   {t('projects.backend')}
                 </a>
                 )}
                 {project.repoFront && (
                   <a href={project.repoFront} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-cyan-400 transition-colors">
+                    className="flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400 hover:text-cyan-400 transition-colors">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     {t('projects.frontend')}
+                  </a>
+                )}
+                {project.demo && (
+                  <a href={project.demo} target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-violet-400 transition-colors">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                    Demo
                   </a>
                 )}
               </div>
@@ -228,8 +235,8 @@ function ProjectCard({ project, index, featured }) {
             </span>
             <span className="text-slate-600 text-xs font-mono">{project.year}</span>
           </div>
-          <h3 className="text-base font-semibold text-white mb-1.5">{p.name}</h3>
-          <p className="text-slate-400 text-sm leading-relaxed mb-3 line-clamp-2 flex-1">{p.description}</p>
+          <h3 className="text-base font-semibold text-slate-900 dark:text-white mb-1.5">{p.name}</h3>
+          <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-3 line-clamp-2 flex-1">{p.description}</p>
           <div className="flex flex-wrap gap-1.5 mb-3">
             {project.techs.slice(0, 4).map((tech) => (
               <span key={tech} className="px-2 py-0.5 text-xs font-mono text-violet-400 bg-violet-500/10 rounded border border-violet-500/20">
@@ -237,21 +244,30 @@ function ProjectCard({ project, index, featured }) {
               </span>
             ))}
             {project.techs.length > 4 && (
-              <span className="px-2 py-0.5 text-xs text-slate-500">+{project.techs.length - 4}</span>
+              <span className="px-2 py-0.5 text-xs text-slate-400 dark:text-slate-500">+{project.techs.length - 4}</span>
             )}
           </div>
-          {project.repo !== '#' ? (
-            <a href={project.repo} target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-sm text-slate-500 hover:text-cyan-400 transition-colors mt-auto">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              {t('projects.code')}
-            </a>
-          ) : (
-            <span className="flex items-center gap-1.5 text-sm text-slate-600 mt-auto">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              {t('projects.comingSoon')}
-            </span>
-          )}
+          <div className="flex items-center gap-3 mt-auto">
+            {project.repo !== '#' ? (
+              <a href={project.repo} target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-sm text-slate-400 dark:text-slate-500 hover:text-cyan-400 transition-colors">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                {t('projects.code')}
+              </a>
+            ) : (
+              <span className="flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-600">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                {t('projects.comingSoon')}
+              </span>
+            )}
+            {project.demo && (
+              <a href={project.demo} target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-sm text-slate-500 hover:text-violet-400 transition-colors">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                Demo
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </motion.div>
@@ -284,7 +300,7 @@ export default function Projects() {
 
   return (
     <section id="proyectos" className="relative py-28 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-slate-950/60 pointer-events-none" />
+      <div className="absolute inset-0 bg-slate-50/80 dark:bg-slate-950/60 pointer-events-none" />
 
       <motion.div
         ref={ref}
@@ -298,7 +314,7 @@ export default function Projects() {
             <span className="text-gradient">/</span> {t('projects.title')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-3" />
-          <p className="text-slate-400 mb-6 max-w-2xl">
+          <p className="text-slate-500 dark:text-slate-400 mb-6 max-w-2xl">
             {t('projects.subtitle')}
           </p>
         </motion.div>
@@ -313,7 +329,7 @@ export default function Projects() {
                 className={`px-3 py-1.5 text-xs font-mono rounded-lg border transition-all ${
                   filter === tech
                     ? 'text-cyan-400 border-cyan-500/50 bg-cyan-500/10'
-                    : 'text-slate-500 border-slate-700 hover:text-slate-300 hover:border-slate-600 bg-slate-800/50'
+                    : 'text-slate-400 dark:text-slate-500 border-slate-200 dark:border-slate-700 hover:text-slate-600 dark:hover:text-slate-300 hover:border-slate-300 dark:hover:border-slate-600 bg-slate-100 dark:bg-slate-800/50'
                 }`}
               >
                 {tech}
@@ -332,7 +348,7 @@ export default function Projects() {
             ))}
           </div>
           {filtered.length === 0 && (
-            <p className="text-center text-slate-500 py-12">{t('projects.noResults')}</p>
+            <p className="text-center text-slate-400 dark:text-slate-500 py-12">{t('projects.noResults')}</p>
           )}
         </div>
 
@@ -343,7 +359,7 @@ export default function Projects() {
           className="text-center mt-12"
         >
           <a href="https://github.com/Manuel-Adolfo-Soto?tab=repositories" target="_blank" rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 px-8 py-3.5 bg-slate-800/80 border border-slate-700 text-slate-200 rounded-xl hover:border-cyan-500/50 hover:bg-slate-700/80 transition-all backdrop-blur-sm">
+            className="group inline-flex items-center gap-2 px-8 py-3.5 bg-slate-100 dark:bg-slate-800/80 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 rounded-xl hover:border-cyan-500/50 hover:bg-slate-200 dark:hover:bg-slate-700/80 transition-all backdrop-blur-sm">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             {t('projects.viewAll')}
             <span className="group-hover:translate-x-1 transition-transform">→</span>

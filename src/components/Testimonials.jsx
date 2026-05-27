@@ -16,7 +16,7 @@ export default function Testimonials() {
 
   return (
     <section className="relative py-28 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/30 to-slate-950 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-100/50 to-slate-50 dark:from-slate-950 dark:via-slate-900/30 dark:to-slate-950 pointer-events-none" />
 
       <motion.div
         ref={ref}
@@ -52,8 +52,8 @@ export default function Testimonials() {
                   AF
                 </div>
                 <div>
-                  <p className="text-white font-semibold">{testimonials[0].author}</p>
-                  <p className="text-slate-500 text-sm">{testimonials[0].role}</p>
+                  <p className="text-slate-900 dark:text-white font-semibold">{testimonials[0].author}</p>
+                  <p className="text-slate-400 dark:text-slate-500 text-sm">{testimonials[0].role}</p>
                 </div>
               </div>
             </div>

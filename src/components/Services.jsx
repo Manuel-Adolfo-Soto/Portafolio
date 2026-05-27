@@ -26,7 +26,7 @@ export default function Services() {
 
   return (
     <section className="relative py-28 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/30 to-slate-950 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-100/50 to-slate-50 dark:from-slate-950 dark:via-slate-900/30 dark:to-slate-950 pointer-events-none" />
 
       <motion.div
         ref={ref}
@@ -40,7 +40,7 @@ export default function Services() {
             <span className="text-gradient">/</span> {t('services.title')}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-4" />
-          <p className="text-slate-400 max-w-2xl mb-12">{t('services.subtitle')}</p>
+          <p className="text-slate-500 dark:text-slate-400 max-w-2xl mb-12">{t('services.subtitle')}</p>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 gap-6">
@@ -54,8 +54,8 @@ export default function Services() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-1">{service.title}</h3>
-                    <p className="text-slate-400 text-sm leading-relaxed">{service.desc}</p>
+                    <h3 className="text-slate-900 dark:text-white font-semibold mb-1">{service.title}</h3>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{service.desc}</p>
                   </div>
                 </div>
               </div>
@@ -64,7 +64,7 @@ export default function Services() {
         </div>
 
         <motion.div variants={item} className="mt-10 text-center">
-          <div className="inline-flex items-center gap-2 px-6 py-3 text-sm text-slate-500 bg-slate-800/30 rounded-xl border border-slate-700/30">
+          <div className="inline-flex items-center gap-2 px-6 py-3 text-sm text-slate-400 dark:text-slate-500 bg-slate-100/50 dark:bg-slate-800/30 rounded-xl border border-slate-200/30 dark:border-slate-700/30">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             {t('services.cta')}
           </div>
