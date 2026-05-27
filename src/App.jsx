@@ -18,8 +18,7 @@ import CinematicSplash from './components/CinematicSplash';
 import BackToTop from './components/BackToTop';
 import DotNav from './components/DotNav';
 import CVModal from './components/CVModal';
-import CustomCursor from './components/CustomCursor';
-import Spotlight from './components/Spotlight';
+
 import { CVModalProvider } from './context/CVModalContext';
 import { ThemeProvider } from './context/ThemeContext';
 
@@ -30,8 +29,6 @@ export default function App() {
     <ThemeProvider>
       <CVModalProvider>
         <CinematicSplash isVisible={showSplash} onFinish={() => setShowSplash(false)} onSkip={() => setShowSplash(false)} />
-        <CustomCursor />
-        <Spotlight />
         <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-300">
           <Navbar />
           <DotNav />
