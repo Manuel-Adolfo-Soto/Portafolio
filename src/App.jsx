@@ -12,7 +12,7 @@ import WhyHireMe from './components/WhyHireMe';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import SplashScreen from './components/SplashScreen';
+import CinematicSplash from './components/CinematicSplash';
 import BackToTop from './components/BackToTop';
 import DotNav from './components/DotNav';
 import CVModal from './components/CVModal';
@@ -21,14 +21,9 @@ import { CVModalProvider } from './context/CVModalContext';
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setShowSplash(false), 3500);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <CVModalProvider>
-      <SplashScreen isVisible={showSplash} />
+      <CinematicSplash isVisible={showSplash} onFinish={() => setShowSplash(false)} />
       <div className="min-h-screen bg-slate-950 text-white">
         <Navbar />
         <DotNav />
