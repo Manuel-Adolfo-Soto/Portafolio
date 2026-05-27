@@ -1,4 +1,4 @@
-import { useRef, useMemo, useState, useEffect, useCallback } from 'react';
+import { useRef, useMemo, useState, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { EffectComposer, Bloom, ChromaticAberration } from '@react-three/postprocessing';
 import { BlendFunction } from 'postprocessing';
@@ -7,132 +7,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 const K_PATH = 'M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z';
 
 const TOTAL_DURATION = 12;
-
-let audioCtx = null;
-let audioNodes = [];
-let audioUnlocked = false;
-
-function unlockAudio() {
-  if (audioUnlocked) return;
-  try {
-    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    if (audioCtx.state === 'suspended') audioCtx.resume();
-    audioUnlocked = true;
-  } catch {}
-}
-
-function stopAudio() {
-  audioNodes.forEach((n) => {
-    try { n.stop(); } catch {}
-    try { n.disconnect(); } catch {}
-  });
-  audioNodes = [];
-}
-
-function playCinematicSound() {
-  unlockAudio();
-  if (!audioCtx) return false;
-  stopAudio();
-  if (audioCtx.state === 'suspended') audioCtx.resume();
-
-  const now = audioCtx.currentTime;
-  const master = audioCtx.createGain();
-  master.gain.setValueAtTime(0.8, now);
-  master.gain.linearRampToValueAtTime(0.6, now + 10);
-  master.gain.linearRampToValueAtTime(0, now + 12);
-  master.connect(audioCtx.destination);
-
-  // — Sub bass drone (more aggressive) —
-  const sub = audioCtx.createOscillator();
-  sub.type = 'sine';
-  sub.frequency.setValueAtTime(28, now);
-  sub.frequency.linearRampToValueAtTime(32, now + 5);
-  sub.frequency.linearRampToValueAtTime(28, now + 12);
-  const subGain = audioCtx.createGain();
-  subGain.gain.setValueAtTime(0, now);
-  subGain.gain.linearRampToValueAtTime(0.35, now + 2);
-  subGain.gain.linearRampToValueAtTime(0.3, now + 9);
-  subGain.gain.linearRampToValueAtTime(0, now + 12);
-  sub.connect(subGain).connect(master);
-  audioNodes.push(sub, subGain);
-  sub.start(now); sub.stop(now + 12);
-
-  // — Bass pad (filtered saw, louder) —
-  const pad = audioCtx.createOscillator();
-  pad.type = 'sawtooth';
-  pad.frequency.setValueAtTime(55, now);
-  pad.frequency.linearRampToValueAtTime(65, now + 10);
-  const padFilter = audioCtx.createBiquadFilter();
-  padFilter.type = 'lowpass';
-  padFilter.frequency.setValueAtTime(80, now);
-  padFilter.frequency.exponentialRampToValueAtTime(600, now + 5);
-  padFilter.frequency.exponentialRampToValueAtTime(200, now + 12);
-  const padGain = audioCtx.createGain();
-  padGain.gain.setValueAtTime(0, now);
-  padGain.gain.linearRampToValueAtTime(0.2, now + 3);
-  padGain.gain.linearRampToValueAtTime(0.15, now + 10);
-  padGain.gain.linearRampToValueAtTime(0, now + 12);
-  pad.connect(padFilter).connect(padGain).connect(master);
-  audioNodes.push(pad, padFilter, padGain);
-  pad.start(now); pad.stop(now + 12);
-
-  // — High shimmer (at reveal) —
-  const shimmer = audioCtx.createOscillator();
-  shimmer.type = 'sine';
-  shimmer.frequency.setValueAtTime(880, now);
-  shimmer.frequency.exponentialRampToValueAtTime(1760, now + 5);
-  shimmer.frequency.exponentialRampToValueAtTime(880, now + 12);
-  const shimmerGain = audioCtx.createGain();
-  shimmerGain.gain.setValueAtTime(0, now);
-  shimmerGain.gain.linearRampToValueAtTime(0, now + 4);
-  shimmerGain.gain.linearRampToValueAtTime(0.08, now + 4.5);
-  shimmerGain.gain.linearRampToValueAtTime(0.05, now + 9);
-  shimmerGain.gain.linearRampToValueAtTime(0, now + 12);
-  const shimmerFilter = audioCtx.createBiquadFilter();
-  shimmerFilter.type = 'bandpass';
-  shimmerFilter.frequency.setValueAtTime(1200, now);
-  shimmerFilter.Q.setValueAtTime(2, now);
-  shimmer.connect(shimmerFilter).connect(shimmerGain).connect(master);
-  audioNodes.push(shimmer, shimmerFilter, shimmerGain);
-  shimmer.start(now); shimmer.stop(now + 12);
-
-  // — Reveal impact (noise burst at ~4.5s, louder) —
-  const bufferSize = audioCtx.sampleRate * 0.4;
-  const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
-  const data = buffer.getChannelData(0);
-  for (let i = 0; i < bufferSize; i++) {
-    data[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / bufferSize, 2);
-  }
-  const noise = audioCtx.createBufferSource();
-  noise.buffer = buffer;
-  const noiseFilter = audioCtx.createBiquadFilter();
-  noiseFilter.type = 'highpass';
-  noiseFilter.frequency.setValueAtTime(1500, now);
-  const noiseGain = audioCtx.createGain();
-  noiseGain.gain.setValueAtTime(0, now);
-  noiseGain.gain.linearRampToValueAtTime(0, now + 4.3);
-  noiseGain.gain.linearRampToValueAtTime(0.15, now + 4.5);
-  noiseGain.gain.exponentialRampToValueAtTime(0.001, now + 4.9);
-  noise.connect(noiseFilter).connect(noiseGain).connect(master);
-  audioNodes.push(noise, noiseFilter, noiseGain);
-  noise.start(now + 4.3); noise.stop(now + 4.9);
-
-  // — Final chord (sustained from ~7.5s to ~11s) —
-  [262, 330, 392, 523].forEach((freq, i) => {
-    const osc = audioCtx.createOscillator();
-    osc.type = 'sine';
-    osc.frequency.setValueAtTime(freq, now);
-    const oGain = audioCtx.createGain();
-    oGain.gain.setValueAtTime(0, now);
-    oGain.gain.linearRampToValueAtTime(0, now + 7.2);
-    oGain.gain.linearRampToValueAtTime(0.06 - i * 0.01, now + 7.5);
-    oGain.gain.linearRampToValueAtTime(0.04, now + 10);
-    oGain.gain.linearRampToValueAtTime(0, now + 12);
-    osc.connect(oGain).connect(master);
-    audioNodes.push(osc, oGain);
-    osc.start(now); osc.stop(now + 12);
-  });
-}
 
 function StarField({ progress }) {
   const count = 3000;
@@ -313,7 +187,6 @@ const textChars = 'khiomaru';
 export default function CinematicSplash({ isVisible, onFinish }) {
   const progressRef = useRef(0);
   const startTimeRef = useRef(null);
-  const audioStartedRef = useRef(false);
 
   const [phase, setPhase] = useState(0);
   const [typedText, setTypedText] = useState('');
@@ -324,7 +197,6 @@ export default function CinematicSplash({ isVisible, onFinish }) {
     if (!isVisible) return;
     startTimeRef.current = Date.now();
     progressRef.current = 0;
-    audioStartedRef.current = false;
 
     const phaseTimers = [
       setTimeout(() => setPhase(1), 2000),
@@ -351,7 +223,6 @@ export default function CinematicSplash({ isVisible, onFinish }) {
     }, 1200);
 
     const finishTimer = setTimeout(() => {
-      stopAudio();
       onFinish?.();
     }, TOTAL_DURATION * 1000);
 
@@ -359,29 +230,6 @@ export default function CinematicSplash({ isVisible, onFinish }) {
       phaseTimers.forEach(clearTimeout);
       clearInterval(glitchInterval);
       clearTimeout(finishTimer);
-      stopAudio();
-    };
-  }, [isVisible]);
-
-  useEffect(() => {
-    if (!isVisible) return;
-
-    function tryStartAudio() {
-      if (audioStartedRef.current) return;
-      audioStartedRef.current = true;
-      playCinematicSound();
-    }
-
-    const clickHandler = () => tryStartAudio();
-    window.addEventListener('click', clickHandler);
-    window.addEventListener('touchstart', clickHandler);
-
-    const fallback = setTimeout(tryStartAudio, 300);
-
-    return () => {
-      window.removeEventListener('click', clickHandler);
-      window.removeEventListener('touchstart', clickHandler);
-      clearTimeout(fallback);
     };
   }, [isVisible]);
 
