@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { useCVModal } from '../context/useCVModal';
+import AnimatedLogo from './AnimatedLogo';
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
@@ -66,15 +67,7 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a
-            href="#inicio"
-            onClick={(e) => scrollTo(e, '#inicio')}
-            className="text-xl font-bold font-mono"
-          >
-            <span className="text-gradient">&lt;k</span>
-            <span className="text-white">hiomaru</span>
-            <span className="text-gradient"> /&gt;</span>
-          </a>
+          <AnimatedLogo href="#inicio" onClick={(e) => scrollTo(e, '#inicio')} />
 
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (

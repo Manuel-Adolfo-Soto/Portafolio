@@ -160,7 +160,7 @@ export const education = [
 
 export const certificates = [
   {
-    name: "Carta de Recomendación - Afer Bolivia",
+    name: "Certificado de Afer Bolivia",
     issuer: "Afer Bolivia",
     date: "2026",
     link: "/images/certificado-afer.jpg",
