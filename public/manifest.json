@@ -1,0 +1,18 @@
+{
+  "name": "Manuel Adolfo Soto | Full Stack Developer",
+  "short_name": "Khiomaru",
+  "description": "Portafolio profesional de Manuel Adolfo Soto — Full Stack Developer especializado en Angular y NestJS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020618",
+  "theme_color": "#06b6d4",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
