@@ -5,13 +5,13 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-slate-800/50 py-10 px-4">
+    <footer className="border-t border-slate-200/50 dark:border-slate-800/50 py-10 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <p className="text-xl font-bold font-mono">
               <span className="text-gradient">&lt;k</span>
-              <span className="text-white">hiomaru</span>
+              <span className="text-slate-900 dark:text-white">hiomaru</span>
               <span className="text-gradient"> /&gt;</span>
             </p>
             <p className="text-slate-600 text-xs mt-1">{t('footer.subtitle')} · {year}</p>
@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-slate-800/30 text-center">
+        <div className="mt-8 pt-6 border-t border-slate-200/30 dark:border-slate-800/30 text-center">
           <p className="text-slate-600 text-xs">
             © {year} Manuel Adolfo Soto · {t('footer.tagline')}
           </p>
