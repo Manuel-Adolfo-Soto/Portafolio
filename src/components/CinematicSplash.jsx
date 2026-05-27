@@ -6,15 +6,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const K_PATH = 'M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z';
 
-const TOTAL_DURATION = 10;
+const TOTAL_DURATION = 12;
 
 let audioCtx = null;
 let audioNodes = [];
+let audioUnlocked = false;
 
-function initAudio() {
-  if (audioCtx) return;
+function unlockAudio() {
+  if (audioUnlocked) return;
   try {
     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    audioUnlocked = true;
   } catch {}
 }
 
@@ -27,104 +30,107 @@ function stopAudio() {
 }
 
 function playCinematicSound() {
-  initAudio();
-  if (!audioCtx) return;
+  unlockAudio();
+  if (!audioCtx) return false;
   stopAudio();
+  if (audioCtx.state === 'suspended') audioCtx.resume();
 
   const now = audioCtx.currentTime;
   const master = audioCtx.createGain();
-  master.gain.setValueAtTime(0.4, now);
+  master.gain.setValueAtTime(0.8, now);
+  master.gain.linearRampToValueAtTime(0.6, now + 10);
+  master.gain.linearRampToValueAtTime(0, now + 12);
   master.connect(audioCtx.destination);
 
-  // — Sub bass drone —
+  // — Sub bass drone (more aggressive) —
   const sub = audioCtx.createOscillator();
   sub.type = 'sine';
-  sub.frequency.setValueAtTime(32, now);
-  sub.frequency.linearRampToValueAtTime(35, now + 5);
-  sub.frequency.linearRampToValueAtTime(32, now + 10);
+  sub.frequency.setValueAtTime(28, now);
+  sub.frequency.linearRampToValueAtTime(32, now + 5);
+  sub.frequency.linearRampToValueAtTime(28, now + 12);
   const subGain = audioCtx.createGain();
   subGain.gain.setValueAtTime(0, now);
-  subGain.gain.linearRampToValueAtTime(0.25, now + 2);
-  subGain.gain.linearRampToValueAtTime(0.2, now + 8);
-  subGain.gain.linearRampToValueAtTime(0, now + 10);
+  subGain.gain.linearRampToValueAtTime(0.35, now + 2);
+  subGain.gain.linearRampToValueAtTime(0.3, now + 9);
+  subGain.gain.linearRampToValueAtTime(0, now + 12);
   sub.connect(subGain).connect(master);
-  sub.start(now); sub.stop(now + 10);
-  audioNodes.push(sub);
+  audioNodes.push(sub, subGain);
+  sub.start(now); sub.stop(now + 12);
 
-  // — Bass pad (filtered saw) —
+  // — Bass pad (filtered saw, louder) —
   const pad = audioCtx.createOscillator();
   pad.type = 'sawtooth';
   pad.frequency.setValueAtTime(55, now);
   pad.frequency.linearRampToValueAtTime(65, now + 10);
   const padFilter = audioCtx.createBiquadFilter();
   padFilter.type = 'lowpass';
-  padFilter.frequency.setValueAtTime(100, now);
-  padFilter.frequency.exponentialRampToValueAtTime(800, now + 6);
-  padFilter.frequency.exponentialRampToValueAtTime(300, now + 10);
+  padFilter.frequency.setValueAtTime(80, now);
+  padFilter.frequency.exponentialRampToValueAtTime(600, now + 5);
+  padFilter.frequency.exponentialRampToValueAtTime(200, now + 12);
   const padGain = audioCtx.createGain();
   padGain.gain.setValueAtTime(0, now);
-  padGain.gain.linearRampToValueAtTime(0.15, now + 3);
-  padGain.gain.linearRampToValueAtTime(0.1, now + 9);
-  padGain.gain.linearRampToValueAtTime(0, now + 10);
+  padGain.gain.linearRampToValueAtTime(0.2, now + 3);
+  padGain.gain.linearRampToValueAtTime(0.15, now + 10);
+  padGain.gain.linearRampToValueAtTime(0, now + 12);
   pad.connect(padFilter).connect(padGain).connect(master);
-  pad.start(now); pad.stop(now + 10);
-  audioNodes.push(pad);
+  audioNodes.push(pad, padFilter, padGain);
+  pad.start(now); pad.stop(now + 12);
 
   // — High shimmer (at reveal) —
   const shimmer = audioCtx.createOscillator();
   shimmer.type = 'sine';
   shimmer.frequency.setValueAtTime(880, now);
   shimmer.frequency.exponentialRampToValueAtTime(1760, now + 5);
-  shimmer.frequency.exponentialRampToValueAtTime(880, now + 10);
+  shimmer.frequency.exponentialRampToValueAtTime(880, now + 12);
   const shimmerGain = audioCtx.createGain();
   shimmerGain.gain.setValueAtTime(0, now);
   shimmerGain.gain.linearRampToValueAtTime(0, now + 4);
-  shimmerGain.gain.linearRampToValueAtTime(0.06, now + 4.5);
-  shimmerGain.gain.linearRampToValueAtTime(0.04, now + 8);
-  shimmerGain.gain.linearRampToValueAtTime(0, now + 10);
+  shimmerGain.gain.linearRampToValueAtTime(0.08, now + 4.5);
+  shimmerGain.gain.linearRampToValueAtTime(0.05, now + 9);
+  shimmerGain.gain.linearRampToValueAtTime(0, now + 12);
   const shimmerFilter = audioCtx.createBiquadFilter();
   shimmerFilter.type = 'bandpass';
   shimmerFilter.frequency.setValueAtTime(1200, now);
   shimmerFilter.Q.setValueAtTime(2, now);
   shimmer.connect(shimmerFilter).connect(shimmerGain).connect(master);
-  shimmer.start(now); shimmer.stop(now + 10);
-  audioNodes.push(shimmer);
+  audioNodes.push(shimmer, shimmerFilter, shimmerGain);
+  shimmer.start(now); shimmer.stop(now + 12);
 
-  // — Reveal impact (short noise burst at ~4.5s) —
-  const bufferSize = audioCtx.sampleRate * 0.3;
+  // — Reveal impact (noise burst at ~4.5s, louder) —
+  const bufferSize = audioCtx.sampleRate * 0.4;
   const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
   const data = buffer.getChannelData(0);
   for (let i = 0; i < bufferSize; i++) {
-    data[i] = (Math.random() * 2 - 1) * (1 - i / bufferSize);
+    data[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / bufferSize, 2);
   }
   const noise = audioCtx.createBufferSource();
   noise.buffer = buffer;
   const noiseFilter = audioCtx.createBiquadFilter();
   noiseFilter.type = 'highpass';
-  noiseFilter.frequency.setValueAtTime(2000, now);
+  noiseFilter.frequency.setValueAtTime(1500, now);
   const noiseGain = audioCtx.createGain();
   noiseGain.gain.setValueAtTime(0, now);
   noiseGain.gain.linearRampToValueAtTime(0, now + 4.3);
-  noiseGain.gain.linearRampToValueAtTime(0.08, now + 4.5);
-  noiseGain.gain.exponentialRampToValueAtTime(0.001, now + 4.8);
+  noiseGain.gain.linearRampToValueAtTime(0.15, now + 4.5);
+  noiseGain.gain.exponentialRampToValueAtTime(0.001, now + 4.9);
   noise.connect(noiseFilter).connect(noiseGain).connect(master);
-  noise.start(now + 4.3); noise.stop(now + 4.8);
-  audioNodes.push(noise);
+  audioNodes.push(noise, noiseFilter, noiseGain);
+  noise.start(now + 4.3); noise.stop(now + 4.9);
 
-  // — Final chord (sustained at ~7.5s) —
-  [262, 330, 392].forEach((freq, i) => {
+  // — Final chord (sustained from ~7.5s to ~11s) —
+  [262, 330, 392, 523].forEach((freq, i) => {
     const osc = audioCtx.createOscillator();
     osc.type = 'sine';
     osc.frequency.setValueAtTime(freq, now);
     const oGain = audioCtx.createGain();
     oGain.gain.setValueAtTime(0, now);
     oGain.gain.linearRampToValueAtTime(0, now + 7.2);
-    oGain.gain.linearRampToValueAtTime(0.04 - i * 0.01, now + 7.5);
-    oGain.gain.linearRampToValueAtTime(0.02, now + 9);
-    oGain.gain.linearRampToValueAtTime(0, now + 10);
+    oGain.gain.linearRampToValueAtTime(0.06 - i * 0.01, now + 7.5);
+    oGain.gain.linearRampToValueAtTime(0.04, now + 10);
+    oGain.gain.linearRampToValueAtTime(0, now + 12);
     osc.connect(oGain).connect(master);
-    osc.start(now); osc.stop(now + 10);
-    audioNodes.push(osc);
+    audioNodes.push(osc, oGain);
+    osc.start(now); osc.stop(now + 12);
   });
 }
 
@@ -358,16 +364,25 @@ export default function CinematicSplash({ isVisible, onFinish }) {
   }, [isVisible]);
 
   useEffect(() => {
-    if (!isVisible || audioStartedRef.current) return;
-    const start = Date.now();
-    const check = setInterval(() => {
-      if (Date.now() - start > 100) {
-        audioStartedRef.current = true;
-        playCinematicSound();
-        clearInterval(check);
-      }
-    }, 50);
-    return () => clearInterval(check);
+    if (!isVisible) return;
+
+    function tryStartAudio() {
+      if (audioStartedRef.current) return;
+      audioStartedRef.current = true;
+      playCinematicSound();
+    }
+
+    const clickHandler = () => tryStartAudio();
+    window.addEventListener('click', clickHandler);
+    window.addEventListener('touchstart', clickHandler);
+
+    const fallback = setTimeout(tryStartAudio, 300);
+
+    return () => {
+      window.removeEventListener('click', clickHandler);
+      window.removeEventListener('touchstart', clickHandler);
+      clearTimeout(fallback);
+    };
   }, [isVisible]);
 
   const elapsed = startTimeRef.current ? (Date.now() - startTimeRef.current) / 1000 : 0;
