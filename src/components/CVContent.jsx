@@ -39,7 +39,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
       <header className="mb-6 pb-5 border-b-2 border-cyan-500 dark:border-cyan-400">
         <div className="flex items-center gap-6">
           <div className="shrink-0">
-            <div className="w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-cyan-500/30">
+            <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-2 border-cyan-500/30">
               <img src="/images/Mi%20foto%20de%20perfil/Mi%20foto%20de%20perfil.jpeg" alt={name} className="w-full h-full object-cover" />
             </div>
           </div>
