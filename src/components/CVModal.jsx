@@ -1,10 +1,60 @@
+import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCVModal } from '../context/useCVModal';
+import CVContent from './CVContent';
 
 export default function CVModal() {
   const { t } = useTranslation();
   const { isOpen, closeCV } = useCVModal();
+  const cvRef = useRef(null);
+
+  const handleDownloadPDF = () => {
+    const cvElement = document.querySelector('.cv-page');
+    if (!cvElement) {
+      window.print();
+      return;
+    }
+
+    const printWindow = window.open('', '_blank');
+    if (!printWindow) {
+      window.print();
+      return;
+    }
+
+    const styles = document.querySelectorAll('style, link[rel="stylesheet"]');
+    const stylesHTML = Array.from(styles).map(s => s.outerHTML).join('');
+
+    printWindow.document.write(`
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>CV - Manuel Adolfo Soto</title>
+          ${stylesHTML}
+          <style>
+            @page { size: A4; margin: 0; }
+            body {
+              margin: 0;
+              padding: 0;
+              background: white !important;
+              -webkit-print-color-adjust: exact !important;
+              print-color-adjust: exact !important;
+            }
+            .cv-page {
+              max-width: 210mm;
+              margin: 0 auto;
+              padding: 15mm 12mm;
+              background: white !important;
+            }
+          </style>
+        </head>
+        <body>${cvElement.outerHTML}</body>
+      </html>
+    `);
+    printWindow.document.close();
+    printWindow.focus();
+    setTimeout(() => printWindow.print(), 800);
+  };
 
   return (
     <AnimatePresence>
@@ -33,6 +83,15 @@ export default function CVModal() {
                   {t('nav.cv')}
                 </a>
                 <button
+                  onClick={handleDownloadPDF}
+                  className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg hover:from-emerald-400 hover:to-teal-400 transition-all flex items-center gap-1.5"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  PDF
+                </button>
+                <button
                   onClick={closeCV}
                   className="p-2 text-slate-400 hover:text-white transition-colors rounded-lg hover:bg-slate-800"
                 >
@@ -42,12 +101,8 @@ export default function CVModal() {
                 </button>
               </div>
             </div>
-            <div className="flex-1 bg-slate-900">
-              <iframe
-                src="/cv.pdf"
-                className="w-full h-full"
-                title="CV"
-              />
+            <div className="flex-1 overflow-y-auto bg-slate-50 dark:bg-slate-900 print:overflow-visible">
+              <CVContent ref={cvRef} />
             </div>
           </motion.div>
         </motion.div>

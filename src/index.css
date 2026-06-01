@@ -121,3 +121,8 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* === PRINT FALLBACK === */
+@media print {
+  body { background: white; }
+}
