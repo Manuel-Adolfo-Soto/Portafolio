@@ -36,16 +36,18 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
     <div ref={ref} className="cv-page bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 p-8 md:p-10 max-w-[210mm] mx-auto font-sans leading-relaxed print:shadow-none">
       <span className="block text-[0px] leading-none text-transparent overflow-hidden select-none" aria-hidden="true">{hidden}</span>
       {/* Header */}
-      <header className="text-center mb-6 pb-5 border-b-2 border-cyan-500 dark:border-cyan-400">
-        <div className="flex justify-center mb-4">
-          <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-cyan-500/30">
-            <img src="/images/Mi%20foto%20de%20perfil/Mi%20foto%20de%20perfil.jpeg" alt={name} className="w-full h-full object-cover" />
+      <header className="mb-6 pb-5 border-b-2 border-cyan-500 dark:border-cyan-400">
+        <div className="flex items-center gap-6">
+          <div className="shrink-0">
+            <div className="w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-cyan-500/30">
+              <img src="/images/Mi%20foto%20de%20perfil/Mi%20foto%20de%20perfil.jpeg" alt={name} className="w-full h-full object-cover" />
+            </div>
           </div>
-        </div>
-        <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">{name}</h1>
-        <p className="text-lg font-semibold text-cyan-600 dark:text-cyan-400 mt-1">{title}</p>
-        <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5 font-mono">{subtitle}</p>
-        <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 mt-3 text-xs text-slate-600 dark:text-slate-400">
+          <div className="min-w-0">
+            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">{name}</h1>
+            <p className="text-lg font-semibold text-cyan-600 dark:text-cyan-400 mt-1">{title}</p>
+            <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5 font-mono">{subtitle}</p>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 mt-3 text-xs text-slate-600 dark:text-slate-400">
           <span className="flex items-center gap-1">
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             {contact.email}
@@ -70,6 +72,8 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" /></svg>
             {contact.website}
           </span>
+        </div>
+      </div>
         </div>
       </header>
 

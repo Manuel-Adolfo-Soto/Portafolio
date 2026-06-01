@@ -95,15 +95,19 @@ li::before{content:"▸";position:absolute;left:0;color:#06b6d4}
 <div class="cv-page">
 <span style="display:block;font-size:0;line-height:0;overflow:hidden">${data.hidden}</span>
 
-<header style="text-align:center;margin-bottom:22px">
-<div style="display:flex;justify-content:center;margin-bottom:10px">
-<img src="${location.origin}/images/Mi%20foto%20de%20perfil/Mi%20foto%20de%20perfil.jpeg" alt="${data.name}" style="width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid rgba(6,182,212,.3)">
+<header style="margin-bottom:22px">
+<div style="display:flex;align-items:center;gap:20px">
+<div style="flex-shrink:0">
+<img src="${location.origin}/images/Mi%20foto%20de%20perfil/Mi%20foto%20de%20perfil.jpeg" alt="${data.name}" style="width:90px;height:90px;border-radius:50%;object-fit:cover;border:2px solid rgba(6,182,212,.3)">
 </div>
+<div>
 <h1>${data.name}</h1>
 <p class="title">${data.title}</p>
 <p class="subtitle">${data.subtitle}</p>
-<div class="contact">
+<div class="contact" style="justify-content:flex-start">
 ${Object.values(data.contact).map(v => `<span>${v}</span>`).join('')}
+</div>
+</div>
 </div>
 </header>
 <hr class="sep">
