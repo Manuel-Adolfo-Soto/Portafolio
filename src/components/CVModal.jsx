@@ -93,7 +93,7 @@ li::before{content:"▸";position:absolute;left:0;color:#06b6d4}
 <div class="toolbar"><button onclick="window.print()">${labels.pdf}</button>
 <span style="margin-left:12px;font-size:13px;color:#64748b;">${labels.tip}</span></div>
 <div class="cv-page">
-<span style="display:block;text-align:center;color:#fff;font-size:12px;padding:4px 0">${data.hidden}</span>
+<span style="display:block;font-size:0;line-height:0;overflow:hidden">${data.hidden}</span>
 
 <header style="margin-bottom:22px">
 <div style="display:flex;align-items:center;gap:20px">

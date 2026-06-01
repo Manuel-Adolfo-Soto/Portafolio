@@ -34,7 +34,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
 
   return (
     <div ref={ref} className="cv-page bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 p-8 md:p-10 max-w-[210mm] mx-auto font-sans leading-relaxed print:shadow-none">
-      <span className="block text-xs text-white text-center my-2 select-none" aria-hidden="true">{hidden}</span>
+      <span className="block text-[0px] leading-none text-transparent overflow-hidden select-none" aria-hidden="true">{hidden}</span>
       {/* Header */}
       <header className="mb-6 pb-5 border-b-2 border-cyan-500 dark:border-cyan-400">
         <div className="flex items-center gap-6">
