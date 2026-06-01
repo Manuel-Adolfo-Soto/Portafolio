@@ -37,6 +37,11 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
       <span className="block text-[0px] leading-none text-transparent overflow-hidden select-none" aria-hidden="true">{hidden}</span>
       {/* Header */}
       <header className="text-center mb-6 pb-5 border-b-2 border-cyan-500 dark:border-cyan-400">
+        <div className="flex justify-center mb-4">
+          <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-cyan-500/30">
+            <img src="/images/Mi%20foto%20de%20perfil/Mi%20foto%20de%20perfil.jpeg" alt={name} className="w-full h-full object-cover" />
+          </div>
+        </div>
         <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">{name}</h1>
         <p className="text-lg font-semibold text-cyan-600 dark:text-cyan-400 mt-1">{title}</p>
         <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5 font-mono">{subtitle}</p>
