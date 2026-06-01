@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCVModal } from '../context/useCVModal';
+import CVContent from './CVContent';
 import { cvData } from '../data/cv';
 import { cvDataEn } from '../data/cv-en';
 
