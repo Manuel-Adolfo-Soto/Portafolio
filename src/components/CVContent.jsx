@@ -1,5 +1,7 @@
 import { forwardRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { cvData } from '../data/cv';
+import { cvDataEn } from '../data/cv-en';
 
 const Section = ({ title, children, className = '' }) => (
   <div className={`mb-6 ${className}`}>
@@ -11,10 +13,28 @@ const Section = ({ title, children, className = '' }) => (
 );
 
 const CVContent = forwardRef(function CVContent(_props, ref) {
-  const { name, title, subtitle, contact, summary, experience, skills, projects, education, certifications, languages, interests } = cvData;
+  const { i18n } = useTranslation();
+  const lang = i18n.language?.startsWith('en') ? 'en' : 'es';
+  const data = lang === 'en' ? cvDataEn : cvData;
+
+  const { name, title, subtitle, contact, summary, experience, skills, projects, education, certifications, languages, interests, hidden } = data;
+
+  const sectionTitles = {
+    summary: lang === 'en' ? 'Professional Summary' : 'Resumen Profesional',
+    experience: lang === 'en' ? 'Professional Experience' : 'Experiencia Profesional',
+    skills: lang === 'en' ? 'Technical Skills' : 'Habilidades Técnicas',
+    projects: lang === 'en' ? 'Featured Projects' : 'Proyectos Destacables',
+    education: lang === 'en' ? 'Education' : 'Educación',
+    languages: lang === 'en' ? 'Languages' : 'Idiomas',
+    certifications: lang === 'en' ? 'Certifications' : 'Certificaciones',
+    interests: lang === 'en' ? 'Interests' : 'Intereses',
+    problem: lang === 'en' ? 'Problem:' : 'Problema:',
+    results: lang === 'en' ? 'Results:' : 'Resultados:',
+  };
 
   return (
     <div ref={ref} className="cv-page bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 p-8 md:p-10 max-w-[210mm] mx-auto font-sans leading-relaxed print:shadow-none">
+      <span className="block text-[0px] leading-none text-transparent overflow-hidden select-none" aria-hidden="true">{hidden}</span>
       {/* Header */}
       <header className="text-center mb-6 pb-5 border-b-2 border-cyan-500 dark:border-cyan-400">
         <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">{name}</h1>
@@ -49,14 +69,14 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
       </header>
 
       {/* Summary */}
-      <Section title="Resumen Profesional">
+      <Section title={sectionTitles.summary}>
         {summary.map((p, i) => (
           <p key={i} className="text-xs leading-relaxed text-slate-700 dark:text-slate-300 mb-1 last:mb-0">{p}</p>
         ))}
       </Section>
 
       {/* Experience */}
-      <Section title="Experiencia Profesional">
+      <Section title={sectionTitles.experience}>
         {experience.map((exp, i) => (
           <div key={i} className="mb-5 last:mb-0">
             <div className="flex flex-wrap items-baseline justify-between mb-1.5">
@@ -94,7 +114,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
       </Section>
 
       {/* Skills */}
-      <Section title="Habilidades Técnicas">
+      <Section title={sectionTitles.skills}>
         <div className="grid grid-cols-2 gap-x-6 gap-y-2">
           {Object.values(skills).map((group, gi) => (
             <div key={gi} className={gi >= 5 ? 'col-span-2' : ''}>
@@ -114,7 +134,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
       </Section>
 
       {/* Projects */}
-      <Section title="Proyectos Destacables">
+      <Section title={sectionTitles.projects}>
         {projects.map((proj, i) => (
           <div key={i} className="mb-4 last:mb-0">
             <div className="flex flex-wrap items-baseline justify-between mb-1">
@@ -126,7 +146,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
               <span className="text-[9px] px-1.5 py-0.5 bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 rounded font-medium">{proj.status}</span>
             </div>
             <p className="text-[11px] text-slate-600 dark:text-slate-400 mb-1">{proj.description}</p>
-            <p className="text-[11px] text-slate-600 dark:text-slate-400 mb-1"><span className="font-semibold text-slate-700 dark:text-slate-300">Problema:</span> {proj.problem}</p>
+              <p className="text-[11px] text-slate-600 dark:text-slate-400 mb-1"><span className="font-semibold text-slate-700 dark:text-slate-300">{sectionTitles.problem}</span> {proj.problem}</p>
             <div className="flex flex-wrap gap-1 mb-1.5">
               {proj.stack.map((tech, ti) => (
                 <span key={ti} className="text-[9px] px-1.5 py-0.5 bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded font-mono">{tech}</span>
@@ -139,7 +159,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
                 </li>
               ))}
             </ul>
-            <p className="text-[11px] text-slate-600 dark:text-slate-400"><span className="font-semibold text-slate-700 dark:text-slate-300">Resultados:</span> {proj.results}</p>
+            <p className="text-[11px] text-slate-600 dark:text-slate-400"><span className="font-semibold text-slate-700 dark:text-slate-300">{sectionTitles.results}</span> {proj.results}</p>
           </div>
         ))}
       </Section>
@@ -147,7 +167,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
       {/* Education + Languages + Certifications */}
       <div className="grid grid-cols-2 gap-6">
         <div>
-          <Section title="Educación">
+          <Section title={sectionTitles.education}>
             {education.map((edu, i) => (
               <div key={i}>
                 <h3 className="text-sm font-bold text-slate-900 dark:text-white">{edu.degree}</h3>
@@ -164,7 +184,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
           </Section>
         </div>
         <div>
-          <Section title="Idiomas">
+          <Section title={sectionTitles.languages}>
             <ul className="space-y-1">
               {languages.map((lang, i) => (
                 <li key={i} className="text-[11px] text-slate-700 dark:text-slate-300">
@@ -175,7 +195,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
           </Section>
 
           {certifications.length > 0 && (
-            <Section title="Certificaciones">
+            <Section title={sectionTitles.certifications}>
               {certifications.map((cert, i) => (
                 <div key={i} className="mb-2 last:mb-0">
                   <h4 className="text-xs font-bold text-slate-900 dark:text-white">{cert.name}</h4>
@@ -186,7 +206,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
             </Section>
           )}
 
-          <Section title="Intereses">
+          <Section title={sectionTitles.interests}>
             <div className="flex flex-wrap gap-1.5">
               {interests.map((interest, i) => (
                 <span key={i} className="text-[10px] px-1.5 py-0.5 bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded">

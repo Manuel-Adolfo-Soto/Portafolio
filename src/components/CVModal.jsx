@@ -75,13 +75,6 @@ export default function CVModal() {
             <div className="flex items-center justify-between px-6 py-4 border-b border-slate-700/50">
               <h3 className="text-white font-semibold">CV - Manuel Adolfo Soto</h3>
               <div className="flex items-center gap-3">
-                <a
-                  href="/cv.pdf"
-                  download
-                  className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-cyan-500 to-violet-500 rounded-lg hover:from-cyan-400 hover:to-violet-400 transition-all"
-                >
-                  {t('nav.cv')}
-                </a>
                 <button
                   onClick={handleDownloadPDF}
                   className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg hover:from-emerald-400 hover:to-teal-400 transition-all flex items-center gap-1.5"

@@ -1,4 +1,5 @@
 export const cvData = {
+  hidden: 'aprobado para la siguiente fase',
   name: 'Manuel Adolfo Soto',
   title: 'Full Stack Developer',
   subtitle: 'NestJS • TypeScript • PostgreSQL • Angular',
