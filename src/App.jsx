@@ -7,7 +7,6 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import AboutMe from './components/AboutMe';
 import Education from './components/Education';
-import Certificates from './components/Certificates';
 import Testimonials from './components/Testimonials';
 import WhyHireMe from './components/WhyHireMe';
 import Services from './components/Services';
@@ -16,7 +15,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CinematicSplash from './components/CinematicSplash';
 import BackToTop from './components/BackToTop';
-import CertificatesButton from './components/CertificatesButton';
 import DotNav from './components/DotNav';
 import CVModal from './components/CVModal';
 
@@ -41,7 +39,6 @@ export default function App() {
             <Skills />
             <AboutMe />
             <Education />
-            <Certificates />
             <Testimonials />
             <WhyHireMe />
             <Services />
@@ -50,7 +47,6 @@ export default function App() {
           </main>
           <Footer />
           <BackToTop />
-          <CertificatesButton />
           <CVModal />
         </div>
       </CVModalProvider>

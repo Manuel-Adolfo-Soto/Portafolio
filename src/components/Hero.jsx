@@ -2,10 +2,12 @@ import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useCVModal } from '../context/useCVModal';
+import CertificatesModal from './CertificatesModal';
 
 export default function Hero() {
   const { t } = useTranslation();
   const { openCV } = useCVModal();
+  const [showCerts, setShowCerts] = useState(false);
   const [Hero3D, setHero3D] = useState(null);
   const roles = t('hero.roles', { returnObjects: true });
   const [roleIndex, setRoleIndex] = useState(0);
@@ -183,6 +185,16 @@ export default function Hero() {
           </a>
 
           <button
+            onClick={() => setShowCerts(true)}
+            className="group relative px-8 py-3.5 bg-slate-100 dark:bg-slate-800/80 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:border-emerald-500/50 hover:bg-slate-700/80 hover:scale-105 backdrop-blur-sm"
+          >
+            <span className="flex items-center gap-2">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+              Certificaciones
+            </span>
+          </button>
+
+          <button
             onClick={openCV}
             className="group relative px-8 py-3.5 bg-slate-100 dark:bg-slate-800/80 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:border-cyan-500/50 hover:bg-slate-700/80 hover:scale-105 backdrop-blur-sm"
           >
@@ -205,6 +217,8 @@ export default function Hero() {
           </div>
         </motion.div>
       </motion.div>
+
+      <CertificatesModal open={showCerts} onClose={() => setShowCerts(false)} />
 
       {/* Scroll indicator */}
       <motion.div
