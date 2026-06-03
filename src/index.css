@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@variant dark (&:where(.dark, .dark *));
-
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'Fira Code', ui-monospace, monospace;
@@ -17,10 +15,6 @@
     scrollbar-color: var(--color-primary) #0f172a;
   }
 
-  .light * {
-    scrollbar-color: var(--color-primary) #e2e8f0;
-  }
-
   html {
     scroll-behavior: smooth;
   }
@@ -33,11 +27,6 @@
   :root {
     --glass-bg: rgba(15, 23, 42, 0.6);
     --glass-border: rgba(51, 65, 85, 0.5);
-  }
-
-  .light {
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(203, 213, 225, 0.6);
   }
 
   @media (max-width: 1024px) {

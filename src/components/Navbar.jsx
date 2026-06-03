@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { useCVModal } from '../context/useCVModal';
-import { useTheme } from '../context/ThemeContext';
 import AnimatedLogo from './AnimatedLogo';
 
 export default function Navbar() {
@@ -13,7 +12,6 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState('#inicio');
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 200, damping: 30 });
-  const { theme, toggleTheme } = useTheme();
 
   const navLinks = [
     { href: '#inicio', label: t('nav.inicio') },
@@ -95,22 +93,6 @@ export default function Navbar() {
             ))}
 
             <button
-              onClick={toggleTheme}
-              className="ml-2 px-3 py-1.5 text-xs font-mono font-medium text-gray-500 dark:text-gray-400 hover:text-emerald-400 border border-gray-300 dark:border-gray-700 hover:border-emerald-500/50 rounded-lg transition-all bg-gray-100 dark:bg-gray-800/50"
-              aria-label={theme === 'dark' ? 'Light mode' : 'Dark mode'}
-            >
-              {theme === 'dark' ? (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-              ) : (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                </svg>
-              )}
-            </button>
-
-            <button
               onClick={toggleLang}
               className="ml-2 px-3 py-1.5 text-xs font-mono font-medium text-gray-500 dark:text-gray-400 hover:text-emerald-400 border border-gray-300 dark:border-gray-700 hover:border-emerald-500/50 rounded-lg transition-all bg-gray-100 dark:bg-gray-800/50"
             >
@@ -126,21 +108,6 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-2 md:hidden">
-            <button
-              onClick={toggleTheme}
-              className="px-2 py-1 text-xs font-mono font-medium text-gray-500 dark:text-gray-400 hover:text-emerald-400 border border-gray-300 dark:border-gray-700 rounded-lg transition-all bg-gray-100 dark:bg-gray-800/50"
-              aria-label={theme === 'dark' ? 'Light mode' : 'Dark mode'}
-            >
-              {theme === 'dark' ? (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-              ) : (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                </svg>
-              )}
-            </button>
             <button
               onClick={toggleLang}
               className="px-2 py-1 text-xs font-mono font-medium text-gray-500 dark:text-gray-400 hover:text-emerald-400 border border-gray-300 dark:border-gray-700 rounded-lg transition-all bg-gray-100 dark:bg-gray-800/50"

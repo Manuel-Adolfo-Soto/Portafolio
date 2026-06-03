@@ -17,12 +17,10 @@ import DotNav from './components/DotNav';
 import CVModal from './components/CVModal';
 
 import { CVModalProvider } from './context/CVModalContext';
-import { ThemeProvider } from './context/ThemeContext';
 
 export default function App() {
   return (
-    <ThemeProvider>
-      <CVModalProvider>
+    <CVModalProvider>
         <div className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300">
           <Navbar />
           <DotNav />
@@ -45,6 +43,5 @@ export default function App() {
           <CVModal />
         </div>
       </CVModalProvider>
-    </ThemeProvider>
   );
 }
