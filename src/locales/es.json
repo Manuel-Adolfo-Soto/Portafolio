@@ -10,7 +10,7 @@
     "cvShort": "CV"
   },
   "hero": {
-    "available": "Disponible para oportunidades",
+    "available": "Disponible inmediatamente",
     "description": "Full Stack Developer especializado en Angular y NestJS. Desarrollo sistemas comerciales con TypeScript, PostgreSQL y Docker. Experiencia real en producción para usuarios reales. Basado en Sucre, Bolivia.",
     "viewProjects": "Ver proyectos",
     "mainStack": "Stack principal",
@@ -28,12 +28,12 @@
       { "label": "Experiencia", "value": "920 hs", "sub": "práctica laboral full-stack" },
       { "label": "Proyectos", "value": "6+", "sub": "sistemas completos" },
       { "label": "Stack", "value": "Full Stack", "sub": "Angular + NestJS" },
-      { "label": "Estado", "value": "Disponible", "sub": "para oportunidades" }
+      { "label": "Estado", "value": "Disponible", "sub": "inmediatamente" }
     ],
     "bio": [
-      "Soy Manuel Adolfo Soto, desarrollador Full Stack y estudiante de último semestre de Ingeniería Informática en la USFX, Sucre, Bolivia.",
+      "Soy Manuel Adolfo Soto, desarrollador Full Stack egresado de Ingeniería Informática en la USFX, Sucre, Bolivia.",
       "Realicé mi práctica laboral de convenio (tiempo completo) en Afer Bolivia (Mar 2026 - Jun 2026), desarrollando un sistema e-commerce de electrodomésticos. Participé en autenticación con roles, CRUDs, inventarios, pedidos, panel administrador y reportes, trabajando con un equipo multidisciplinario de diseño, sistemas, comercial y economía.",
-      "Estudio inglés intensivo (nivel A1) y busco oportunidades laborales remotas para seguir creciendo profesionalmente."
+      "Actualmente continuo estudiando inglés (nivel A1) y busco oportunidades laborales remotas para seguir creciendo profesionalmente."
     ],
     "timeline": {
       "title": "Trayectoria",
@@ -41,7 +41,7 @@
         { "year": "2022", "label": "Ingreso a USFX", "desc": "Inicio de Ingeniería Informática", "icon": "🎓" },
         { "year": "2026", "label": "Afer Bolivia", "desc": "Práctica laboral de convenio — tiempo completo", "icon": "💼" },
         { "year": "2025", "label": "Proyectos completos", "desc": "Farmacia, Hamburguesería, Cafetería", "icon": "🛠️" },
-        { "year": "2026", "label": "Último semestre", "desc": "Próximo a egresar + pasantía formal", "icon": "🎯" }
+        { "year": "2026", "label": "Egresado", "desc": "Carrera completada + práctica laboral", "icon": "🎯" }
       ]
     },
     "methodology": {
@@ -165,8 +165,8 @@
         "icon": "team"
       },
       {
-        "title": "Último semestre de Ing. Informática",
-        "desc": "Próximo a egresar de la USFX. Formación sólida en desarrollo, bases de datos, redes y arquitectura de software.",
+        "title": "Egresado de Ing. Informática",
+        "desc": "Egresado de la USFX. Formación sólida en desarrollo, bases de datos, redes y arquitectura de software.",
         "icon": "study"
       },
       {
@@ -178,12 +178,12 @@
   },
   "education": {
     "title": "Educación",
-    "badge": "Último semestre — Próximo a egresar",
+    "badge": "Egresado — Ingeniería Informática",
     "english": {
       "title": "Inglés",
-      "level": "Nivel actual",
+      "level": "Nivel completado",
       "badge": "A1 — Básico",
-      "description": "Actualmente estudiando inglés de forma intensiva. Objetivo: alcanzar nivel B1."
+      "description": "Curso A1 completado. Continuo estudiando para alcanzar nivel B1."
     }
   },
   "certificates": {
@@ -222,7 +222,7 @@
       { "value": "920", "label": "horas de práctica laboral", "desc": "Práctica laboral de convenio tiempo completo en Afer Bolivia (Mar 2026 - Jun 2026).", "icon": "code" },
       { "value": "6+", "label": "proyectos completos", "desc": "Sistemas full-stack con Angular, NestJS, Vue, C#. APIs REST, autenticación JWT, roles, CRUDs completos.", "icon": "layers" },
       { "value": "1", "label": "sistema en producción (próximo deploy)", "desc": "E-commerce de electrodomésticos que reemplaza un sistema legacy. Trabajo en equipo multidisciplinario.", "icon": "rocket" },
-      { "value": "Último", "label": "semestre de Ingeniería Informática", "desc": "Próximo a egresar de la USFX. Pasantía formalizada como Trabajo Dirigido en Afer Bolivia.", "icon": "users" }
+      { "value": "Egresado", "label": "de Ingeniería Informática", "desc": "Carrera completada en la USFX. Práctica laboral de convenio en Afer Bolivia (920 horas).", "icon": "users" }
     ]
   },
   "services": {
@@ -255,7 +255,7 @@
   "contact": {
     "title": "Contacto",
     "letsTalk": "Hablemos",
-    "description": "¿Tienes una oportunidad laboral, proyecto freelance o simplemente quieres conectar? Estoy abierto a pasantías, posiciones junior y colaboraciones.",
+    "description": "¿Tienes una oportunidad laboral, proyecto freelance o simplemente quieres conectar? Estoy abierto a posiciones junior, trainee y colaboraciones.",
     "email": "Email",
     "whatsapp": "WhatsApp",
     "linkedin": "LinkedIn",

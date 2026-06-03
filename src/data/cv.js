@@ -126,8 +126,8 @@ export const cvData = {
       institution: 'Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca (USFX)',
       location: 'Sucre, Bolivia',
       period: '2022 - 2026',
-      status: 'Último semestre — Próximo a egresar',
-      details: ['Pasantía universitaria formalizada como Trabajo Dirigido en Afer Bolivia', 'Formación sólida en desarrollo, bases de datos, redes y arquitectura de software'],
+      status: 'Egresado',
+      details: ['Carrera completada con práctica laboral de convenio en Afer Bolivia (920 horas)', 'Formación sólida en desarrollo, bases de datos, redes y arquitectura de software'],
     },
   ],
   certifications: [
@@ -139,7 +139,7 @@ export const cvData = {
   ],
   languages: [
     { name: 'Español', level: 'Nativo' },
-    { name: 'Inglés', level: 'A1 (Básico) — Estudiando intensivamente, objetivo B1' },
+    { name: 'Inglés', level: 'A1 (Básico) — Curso completado, continuando estudio, objetivo B1' },
   ],
   interests: ['Desarrollo Web', 'Backend', 'API REST', 'E-commerce', 'Sistemas Comerciales', 'Arquitectura', 'Cloud', 'Bases de Datos'],
 };

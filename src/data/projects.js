@@ -146,14 +146,14 @@ export const education = [
   {
     degree: "Ingeniería Informática (Último semestre)",
     institution: "Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca (USFX)",
-    period: "2022 - Actualidad",
-    description: "Cursando el último semestre de la carrera, próximo a egresar. Formación integral en desarrollo de software, ingeniería de sistemas, bases de datos, redes de computadoras y gestión de proyectos tecnológicos.",
+    period: "2022 - 2026",
+    description: "Carrera completada. Formación integral en desarrollo de software, ingeniería de sistemas, bases de datos, redes de computadoras y gestión de proyectos tecnológicos.",
     highlights: [
       "Desarrollo de aplicaciones Internet/Intranet I y II (Angular, NestJS, Vue)",
       "Programación avanzada con C# y .NET",
       "Bases de datos relacionales (PostgreSQL, SQL Server, MySQL)",
       "Arquitectura de redes y direccionamiento IP",
-      "Trabajo dirigido como modalidad de titulación",
+      "Trabajo dirigido como modalidad de titulación (920 horas en Afer Bolivia)",
       "Proyecto final: Sistema e-commerce para Afer Bolivia",
     ],
   },
@@ -204,5 +204,5 @@ export const timeline = [
   { year: "2025", title: "Proyectos full-stack", description: "Farmacia, Hamburguesería, Cafetería — sistemas completos con múltiples tecnologías", icon: "🛠️" },
   { year: "2026", title: "Práctica Laboral Afer Bolivia", description: "Práctica laboral de convenio tiempo completo, desarrollo real en Angular y NestJS", icon: "🚀" },
   { year: "2026", title: "E-commerce Afer Bolivia", description: "Desarrollo de sistema comercial para usuarios reales", icon: "🌟" },
-  { year: "2026", title: "Último semestre + Práctica Laboral", description: "Finalización de carrera y práctica laboral de convenio (920 horas)", icon: "🎯" },
+  { year: "2026", title: "Egresado + Práctica Laboral", description: "Carrera completada y práctica laboral de convenio (920 horas)", icon: "🎯" },
 ];

@@ -10,7 +10,7 @@
     "cvShort": "CV"
   },
   "hero": {
-    "available": "Available for opportunities",
+    "available": "Available immediately",
     "description": "Full Stack Developer specialized in Angular and NestJS. I build commercial systems with TypeScript, PostgreSQL and Docker. Real experience in production for real users. Based in Sucre, Bolivia.",
     "viewProjects": "View projects",
     "mainStack": "Main Stack",
@@ -28,12 +28,12 @@
       { "label": "Experience", "value": "920 hrs", "sub": "full-stack internship" },
       { "label": "Projects", "value": "6+", "sub": "complete systems" },
       { "label": "Stack", "value": "Full Stack", "sub": "Angular + NestJS" },
-      { "label": "Status", "value": "Available", "sub": "for opportunities" }
+      { "label": "Status", "value": "Available", "sub": "immediately" }
     ],
     "bio": [
-      "I'm Manuel Adolfo Soto, a Full Stack developer and last semester student of Computer Engineering at USFX, Sucre, Bolivia.",
+      "I'm Manuel Adolfo Soto, a Full Stack developer and graduate of Computer Engineering at USFX, Sucre, Bolivia.",
       "I completed my full-time convention internship at Afer Bolivia (Mar 2026 - Jun 2026), building an e-commerce system for home appliances. I worked on role-based authentication, CRUDs, inventory, orders, admin panel and reports, collaborating with a multidisciplinary team of design, systems, commercial and economics.",
-      "I'm studying intensive English (A1 level) and looking for remote work opportunities to keep growing professionally."
+      "I'm currently continuing my English studies (A1 level) and looking for remote work opportunities to keep growing professionally."
     ],
     "timeline": {
       "title": "Timeline",
@@ -41,7 +41,7 @@
         { "year": "2022", "label": "Started at USFX", "desc": "Began Computer Engineering", "icon": "🎓" },
         { "year": "2026", "label": "Afer Bolivia", "desc": "Convention internship — full time", "icon": "💼" },
         { "year": "2025", "label": "Completed projects", "desc": "Pharmacy, Burger Shop, Cafeteria", "icon": "🛠️" },
-        { "year": "2026", "label": "Last semester", "desc": "About to graduate + formal internship", "icon": "🎯" }
+        { "year": "2026", "label": "Graduated", "desc": "Completed degree + internship", "icon": "🎯" }
       ]
     },
     "methodology": {
@@ -165,8 +165,8 @@
         "icon": "team"
       },
       {
-        "title": "Last semester CS student",
-        "desc": "About to graduate from USFX. Solid foundation in development, databases, networking and software architecture.",
+        "title": "Computer Engineering Graduate",
+        "desc": "Graduated from USFX. Solid foundation in development, databases, networking and software architecture.",
         "icon": "study"
       },
       {
@@ -178,12 +178,12 @@
   },
   "education": {
     "title": "Education",
-    "badge": "Last semester — About to graduate",
+    "badge": "Graduated — Computer Engineering",
     "english": {
       "title": "English",
-      "level": "Current level",
+      "level": "Completed level",
       "badge": "A1 — Basic",
-      "description": "Currently studying English intensively. Goal: reach B1 level."
+      "description": "A1 course completed. Continuing studies to reach B1 level."
     }
   },
   "certificates": {
@@ -222,7 +222,7 @@
       { "value": "920", "label": "hours of internship", "desc": "Full-time convention internship at Afer Bolivia (Mar 2026 - Jun 2026).", "icon": "code" },
       { "value": "6+", "label": "completed projects", "desc": "Full-stack systems with Angular, NestJS, Vue, C#. REST APIs, JWT auth, roles, complete CRUDs.", "icon": "layers" },
       { "value": "1", "label": "system nearing production", "desc": "Home appliance e-commerce replacing a legacy system. Multidisciplinary teamwork.", "icon": "rocket" },
-      { "value": "Last", "label": "semester of Computer Engineering", "desc": "About to graduate from USFX. Formal internship as Directed Work at Afer Bolivia.", "icon": "users" }
+      { "value": "Graduated", "label": "in Computer Engineering", "desc": "Completed degree at USFX. Convention internship at Afer Bolivia (920 hours).", "icon": "users" }
     ]
   },
   "services": {
@@ -255,7 +255,7 @@
   "contact": {
     "title": "Contact",
     "letsTalk": "Let's Talk",
-    "description": "Have a job opportunity, freelance project or just want to connect? I'm open to internships, junior positions and collaborations.",
+    "description": "Have a job opportunity, freelance project or just want to connect? I'm open to junior positions, trainee roles and collaborations.",
     "email": "Email",
     "whatsapp": "WhatsApp",
     "linkedin": "LinkedIn",
