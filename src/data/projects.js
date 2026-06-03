@@ -161,14 +161,6 @@ export const education = [
 
 export const certificates = [
   {
-    name: "Certificado de Afer Bolivia",
-    issuer: "Afer Bolivia",
-    date: "2026",
-    link: "/images/certificado-afer.jpg",
-    description: "Certificado de conclusión de práctica laboral convenio-carrera técnico universitario superior en informática.",
-    pending: false,
-  },
-  {
     name: "Certificado de Participación - DevFest Sucre 2024",
     issuer: "Google Developer Groups · Women Techmakers · USFX",
     date: "Noviembre 2024",
@@ -185,10 +177,10 @@ export const certificates = [
     pending: false,
   },
   {
-    name: "Certificado de Finalización — Pasantía Afer Bolivia",
+    name: "Certificado de Finalización — Práctica Laboral Afer Bolivia",
     issuer: "Afer Bolivia",
     date: "Junio 2026",
-    link: "/images/certificado-920hs.jpg",
+    link: "/images/certificados-afer/WhatsApp Image 2026-06-03 at 12.39.40.jpeg",
     description: "Certificado que acredita la finalización de la pasantía universitaria (Trabajo Dirigido) con un total de 920 horas completadas en Afer Bolivia (2 Mar 2026 - 2 Jun 2026).",
     pending: false,
   },
