@@ -16,6 +16,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CinematicSplash from './components/CinematicSplash';
 import BackToTop from './components/BackToTop';
+import CertificatesButton from './components/CertificatesButton';
 import DotNav from './components/DotNav';
 import CVModal from './components/CVModal';
 
@@ -49,6 +50,7 @@ export default function App() {
           </main>
           <Footer />
           <BackToTop />
+          <CertificatesButton />
           <CVModal />
         </div>
       </CVModalProvider>
