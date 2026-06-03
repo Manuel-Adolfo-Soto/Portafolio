@@ -199,7 +199,6 @@ export const certificates = [
     pending: false,
   },
   {
-  {
     name: "LinkedIn desde Cero | Cómo Crecer Tu cuenta de LinkedIn",
     issuer: "HoyAprendo",
     date: "Junio 2026",
