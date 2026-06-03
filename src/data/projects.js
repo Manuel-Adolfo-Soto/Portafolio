@@ -181,6 +181,10 @@ export const certificates = [
     issuer: "Afer Bolivia",
     date: "Junio 2026",
     link: "/images/certificados-afer/WhatsApp Image 2026-06-03 at 12.39.40.jpeg",
+    images: [
+      "/images/certificados-afer/WhatsApp Image 2026-06-03 at 12.39.40.jpeg",
+      "/images/certificados-afer/WhatsApp Image 2026-06-03 at 12.40.51.jpeg",
+    ],
     description: "Certificado que acredita la finalización de la pasantía universitaria (Trabajo Dirigido) con un total de 920 horas completadas en Afer Bolivia (2 Mar 2026 - 2 Jun 2026).",
     pending: false,
   },
