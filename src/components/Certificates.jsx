@@ -120,7 +120,7 @@ export default function Certificates() {
                 <img
                   src={preview.images[preview.index]}
                   alt="Certificado"
-                  className="w-full h-auto rounded-xl shadow-2xl"
+                  className="w-full max-h-[80vh] object-contain rounded-xl shadow-2xl"
                 />
               )}
               {preview.images.length > 1 && (
