@@ -199,6 +199,17 @@ export const certificates = [
     pending: false,
   },
   {
+  {
+    name: "LinkedIn desde Cero | Cómo Crecer Tu cuenta de LinkedIn",
+    issuer: "HoyAprendo",
+    date: "Junio 2026",
+    link: "/images/certificados/hoyaprendo/Diploma__LinkedIn_desde_Cero___Cómo_Crecer_Tu_cuenta_de_LinkedIn_HA-2026-FBXCK7_page-0001.jpg",
+    credentialId: "HA-2026-FBXCK7",
+    credentialUrl: "https://hoyaprendo.com/certificados/HA-2026-FBXCK7",
+    description: "Curso de LinkedIn con Martin Arosa. Aprende a optimizar tu perfil, crear contenido y hacer crecer tu red profesional.",
+    pending: false,
+  },
+  {
     name: "Próximamente — Cursos y certificaciones",
     issuer: "",
     date: "",
