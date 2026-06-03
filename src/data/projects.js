@@ -192,7 +192,7 @@ export const certificates = [
     name: "Cómo Programar Aplicaciones Desde cero",
     issuer: "HoyAprendo",
     date: "Junio 2026",
-    link: "/images/certificados/hoyaprendo/Diploma_Cómo_Programar_Aplicaciones_Desde_cero__HA-2026-EGNQLA.pdf",
+    link: "/images/certificados/hoyaprendo/Diploma_Cómo_Programar_Aplicaciones_Desde_cero__HA-2026-EGNQLA_page-0001.jpg",
     credentialId: "HA-2026-EGNQLA",
     credentialUrl: "https://hoyaprendo.com/certificados/HA-2026-EGNQLA",
     description: "Desarrollo de Aplicaciones con Flutter. Curso práctico de creación de apps multiplataforma desde cero.",
