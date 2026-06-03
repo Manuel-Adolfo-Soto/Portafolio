@@ -31,7 +31,7 @@
       { "label": "Estado", "value": "Disponible", "sub": "inmediatamente" }
     ],
     "bio": [
-      "Soy Manuel Adolfo Soto, desarrollador Full Stack egresado de Ingeniería Informática en la USFX, Sucre, Bolivia.",
+      "Soy Manuel Adolfo Soto, desarrollador Full Stack estudiante de Ingeniería Informática (próximo a defender) en la USFX, Sucre, Bolivia.",
       "Realicé mi práctica laboral de convenio (tiempo completo) en Afer Bolivia (Mar 2026 - Jun 2026), desarrollando un sistema e-commerce de electrodomésticos. Participé en autenticación con roles, CRUDs, inventarios, pedidos, panel administrador y reportes, trabajando con un equipo multidisciplinario de diseño, sistemas, comercial y economía.",
       "Actualmente continuo estudiando inglés (nivel A1) y busco oportunidades laborales remotas para seguir creciendo profesionalmente."
     ],
@@ -41,7 +41,7 @@
         { "year": "2022", "label": "Ingreso a USFX", "desc": "Inicio de Ingeniería Informática", "icon": "🎓" },
         { "year": "2026", "label": "Afer Bolivia", "desc": "Práctica laboral de convenio — tiempo completo", "icon": "💼" },
         { "year": "2025", "label": "Proyectos completos", "desc": "Farmacia, Hamburguesería, Cafetería", "icon": "🛠️" },
-        { "year": "2026", "label": "Egresado", "desc": "Carrera completada + práctica laboral", "icon": "🎯" }
+        { "year": "2026", "label": "Tesis pending", "desc": "Carrera cursada + práctica laboral. Próximo a defender.", "icon": "🎯" }
       ]
     },
     "methodology": {
@@ -165,8 +165,8 @@
         "icon": "team"
       },
       {
-        "title": "Egresado de Ing. Informática",
-        "desc": "Egresado de la USFX. Formación sólida en desarrollo, bases de datos, redes y arquitectura de software.",
+        "title": "Próximo a defender — Ing. Informática",
+        "desc": "Carrera cursada en la USFX. Práctica laboral completada. Próximo a defender tesis.",
         "icon": "study"
       },
       {
@@ -178,7 +178,7 @@
   },
   "education": {
     "title": "Educación",
-    "badge": "Egresado — Ingeniería Informática",
+    "badge": "Próximo a defender — Ingeniería Informática",
     "english": {
       "title": "Inglés",
       "level": "Nivel completado",
@@ -222,7 +222,7 @@
       { "value": "920", "label": "horas de práctica laboral", "desc": "Práctica laboral de convenio tiempo completo en Afer Bolivia (Mar 2026 - Jun 2026).", "icon": "code" },
       { "value": "6+", "label": "proyectos completos", "desc": "Sistemas full-stack con Angular, NestJS, Vue, C#. APIs REST, autenticación JWT, roles, CRUDs completos.", "icon": "layers" },
       { "value": "1", "label": "sistema en producción (próximo deploy)", "desc": "E-commerce de electrodomésticos que reemplaza un sistema legacy. Trabajo en equipo multidisciplinario.", "icon": "rocket" },
-      { "value": "Egresado", "label": "de Ingeniería Informática", "desc": "Carrera completada en la USFX. Práctica laboral de convenio en Afer Bolivia (920 horas).", "icon": "users" }
+      { "value": "Próx.", "label": "a defender — Ing. Informática", "desc": "Carrera cursada en la USFX. Práctica laboral completada (920 horas). Próximo a defender tesis.", "icon": "users" }
     ]
   },
   "services": {

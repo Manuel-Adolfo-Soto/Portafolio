@@ -31,7 +31,7 @@
       { "label": "Status", "value": "Available", "sub": "immediately" }
     ],
     "bio": [
-      "I'm Manuel Adolfo Soto, a Full Stack developer and graduate of Computer Engineering at USFX, Sucre, Bolivia.",
+      "I'm Manuel Adolfo Soto, a Full Stack developer and Computer Engineering student (about to defend my thesis) at USFX, Sucre, Bolivia.",
       "I completed my full-time convention internship at Afer Bolivia (Mar 2026 - Jun 2026), building an e-commerce system for home appliances. I worked on role-based authentication, CRUDs, inventory, orders, admin panel and reports, collaborating with a multidisciplinary team of design, systems, commercial and economics.",
       "I'm currently continuing my English studies (A1 level) and looking for remote work opportunities to keep growing professionally."
     ],
@@ -41,7 +41,7 @@
         { "year": "2022", "label": "Started at USFX", "desc": "Began Computer Engineering", "icon": "🎓" },
         { "year": "2026", "label": "Afer Bolivia", "desc": "Convention internship — full time", "icon": "💼" },
         { "year": "2025", "label": "Completed projects", "desc": "Pharmacy, Burger Shop, Cafeteria", "icon": "🛠️" },
-        { "year": "2026", "label": "Graduated", "desc": "Completed degree + internship", "icon": "🎯" }
+        { "year": "2026", "label": "Thesis pending", "desc": "Coursework done + internship. About to defend thesis.", "icon": "🎯" }
       ]
     },
     "methodology": {
@@ -165,8 +165,8 @@
         "icon": "team"
       },
       {
-        "title": "Computer Engineering Graduate",
-        "desc": "Graduated from USFX. Solid foundation in development, databases, networking and software architecture.",
+        "title": "About to defend — Comp. Engineering",
+        "desc": "Coursework completed at USFX. Internship done. About to defend thesis.",
         "icon": "study"
       },
       {
@@ -178,7 +178,7 @@
   },
   "education": {
     "title": "Education",
-    "badge": "Graduated — Computer Engineering",
+    "badge": "About to defend — Computer Engineering",
     "english": {
       "title": "English",
       "level": "Completed level",
@@ -222,7 +222,7 @@
       { "value": "920", "label": "hours of internship", "desc": "Full-time convention internship at Afer Bolivia (Mar 2026 - Jun 2026).", "icon": "code" },
       { "value": "6+", "label": "completed projects", "desc": "Full-stack systems with Angular, NestJS, Vue, C#. REST APIs, JWT auth, roles, complete CRUDs.", "icon": "layers" },
       { "value": "1", "label": "system nearing production", "desc": "Home appliance e-commerce replacing a legacy system. Multidisciplinary teamwork.", "icon": "rocket" },
-      { "value": "Graduated", "label": "in Computer Engineering", "desc": "Completed degree at USFX. Convention internship at Afer Bolivia (920 hours).", "icon": "users" }
+      { "value": "Thesis", "label": "pending — Comp. Engineering", "desc": "Coursework completed at USFX. Internship done (920 hours). About to defend thesis.", "icon": "users" }
     ]
   },
   "services": {

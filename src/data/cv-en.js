@@ -126,8 +126,8 @@ export const cvDataEn = {
       institution: 'Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca (USFX)',
       location: 'Sucre, Bolivia',
       period: '2022 - 2026',
-      status: 'Graduated',
-      details: ['Completed degree with convention internship at Afer Bolivia (920 hours)', 'Solid foundation in development, databases, networking, and software architecture'],
+      status: 'About to defend — Coursework completed',
+      details: ['All coursework completed. Convention internship at Afer Bolivia (920 hours)', 'Pending: thesis defense. Solid foundation in development, databases, networking, and software architecture'],
     },
   ],
   certifications: [

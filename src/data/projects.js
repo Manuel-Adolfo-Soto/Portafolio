@@ -147,7 +147,7 @@ export const education = [
     degree: "Ingeniería Informática (Último semestre)",
     institution: "Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca (USFX)",
     period: "2022 - 2026",
-    description: "Carrera completada. Formación integral en desarrollo de software, ingeniería de sistemas, bases de datos, redes de computadoras y gestión de proyectos tecnológicos.",
+    description: "Carrera cursada completamente, pendiente defensa de tesis. Formación integral en desarrollo de software, ingeniería de sistemas, bases de datos, redes de computadoras y gestión de proyectos tecnológicos.",
     highlights: [
       "Desarrollo de aplicaciones Internet/Intranet I y II (Angular, NestJS, Vue)",
       "Programación avanzada con C# y .NET",
@@ -204,5 +204,5 @@ export const timeline = [
   { year: "2025", title: "Proyectos full-stack", description: "Farmacia, Hamburguesería, Cafetería — sistemas completos con múltiples tecnologías", icon: "🛠️" },
   { year: "2026", title: "Práctica Laboral Afer Bolivia", description: "Práctica laboral de convenio tiempo completo, desarrollo real en Angular y NestJS", icon: "🚀" },
   { year: "2026", title: "E-commerce Afer Bolivia", description: "Desarrollo de sistema comercial para usuarios reales", icon: "🌟" },
-  { year: "2026", title: "Egresado + Práctica Laboral", description: "Carrera completada y práctica laboral de convenio (920 horas)", icon: "🎯" },
+  { year: "2026", title: "Tesis pending + Práctica Laboral", description: "Carrera cursada, práctica laboral completada (920 horas). Próximo a defender.", icon: "🎯" },
 ];
