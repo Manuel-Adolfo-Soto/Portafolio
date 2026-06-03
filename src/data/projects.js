@@ -205,6 +205,16 @@ export const certificates = [
     pending: false,
   },
   {
+    name: "Técnico en Big Data",
+    issuer: "Fundación Carlos Slim",
+    date: "Junio 2026",
+    link: "/images/certificados/aprende/bfc1f202-0fa1-4ee2-bb4b-a9e7812d6f3f_certificado_page-0001.jpg",
+    credentialId: "BFC1F202-0FA1-4EE2-BB4B-A9E7812D6F3F",
+    credentialUrl: "https://aprende.org/verifica/496a8767-e86e-4c90-b402-3cac4b575c5e/bfc1f202-0fa1-4ee2-bb4b-a9e7812d6f3f",
+    description: "Programa Finder — Capacitación en técnicas de Big Data, análisis de datos y herramientas para procesamiento de grandes volúmenes de información.",
+    pending: false,
+  },
+  {
     name: "Próximamente — Cursos y certificaciones",
     issuer: "",
     date: "",
