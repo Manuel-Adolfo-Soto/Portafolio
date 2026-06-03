@@ -193,8 +193,6 @@ export const certificates = [
     issuer: "HoyAprendo",
     date: "Junio 2026",
     link: "/images/certificados/hoyaprendo/Diploma_Cómo_Programar_Aplicaciones_Desde_cero__HA-2026-EGNQLA_page-0001.jpg",
-    credentialId: "HA-2026-EGNQLA",
-    credentialUrl: "https://hoyaprendo.com/certificados/HA-2026-EGNQLA",
     description: "Desarrollo de Aplicaciones con Flutter. Curso práctico de creación de apps multiplataforma desde cero.",
     pending: false,
   },
@@ -203,8 +201,6 @@ export const certificates = [
     issuer: "HoyAprendo",
     date: "Junio 2026",
     link: "/images/certificados/hoyaprendo/Diploma__LinkedIn_desde_Cero___Cómo_Crecer_Tu_cuenta_de_LinkedIn_HA-2026-FBXCK7_page-0001.jpg",
-    credentialId: "HA-2026-FBXCK7",
-    credentialUrl: "https://hoyaprendo.com/certificados/HA-2026-FBXCK7",
     description: "Curso de LinkedIn con Martin Arosa. Aprende a optimizar tu perfil, crear contenido y hacer crecer tu red profesional.",
     pending: false,
   },
@@ -216,13 +212,4 @@ export const certificates = [
     description: "Actualmente fortaleciendo inglés y formación complementaria",
     pending: true,
   },
-];
-
-export const timeline = [
-  { year: "2022", title: "Inicio de Ingeniería Informática", description: "Ingreso a la USFX en Sucre, Bolivia", icon: "🎓" },
-  { year: "2023", title: "Primeros proyectos", description: "Desarrollo de sistemas con C# y bases de datos", icon: "💻" },
-  { year: "2025", title: "Proyectos full-stack", description: "Farmacia, Hamburguesería, Cafetería — sistemas completos con múltiples tecnologías", icon: "🛠️" },
-  { year: "2026", title: "Práctica Laboral Afer Bolivia", description: "Práctica laboral de convenio tiempo completo, desarrollo real en Angular y NestJS", icon: "🚀" },
-  { year: "2026", title: "E-commerce Afer Bolivia", description: "Desarrollo de sistema comercial para usuarios reales", icon: "🌟" },
-  { year: "2026", title: "Tesis pending + Práctica Laboral", description: "Carrera cursada, práctica laboral completada (920 horas). Próximo a defender.", icon: "🎯" },
 ];

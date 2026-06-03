@@ -186,9 +186,6 @@
       "description": "A1 course completed. Continuing studies to reach B1 level."
     }
   },
-  "certificates": {
-    "title": "Certifications"
-  },
   "blog": {
     "title": "Technical Blog",
     "viewCode": "View code",
