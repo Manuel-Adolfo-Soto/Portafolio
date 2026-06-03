@@ -21,7 +21,7 @@ export const cvDataEn = {
       title: 'Full Stack Developer',
       company: 'Afer Bolivia',
       location: 'Sucre, Bolivia (Remote)',
-      period: 'January 2024 - Present',
+      period: 'January 2024 - June 2026',
       duration: '2+ years',
       description: 'Full development of a home appliance e-commerce platform in production, working with a multidisciplinary team.',
       highlights: [
@@ -99,7 +99,7 @@ export const cvDataEn = {
     {
       name: 'Afer Bolivia — E-Commerce Platform',
       role: 'Full Stack Developer',
-      period: 'January 2024 - Present',
+      period: 'January 2024 - June 2026',
       type: 'Production commercial system',
       status: 'Nearing deployment (replaces legacy)',
       description: 'Complete e-commerce platform for home appliance management and sales. Integrated system connecting inventory, product catalog, order management, shopping cart, role-based authentication, admin panel with real-time reports.',
