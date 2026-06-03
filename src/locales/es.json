@@ -25,21 +25,21 @@
   "about": {
     "title": "Sobre mí",
     "metrics": [
-      { "label": "Experiencia", "value": "2+ años", "sub": "desarrollo full-stack" },
+      { "label": "Experiencia", "value": "920 hs", "sub": "práctica laboral full-stack" },
       { "label": "Proyectos", "value": "6+", "sub": "sistemas completos" },
       { "label": "Stack", "value": "Full Stack", "sub": "Angular + NestJS" },
       { "label": "Estado", "value": "Disponible", "sub": "para oportunidades" }
     ],
     "bio": [
       "Soy Manuel Adolfo Soto, desarrollador Full Stack y estudiante de último semestre de Ingeniería Informática en la USFX, Sucre, Bolivia.",
-      "Desde 2024 trabajo como pasante Full Stack en Afer Bolivia, desarrollando un sistema e-commerce de electrodomésticos. He participado en autenticación con roles, CRUDs, inventarios, pedidos, panel administrador y reportes, trabajando con un equipo multidisciplinario de diseño, sistemas, comercial y economía.",
-      "Actualmente realizo mi pasantía universitaria obligatoria y estudio inglés intensivo (nivel A1). Busco oportunidades laborales remotas para seguir creciendo profesionalmente."
+      "Realicé mi práctica laboral de convenio (tiempo completo) en Afer Bolivia (Mar 2026 - Jun 2026), desarrollando un sistema e-commerce de electrodomésticos. Participé en autenticación con roles, CRUDs, inventarios, pedidos, panel administrador y reportes, trabajando con un equipo multidisciplinario de diseño, sistemas, comercial y economía.",
+      "Estudio inglés intensivo (nivel A1) y busco oportunidades laborales remotas para seguir creciendo profesionalmente."
     ],
     "timeline": {
       "title": "Trayectoria",
       "items": [
         { "year": "2022", "label": "Ingreso a USFX", "desc": "Inicio de Ingeniería Informática", "icon": "🎓" },
-        { "year": "2024", "label": "Afer Bolivia", "desc": "Pasante Full Stack — desarrollo real", "icon": "💼" },
+        { "year": "2026", "label": "Afer Bolivia", "desc": "Práctica laboral de convenio — tiempo completo", "icon": "💼" },
         { "year": "2025", "label": "Proyectos completos", "desc": "Farmacia, Hamburguesería, Cafetería", "icon": "🛠️" },
         { "year": "2026", "label": "Último semestre", "desc": "Próximo a egresar + pasantía formal", "icon": "🎯" }
       ]
@@ -156,7 +156,7 @@
     "items": [
       {
         "title": "Experiencia real en producción",
-        "desc": "2 años como pasante Full Stack en Afer Bolivia, desarrollando sistema e-commerce para usuarios reales, no solo proyectos académicos.",
+        "desc": "Práctica laboral de convenio tiempo completo en Afer Bolivia (Mar 2026 - Jun 2026), desarrollando sistema e-commerce para usuarios reales, no solo proyectos académicos.",
         "icon": "experience"
       },
       {
@@ -219,7 +219,7 @@
   "achievements": {
     "title": "Logros",
     "items": [
-      { "value": "2+", "label": "años construyendo software", "desc": "Desde sistemas académicos hasta un e-commerce en producción para usuarios reales en Afer Bolivia.", "icon": "code" },
+      { "value": "920", "label": "horas de práctica laboral", "desc": "Práctica laboral de convenio tiempo completo en Afer Bolivia (Mar 2026 - Jun 2026).", "icon": "code" },
       { "value": "6+", "label": "proyectos completos", "desc": "Sistemas full-stack con Angular, NestJS, Vue, C#. APIs REST, autenticación JWT, roles, CRUDs completos.", "icon": "layers" },
       { "value": "1", "label": "sistema en producción (próximo deploy)", "desc": "E-commerce de electrodomésticos que reemplaza un sistema legacy. Trabajo en equipo multidisciplinario.", "icon": "rocket" },
       { "value": "Último", "label": "semestre de Ingeniería Informática", "desc": "Próximo a egresar de la USFX. Pasantía formalizada como Trabajo Dirigido en Afer Bolivia.", "icon": "users" }

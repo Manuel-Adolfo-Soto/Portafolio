@@ -25,21 +25,21 @@
   "about": {
     "title": "About Me",
     "metrics": [
-      { "label": "Experience", "value": "2+ years", "sub": "full-stack development" },
+      { "label": "Experience", "value": "920 hrs", "sub": "full-stack internship" },
       { "label": "Projects", "value": "6+", "sub": "complete systems" },
       { "label": "Stack", "value": "Full Stack", "sub": "Angular + NestJS" },
       { "label": "Status", "value": "Available", "sub": "for opportunities" }
     ],
     "bio": [
       "I'm Manuel Adolfo Soto, a Full Stack developer and last semester student of Computer Engineering at USFX, Sucre, Bolivia.",
-      "Since 2024 I've been working as a Full Stack intern at Afer Bolivia, building an e-commerce system for home appliances. I've worked on role-based authentication, CRUDs, inventory, orders, admin panel and reports, collaborating with a multidisciplinary team of design, systems, commercial and economics.",
-      "I'm currently completing my mandatory university internship and studying intensive English (A1 level). I'm looking for remote work opportunities to keep growing professionally."
+      "I completed my full-time convention internship at Afer Bolivia (Mar 2026 - Jun 2026), building an e-commerce system for home appliances. I worked on role-based authentication, CRUDs, inventory, orders, admin panel and reports, collaborating with a multidisciplinary team of design, systems, commercial and economics.",
+      "I'm studying intensive English (A1 level) and looking for remote work opportunities to keep growing professionally."
     ],
     "timeline": {
       "title": "Timeline",
       "items": [
         { "year": "2022", "label": "Started at USFX", "desc": "Began Computer Engineering", "icon": "🎓" },
-        { "year": "2024", "label": "Afer Bolivia", "desc": "Full Stack Intern — real development", "icon": "💼" },
+        { "year": "2026", "label": "Afer Bolivia", "desc": "Convention internship — full time", "icon": "💼" },
         { "year": "2025", "label": "Completed projects", "desc": "Pharmacy, Burger Shop, Cafeteria", "icon": "🛠️" },
         { "year": "2026", "label": "Last semester", "desc": "About to graduate + formal internship", "icon": "🎯" }
       ]
@@ -156,7 +156,7 @@
     "items": [
       {
         "title": "Real production experience",
-        "desc": "2 years as Full Stack intern at Afer Bolivia, building an e-commerce system for real users, not just academic projects.",
+        "desc": "Full-time convention internship at Afer Bolivia (Mar 2026 - Jun 2026), building an e-commerce system for real users, not just academic projects.",
         "icon": "experience"
       },
       {
@@ -219,7 +219,7 @@
   "achievements": {
     "title": "Achievements",
     "items": [
-      { "value": "2+", "label": "years building software", "desc": "From academic projects to a production e-commerce system for real users at Afer Bolivia.", "icon": "code" },
+      { "value": "920", "label": "hours of internship", "desc": "Full-time convention internship at Afer Bolivia (Mar 2026 - Jun 2026).", "icon": "code" },
       { "value": "6+", "label": "completed projects", "desc": "Full-stack systems with Angular, NestJS, Vue, C#. REST APIs, JWT auth, roles, complete CRUDs.", "icon": "layers" },
       { "value": "1", "label": "system nearing production", "desc": "Home appliance e-commerce replacing a legacy system. Multidisciplinary teamwork.", "icon": "rocket" },
       { "value": "Last", "label": "semester of Computer Engineering", "desc": "About to graduate from USFX. Formal internship as Directed Work at Afer Bolivia.", "icon": "users" }

@@ -6,7 +6,7 @@ export const projects = [
     repo: "https://github.com/Manuel-Adolfo-Soto/Afer-Bolivia-backend",
     repoFront: "https://github.com/Manuel-Adolfo-Soto/Afer-Bolivia-frontend",
     demo: 'https://afer.bo',
-    year: "2025-2026",
+    year: "2026",
     featured: true,
     completed: false,
     images: [
@@ -205,8 +205,8 @@ export const certificates = [
 export const timeline = [
   { year: "2022", title: "Inicio de Ingeniería Informática", description: "Ingreso a la USFX en Sucre, Bolivia", icon: "🎓" },
   { year: "2023", title: "Primeros proyectos", description: "Desarrollo de sistemas con C# y bases de datos", icon: "💻" },
-  { year: "2024", title: "Ingreso a Afer Bolivia", description: "Inicio como pasante full stack, desarrollo real en Angular y NestJS", icon: "🚀" },
   { year: "2025", title: "Proyectos full-stack", description: "Farmacia, Hamburguesería, Cafetería — sistemas completos con múltiples tecnologías", icon: "🛠️" },
-  { year: "2025-2026", title: "E-commerce Afer Bolivia", description: "Desarrollo de sistema comercial para usuarios reales, próximo a deploy", icon: "🌟" },
-  { year: "2026", title: "Último semestre + Pasantía", description: "Finalización de carrera y formalización de experiencia laboral", icon: "🎯" },
+  { year: "2026", title: "Práctica Laboral Afer Bolivia", description: "Práctica laboral de convenio tiempo completo, desarrollo real en Angular y NestJS", icon: "🚀" },
+  { year: "2026", title: "E-commerce Afer Bolivia", description: "Desarrollo de sistema comercial para usuarios reales", icon: "🌟" },
+  { year: "2026", title: "Último semestre + Práctica Laboral", description: "Finalización de carrera y práctica laboral de convenio (920 horas)", icon: "🎯" },
 ];

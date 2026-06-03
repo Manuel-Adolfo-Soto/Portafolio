@@ -12,7 +12,7 @@ export const cvDataEn = {
     location: 'Sucre, Bolivia',
   },
   summary: [
-    'Full Stack Developer with 2+ years of experience building production e-commerce systems for real users. Specialized in backend development with NestJS, TypeScript, and PostgreSQL.',
+    'Full Stack Developer with experience building production e-commerce systems for real users. Specialized in backend development with NestJS, TypeScript, and PostgreSQL.',
     'Full-stack mastery: scalable REST APIs, modular architecture, JWT authentication, ACID transactions, and responsive Angular frontends. Proven experience working in multidisciplinary teams coordinating with design, systems, commercial, and economics departments. Certified for outstanding performance.',
     'Available for remote roles immediately.',
   ],
@@ -21,8 +21,8 @@ export const cvDataEn = {
       title: 'Full Stack Developer',
       company: 'Afer Bolivia',
       location: 'Sucre, Bolivia (Remote)',
-      period: 'January 2024 - June 2026',
-      duration: '2+ years',
+      period: 'Mar 2026 - Jun 2026',
+      duration: '3 months (920 hours)',
       description: 'Full development of a home appliance e-commerce platform in production, working with a multidisciplinary team.',
       highlights: [
         {
@@ -99,7 +99,7 @@ export const cvDataEn = {
     {
       name: 'Afer Bolivia — E-Commerce Platform',
       role: 'Full Stack Developer',
-      period: 'January 2024 - June 2026',
+      period: 'Mar 2026 - Jun 2026',
       type: 'Production commercial system',
       status: 'Nearing deployment (replaces legacy)',
       description: 'Complete e-commerce platform for home appliance management and sales. Integrated system connecting inventory, product catalog, order management, shopping cart, role-based authentication, admin panel with real-time reports.',
