@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useCVModal } from '../context/useCVModal';
@@ -9,45 +9,7 @@ export default function Hero() {
   const { openCV } = useCVModal();
   const [showCerts, setShowCerts] = useState(false);
   const roles = t('hero.roles', { returnObjects: true });
-  const [roleIndex, setRoleIndex] = useState(0);
-  const [displayText, setDisplayText] = useState('');
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    if (!roles.length) return;
-    const currentRole = roles[roleIndex];
-    let timeout;
-
-    if (displayText === '' && roleIndex === 0) {
-      setDisplayText(currentRole);
-      return;
-    }
-
-    if (!isDeleting && displayText.length < currentRole.length) {
-      timeout = setTimeout(() => setDisplayText(currentRole.slice(0, displayText.length + 1)), 80);
-    } else if (!isDeleting && displayText.length === currentRole.length) {
-      timeout = setTimeout(() => setIsDeleting(true), 2500);
-    } else if (isDeleting && displayText.length > 0) {
-      timeout = setTimeout(() => setDisplayText(displayText.slice(0, -1)), 40);
-    } else if (isDeleting && displayText.length === 0) {
-      timeout = setTimeout(() => {
-        setIsDeleting(false);
-        setRoleIndex((prev) => (prev + 1) % roles.length);
-      }, 500);
-    }
-
-    return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, roleIndex, roles]);
-
-  useEffect(() => {
-    const handleMouse = (e) => {
-      setMousePos({ x: (e.clientX / window.innerWidth - 0.5) * 20, y: (e.clientY / window.innerHeight - 0.5) * 20 });
-    };
-    window.addEventListener('mousemove', handleMouse);
-    return () => window.removeEventListener('mousemove', handleMouse);
-  }, []);
+  const role = Array.isArray(roles) ? roles[0] : roles;
 
   const scrollTo = (id) => document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
 
@@ -67,7 +29,6 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      ref={containerRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
     >
       <div className="absolute inset-0 z-0" style={{
@@ -86,10 +47,6 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
         className="relative z-10 text-center px-6 max-w-5xl mx-auto"
-        style={{
-          transform: `translate(${mousePos.x * 0.02}px, ${mousePos.y * 0.02}px)`,
-          transition: 'transform 0.15s ease-out',
-        }}
       >
         {/* Avatar */}
         <motion.div variants={itemVariants} className="mb-8 flex justify-center">
@@ -129,12 +86,11 @@ export default function Hero() {
           </h1>
         </motion.div>
 
-        {/* Subtitle line */}
-        <motion.div variants={itemVariants} className="h-14 mb-8 flex items-center justify-center">
+        {/* Role */}
+        <motion.div variants={itemVariants} className="mb-8">
           <p className="text-xl sm:text-2xl text-slate-500 dark:text-slate-400 font-mono">
             <span className="text-cyan-400">&gt; </span>
-            <span>{displayText}</span>
-            <span className="animate-pulse text-cyan-400 font-light">|</span>
+            <span>{role}</span>
           </p>
         </motion.div>
 
