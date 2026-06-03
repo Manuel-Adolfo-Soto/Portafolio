@@ -299,7 +299,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="proyectos" className="relative py-28 px-4 overflow-hidden">
+    <section id="proyectos" className="relative py-16 px-4 overflow-hidden">
       <div className="absolute inset-0 bg-slate-50/80 dark:bg-slate-950/60 pointer-events-none" />
 
       <motion.div

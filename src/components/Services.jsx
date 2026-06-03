@@ -25,7 +25,7 @@ export default function Services() {
   };
 
   return (
-    <section className="relative py-28 px-4 overflow-hidden">
+    <section className="relative py-16 px-4 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-100/50 to-slate-50 dark:from-slate-950 dark:via-slate-900/30 dark:to-slate-950 pointer-events-none" />
 
       <motion.div

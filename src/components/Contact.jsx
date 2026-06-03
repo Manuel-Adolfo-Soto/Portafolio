@@ -31,7 +31,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contacto" className="relative py-28 px-4 overflow-hidden">
+    <section id="contacto" className="relative py-16 px-4 overflow-hidden">
       <div className="absolute inset-0 bg-slate-50/80 dark:bg-slate-950/60 pointer-events-none" />
 
       <motion.div
@@ -45,7 +45,7 @@ export default function Contact() {
           <h2 className="text-3xl sm:text-5xl font-bold mb-3">
             <span className="text-gradient">/</span> {t('contact.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-12" />
+          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-6" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">

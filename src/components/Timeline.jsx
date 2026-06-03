@@ -5,7 +5,7 @@ export default function Timeline() {
   const { ref, isVisible } = useInView();
 
   return (
-    <section id="trayectoria" className="py-20 px-4 bg-slate-900/30">
+    <section id="trayectoria" className="py-12 px-4 bg-slate-900/30">
       <div
         ref={ref}
         className={`max-w-3xl mx-auto transition-all duration-700 ${

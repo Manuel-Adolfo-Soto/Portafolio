@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useCVModal } from '../context/useCVModal';
@@ -8,7 +8,6 @@ export default function Hero() {
   const { t } = useTranslation();
   const { openCV } = useCVModal();
   const [showCerts, setShowCerts] = useState(false);
-  const [Hero3D, setHero3D] = useState(null);
   const roles = t('hero.roles', { returnObjects: true });
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
@@ -50,10 +49,6 @@ export default function Hero() {
     return () => window.removeEventListener('mousemove', handleMouse);
   }, []);
 
-  useEffect(() => {
-    import('./FloatingShapes').then((mod) => setHero3D(() => mod.default));
-  }, []);
-
   const scrollTo = (id) => document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
 
   const containerVariants = {
@@ -75,11 +70,9 @@ export default function Hero() {
       ref={containerRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
     >
-      {Hero3D ? <Hero3D /> : (
-        <div className="absolute inset-0 z-0" style={{
-          background: 'radial-gradient(ellipse at 30% 50%, rgba(6,182,212,0.08) 0%, transparent 60%), radial-gradient(ellipse at 70% 50%, rgba(139,92,246,0.08) 0%, transparent 60%)',
-        }} />
-      )}
+      <div className="absolute inset-0 z-0" style={{
+        background: 'radial-gradient(ellipse at 30% 50%, rgba(6,182,212,0.08) 0%, transparent 60%), radial-gradient(ellipse at 70% 50%, rgba(139,92,246,0.08) 0%, transparent 60%)',
+      }} />
 
       <div
         className="absolute inset-0 z-[1]"
@@ -146,7 +139,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Description */}
-        <motion.p variants={itemVariants} className="text-base sm:text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+        <motion.p variants={itemVariants} className="text-base sm:text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto mb-6 leading-relaxed">
           {t('hero.description')}
         </motion.p>
 

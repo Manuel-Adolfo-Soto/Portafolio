@@ -23,7 +23,7 @@ export default function Blog() {
   const post = t('blog.post', { returnObjects: true });
 
   return (
-    <section id="blog" className="relative py-28 px-4 overflow-hidden">
+    <section id="blog" className="relative py-16 px-4 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-100/50 to-slate-50 dark:from-slate-950 dark:via-slate-900/30 dark:to-slate-950 pointer-events-none" />
 
       <motion.div
@@ -41,7 +41,7 @@ export default function Blog() {
           <h2 className="text-3xl sm:text-5xl font-bold mb-3">
             <span className="text-gradient">/</span> {t('blog.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-12" />
+          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-6" />
         </motion.div>
 
         <motion.div

@@ -25,7 +25,7 @@ export default function WhyHireMe() {
   };
 
   return (
-    <section className="relative py-28 px-4 overflow-hidden">
+    <section className="relative py-16 px-4 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-100/50 to-slate-50 dark:from-slate-950 dark:via-slate-900/30 dark:to-slate-950 pointer-events-none" />
 
       <motion.div
@@ -39,7 +39,7 @@ export default function WhyHireMe() {
           <h2 className="text-3xl sm:text-5xl font-bold mb-3">
             <span className="text-gradient">/</span> {t('whyme.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-12" />
+          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-6" />
         </motion.div>
 
         <div className="grid sm:grid-cols-2 gap-6">
