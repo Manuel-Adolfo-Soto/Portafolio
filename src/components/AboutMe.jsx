@@ -40,7 +40,7 @@ export default function AboutMe() {
           <h2 className="text-3xl sm:text-5xl font-bold mb-3">
             <span className="text-gradient">/</span> {t('about.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mb-6" />
         </motion.div>
 
         {/* Metrics strip */}
@@ -68,20 +68,20 @@ export default function AboutMe() {
           <motion.div variants={item} className="md:col-span-2">
             <div className="glass rounded-xl p-6 card-hover">
               <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 {t('about.timeline.title')}
               </h3>
               <div className="space-y-0">
                 {highlights.map((h, i) => (
                   <div key={i} className="relative pl-8 pb-6 last:pb-0 group">
                     {i < highlights.length - 1 && (
-                      <div className="absolute left-2.5 top-3 bottom-0 w-px bg-gradient-to-b from-cyan-500/50 to-violet-500/50" />
+                      <div className="absolute left-2.5 top-3 bottom-0 w-px bg-gradient-to-b from-emerald-500/50 to-teal-500/50" />
                     )}
-                    <div className="absolute left-0 top-1 w-5 h-5 rounded-full bg-slate-100 dark:bg-slate-900 border-2 border-cyan-500 flex items-center justify-center group-hover:border-violet-500 transition-colors z-10 text-[10px]">
+                    <div className="absolute left-0 top-1 w-5 h-5 rounded-full bg-slate-100 dark:bg-slate-900 border-2 border-emerald-500 flex items-center justify-center group-hover:border-teal-500 transition-colors z-10 text-[10px]">
                       {h.icon}
                     </div>
                     <div>
-                      <span className="text-xs font-bold text-cyan-400 font-mono">{h.year}</span>
+                      <span className="text-xs font-bold text-emerald-400 font-mono">{h.year}</span>
                       <h4 className="text-slate-900 dark:text-white text-sm font-medium mt-0.5">{h.label}</h4>
                       <p className="text-slate-400 dark:text-slate-500 text-xs mt-0.5">{h.desc}</p>
                     </div>
@@ -115,7 +115,7 @@ export default function AboutMe() {
               {interests.map((interest) => (
                 <span
                   key={interest}
-                  className="px-3 py-1.5 text-sm bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-full border border-slate-200 dark:border-slate-700 hover:border-cyan-500/50 hover:text-cyan-400 transition-all"
+                  className="px-3 py-1.5 text-sm bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-full border border-slate-200 dark:border-slate-700 hover:border-emerald-500/50 hover:text-emerald-400 transition-all"
                 >
                   {interest}
                 </span>

@@ -26,7 +26,7 @@ export default function Education() {
           <h2 className="text-3xl sm:text-5xl font-bold mb-3">
             <span className="text-gradient">/</span> {t('education.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mb-6" />
         </motion.div>
 
         {education.map((edu, i) => (
@@ -43,7 +43,7 @@ export default function Education() {
                     {t('education.badge')}
                   </div>
                   <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{edu.degree}</h3>
-                  <p className="text-cyan-400">{edu.institution}</p>
+                  <p className="text-emerald-400">{edu.institution}</p>
                 </div>
                 <span className="px-3 py-1 text-sm text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700 font-mono">
                   {edu.period}
@@ -53,7 +53,7 @@ export default function Education() {
               <ul className="space-y-2">
                 {edu.highlights.map((item, j) => (
                   <li key={j} className="flex items-start gap-3 text-slate-500 dark:text-slate-400 text-sm">
-                    <span className="text-cyan-400 mt-1">▹</span>
+                    <span className="text-emerald-400 mt-1">▹</span>
                     {item}
                   </li>
                 ))}

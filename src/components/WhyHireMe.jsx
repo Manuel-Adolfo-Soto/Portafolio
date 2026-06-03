@@ -39,7 +39,7 @@ export default function WhyHireMe() {
           <h2 className="text-3xl sm:text-5xl font-bold mb-3">
             <span className="text-gradient">/</span> {t('whyme.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mb-6" />
         </motion.div>
 
         <div className="grid sm:grid-cols-2 gap-6">
@@ -47,8 +47,8 @@ export default function WhyHireMe() {
             <motion.div key={i} variants={item}>
               <div className="glass rounded-xl p-6 card-hover h-full group">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-violet-500/20 flex items-center justify-center shrink-0 group-hover:from-cyan-500/30 group-hover:to-violet-500/30 transition-all">
-                    <svg className="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 flex items-center justify-center shrink-0 group-hover:from-emerald-500/30 group-hover:to-teal-500/30 transition-all">
+                    <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={icons[entry.icon] || icons.stack} />
                     </svg>
                   </div>

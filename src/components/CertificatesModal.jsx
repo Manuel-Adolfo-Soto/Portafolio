@@ -60,9 +60,9 @@ export default function CertificatesModal({ open, onClose }) {
                       </div>
                       <div className="p-4 flex flex-col justify-center">
                         <h4 className="text-base font-semibold text-slate-900 dark:text-white mb-1">{cert.name}</h4>
-                        <p className="text-cyan-400 text-sm mb-1">{cert.issuer}</p>
+                        <p className="text-emerald-400 text-sm mb-1">{cert.issuer}</p>
                         <p className="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">{cert.description}</p>
-                        <span className="mt-2 text-xs text-cyan-400/70 hover:text-cyan-400 transition-colors">Click para ver completo →</span>
+                        <span className="mt-2 text-xs text-emerald-400/70 hover:text-emerald-400 transition-colors">Click para ver completo →</span>
                       </div>
                     </div>
                   </button>
@@ -103,11 +103,11 @@ export default function CertificatesModal({ open, onClose }) {
               {preview.images.length > 1 && (
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                   {preview.images.map((_, idx) => (
-                    <button key={idx} onClick={(e) => { e.stopPropagation(); setPreview(p => ({ ...p, index: idx })); }} className={`w-2.5 h-2.5 rounded-full transition-all ${idx === preview.index ? 'bg-cyan-400 scale-125' : 'bg-white/50 hover:bg-white/80'}`} />
+                    <button key={idx} onClick={(e) => { e.stopPropagation(); setPreview(p => ({ ...p, index: idx })); }} className={`w-2.5 h-2.5 rounded-full transition-all ${idx === preview.index ? 'bg-emerald-400 scale-125' : 'bg-white/50 hover:bg-white/80'}`} />
                   ))}
                 </div>
               )}
-              <a href={preview.images[preview.index]} download className="mt-4 inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-cyan-500 to-violet-500 rounded-lg hover:from-cyan-400 hover:to-violet-400 transition-all">
+              <a href={preview.images[preview.index]} download className="mt-4 inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg hover:from-emerald-400 hover:to-teal-400 transition-all">
                 Descargar imagen
               </a>
             </motion.div>

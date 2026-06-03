@@ -63,7 +63,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-lg shadow-cyan-500/5 border-b border-slate-200 dark:border-slate-800/50'
+          ? 'bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-lg shadow-emerald-500/5 border-b border-slate-200 dark:border-slate-800/50'
           : 'bg-transparent'
       }`}
     >
@@ -79,14 +79,14 @@ export default function Navbar() {
                 onClick={(e) => scrollTo(e, link.href)}
                 className={`relative px-3 py-2 text-sm transition-colors rounded-lg ${
                   activeSection === link.href
-                    ? 'text-cyan-400'
+                    ? 'text-emerald-400'
                     : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
                 }`}
               >
                 {activeSection === link.href && (
                   <motion.div
                     layoutId="nav-active"
-                    className="absolute inset-0 bg-cyan-500/10 rounded-lg border border-cyan-500/20"
+                    className="absolute inset-0 bg-emerald-500/10 rounded-lg border border-emerald-500/20"
                     transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                   />
                 )}
@@ -96,7 +96,7 @@ export default function Navbar() {
 
             <button
               onClick={toggleTheme}
-              className="ml-2 px-3 py-1.5 text-xs font-mono font-medium text-slate-500 dark:text-slate-400 hover:text-cyan-400 border border-slate-300 dark:border-slate-700 hover:border-cyan-500/50 rounded-lg transition-all bg-slate-100 dark:bg-slate-800/50"
+              className="ml-2 px-3 py-1.5 text-xs font-mono font-medium text-slate-500 dark:text-slate-400 hover:text-emerald-400 border border-slate-300 dark:border-slate-700 hover:border-emerald-500/50 rounded-lg transition-all bg-slate-100 dark:bg-slate-800/50"
               aria-label={theme === 'dark' ? 'Light mode' : 'Dark mode'}
             >
               {theme === 'dark' ? (
@@ -112,14 +112,14 @@ export default function Navbar() {
 
             <button
               onClick={toggleLang}
-              className="ml-2 px-3 py-1.5 text-xs font-mono font-medium text-slate-500 dark:text-slate-400 hover:text-cyan-400 border border-slate-300 dark:border-slate-700 hover:border-cyan-500/50 rounded-lg transition-all bg-slate-100 dark:bg-slate-800/50"
+              className="ml-2 px-3 py-1.5 text-xs font-mono font-medium text-slate-500 dark:text-slate-400 hover:text-emerald-400 border border-slate-300 dark:border-slate-700 hover:border-emerald-500/50 rounded-lg transition-all bg-slate-100 dark:bg-slate-800/50"
             >
               {i18n.language === 'es' ? 'EN' : 'ES'}
             </button>
 
             <button
               onClick={openCV}
-              className="ml-3 px-5 py-2 text-sm font-medium text-white bg-gradient-to-r from-cyan-500 to-violet-500 rounded-lg hover:from-cyan-400 hover:to-violet-400 transition-all shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
+              className="ml-3 px-5 py-2 text-sm font-medium text-white bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg hover:from-emerald-400 hover:to-teal-400 transition-all shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40"
             >
               {t('nav.cvShort')}
             </button>
@@ -128,7 +128,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2 md:hidden">
             <button
               onClick={toggleTheme}
-              className="px-2 py-1 text-xs font-mono font-medium text-slate-500 dark:text-slate-400 hover:text-cyan-400 border border-slate-300 dark:border-slate-700 rounded-lg transition-all bg-slate-100 dark:bg-slate-800/50"
+              className="px-2 py-1 text-xs font-mono font-medium text-slate-500 dark:text-slate-400 hover:text-emerald-400 border border-slate-300 dark:border-slate-700 rounded-lg transition-all bg-slate-100 dark:bg-slate-800/50"
               aria-label={theme === 'dark' ? 'Light mode' : 'Dark mode'}
             >
               {theme === 'dark' ? (
@@ -143,13 +143,13 @@ export default function Navbar() {
             </button>
             <button
               onClick={toggleLang}
-              className="px-2 py-1 text-xs font-mono font-medium text-slate-500 dark:text-slate-400 hover:text-cyan-400 border border-slate-300 dark:border-slate-700 rounded-lg transition-all bg-slate-100 dark:bg-slate-800/50"
+              className="px-2 py-1 text-xs font-mono font-medium text-slate-500 dark:text-slate-400 hover:text-emerald-400 border border-slate-300 dark:border-slate-700 rounded-lg transition-all bg-slate-100 dark:bg-slate-800/50"
             >
               {i18n.language === 'es' ? 'EN' : 'ES'}
             </button>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="p-2 text-slate-400 hover:text-cyan-400 transition-colors"
+              className="p-2 text-slate-400 hover:text-emerald-400 transition-colors"
               aria-label="Menú"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -180,7 +180,7 @@ export default function Navbar() {
                   onClick={(e) => scrollTo(e, link.href)}
                   className={`block px-3 py-2 text-sm rounded-lg transition-colors ${
                     activeSection === link.href
-                      ? 'text-cyan-400 bg-cyan-500/10'
+                      ? 'text-emerald-400 bg-emerald-500/10'
                       : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/50'
                   }`}
                 >
@@ -189,7 +189,7 @@ export default function Navbar() {
               ))}
               <button
                 onClick={() => { openCV(); setMenuOpen(false); }}
-                className="w-full px-3 py-2 text-sm font-medium text-center text-white bg-gradient-to-r from-cyan-500 to-violet-500 rounded-lg mt-2"
+                className="w-full px-3 py-2 text-sm font-medium text-center text-white bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg mt-2"
               >
                 {t('nav.cv')}
               </button>
@@ -199,7 +199,7 @@ export default function Navbar() {
       </AnimatePresence>
 
       <motion.div
-        className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-cyan-500 to-violet-500 origin-left"
+        className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-emerald-500 to-teal-500 origin-left"
         style={{ scaleX }}
       />
     </motion.nav>

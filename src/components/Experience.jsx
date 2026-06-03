@@ -5,8 +5,8 @@ import { useInView } from '../hooks/useInView';
 import TiltCard from './TiltCard';
 
 const typeConfig = {
-  internship: { label: 'Pasantía', color: 'from-cyan-500/20 to-cyan-600/10 border-cyan-500/30', accent: '#06b6d4' },
-  academic: { label: 'Académico', color: 'from-violet-500/20 to-violet-600/10 border-violet-500/30', accent: '#8b5cf6' },
+  internship: { label: 'Pasantía', color: 'from-emerald-500/20 to-emerald-600/10 border-emerald-500/30', accent: '#10b981' },
+  academic: { label: 'Académico', color: 'from-teal-500/20 to-teal-600/10 border-teal-500/30', accent: '#14b8a6' },
 };
 
 export default function Experience() {
@@ -38,11 +38,11 @@ export default function Experience() {
           <h2 className="text-3xl sm:text-5xl font-bold mb-3">
             <span className="text-gradient">/</span> {t('experience.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mb-6" />
         </motion.div>
 
         <div className="relative">
-          <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-500 via-violet-500 to-transparent" />
+          <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500 via-teal-500 to-transparent" />
 
           <div className="space-y-8">
             {experience.map((exp, i) => {
@@ -52,13 +52,13 @@ export default function Experience() {
                 <motion.div key={i} variants={item}>
                   <TiltCard intensity={5} glare={false}>
                     <div className="relative pl-0 md:pl-20 group">
-                      <div className="absolute left-0 md:left-4 top-6 w-3 h-3 rounded-full bg-cyan-500 ring-4 ring-slate-100 dark:ring-slate-950 group-hover:ring-cyan-500/30 transition-all hidden md:block shadow-lg shadow-cyan-500/50" />
+                      <div className="absolute left-0 md:left-4 top-6 w-3 h-3 rounded-full bg-emerald-500 ring-4 ring-slate-100 dark:ring-slate-950 group-hover:ring-emerald-500/30 transition-all hidden md:block shadow-lg shadow-emerald-500/50" />
 
                       <div className={`rounded-xl p-6 bg-gradient-to-br ${config.color} border card-hover ml-0 md:ml-4`}>
                         <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                           <div>
                             <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{itemText.title}</h3>
-                            <p className="text-cyan-400 text-sm">{itemText.company}</p>
+                            <p className="text-emerald-400 text-sm">{itemText.company}</p>
                           </div>
                           <div className="flex items-center gap-3">
                             <span
@@ -76,7 +76,7 @@ export default function Experience() {
                             {exp.techs.map((tech) => (
                               <span
                                 key={tech}
-                                className="px-2.5 py-1 text-xs font-mono text-cyan-400 bg-cyan-500/10 rounded-md border border-cyan-500/20"
+                                className="px-2.5 py-1 text-xs font-mono text-emerald-400 bg-emerald-500/10 rounded-md border border-emerald-500/20"
                               >
                                 {tech}
                               </span>

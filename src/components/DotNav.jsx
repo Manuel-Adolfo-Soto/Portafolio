@@ -53,7 +53,7 @@ export default function DotNav() {
           <div
             className={`rounded-full transition-all duration-300 ${
               active === s.id
-                ? 'w-2.5 h-2.5 bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,0.5)]'
+                ? 'w-2.5 h-2.5 bg-emerald-400 shadow-[0_0_8px_rgba(16,185,129,0.5)]'
                 : 'w-2 h-2 bg-slate-600 hover:bg-slate-400'
             }`}
           />

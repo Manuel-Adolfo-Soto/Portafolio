@@ -5,7 +5,7 @@ import { cvDataEn } from '../data/cv-en';
 
 const Section = ({ title, children, className = '' }) => (
   <div className={`mb-6 ${className}`}>
-    <h2 className="text-xs font-bold uppercase tracking-[0.15em] text-cyan-600 dark:text-cyan-400 border-b border-slate-300 dark:border-slate-600 pb-1.5 mb-3">
+    <h2 className="text-xs font-bold uppercase tracking-[0.15em] text-emerald-600 dark:text-emerald-400 border-b border-slate-300 dark:border-slate-600 pb-1.5 mb-3">
       {title}
     </h2>
     {children}
@@ -36,16 +36,16 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
     <div ref={ref} className="cv-page bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 p-8 md:p-10 max-w-[210mm] mx-auto font-sans leading-relaxed print:shadow-none">
       <span className="block text-[0px] leading-none text-transparent overflow-hidden select-none" aria-hidden="true">{hidden}</span>
       {/* Header */}
-      <header className="mb-6 pb-5 border-b-2 border-cyan-500 dark:border-cyan-400">
+      <header className="mb-6 pb-5 border-b-2 border-emerald-500 dark:border-emerald-400">
         <div className="flex items-center gap-6">
           <div className="shrink-0">
-            <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-2 border-cyan-500/30">
+            <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-2 border-emerald-500/30">
               <img src="/images/Mi%20foto%20de%20perfil/Mi%20foto%20de%20perfil.jpeg" alt={name} className="w-full h-full object-cover" />
             </div>
           </div>
           <div className="min-w-0">
             <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">{name}</h1>
-            <p className="text-lg font-semibold text-cyan-600 dark:text-cyan-400 mt-1">{title}</p>
+            <p className="text-lg font-semibold text-emerald-600 dark:text-emerald-400 mt-1">{title}</p>
             <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5 font-mono">{subtitle}</p>
             <div className="flex flex-wrap gap-x-4 gap-y-1 mt-3 text-xs text-slate-600 dark:text-slate-400">
           <span className="flex items-center gap-1">
@@ -91,7 +91,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
             <div className="flex flex-wrap items-baseline justify-between mb-1.5">
               <div>
                 <h3 className="text-sm font-bold text-slate-900 dark:text-white">{exp.title}</h3>
-                <p className="text-xs font-medium text-cyan-600 dark:text-cyan-400">{exp.company} | {exp.location}</p>
+                <p className="text-xs font-medium text-emerald-600 dark:text-emerald-400">{exp.company} | {exp.location}</p>
               </div>
               <div className="text-right">
                 <p className="text-xs font-semibold text-slate-700 dark:text-slate-300">{exp.period}</p>
@@ -104,7 +104,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
                 <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1">{group.category}:</p>
                 <ul className="space-y-0.5">
                   {group.items.map((item, ii) => (
-                    <li key={ii} className="text-[11px] text-slate-700 dark:text-slate-300 pl-3 relative before:content-['▸'] before:absolute before:left-0 before:text-cyan-500 dark:before:text-cyan-400">
+                    <li key={ii} className="text-[11px] text-slate-700 dark:text-slate-300 pl-3 relative before:content-['▸'] before:absolute before:left-0 before:text-emerald-500 dark:before:text-emerald-400">
                       {item}
                     </li>
                   ))}
@@ -127,7 +127,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
         <div className="grid grid-cols-2 gap-x-6 gap-y-2">
           {Object.values(skills).map((group, gi) => (
             <div key={gi} className={gi >= 5 ? 'col-span-2' : ''}>
-              <p className="text-[10px] font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 mb-0.5">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-0.5">
                 {group.title}
               </p>
               <div className="flex flex-wrap gap-x-2 gap-y-0.5">
@@ -148,11 +148,11 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
           <div key={i} className="mb-4 last:mb-0">
             <div className="flex flex-wrap items-baseline justify-between mb-1">
               <h3 className="text-sm font-bold text-slate-900 dark:text-white">{proj.name}</h3>
-              <p className="text-[10px] font-medium text-cyan-600 dark:text-cyan-400">{proj.role} | {proj.period}</p>
+              <p className="text-[10px] font-medium text-emerald-600 dark:text-emerald-400">{proj.role} | {proj.period}</p>
             </div>
             <div className="flex flex-wrap gap-2 mb-1.5">
-              <span className="text-[9px] px-1.5 py-0.5 bg-cyan-100 dark:bg-cyan-900/40 text-cyan-700 dark:text-cyan-300 rounded font-medium">{proj.type}</span>
-              <span className="text-[9px] px-1.5 py-0.5 bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 rounded font-medium">{proj.status}</span>
+              <span className="text-[9px] px-1.5 py-0.5 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 rounded font-medium">{proj.type}</span>
+              <span className="text-[9px] px-1.5 py-0.5 bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300 rounded font-medium">{proj.status}</span>
             </div>
             <p className="text-[11px] text-slate-600 dark:text-slate-400 mb-1">{proj.description}</p>
               <p className="text-[11px] text-slate-600 dark:text-slate-400 mb-1"><span className="font-semibold text-slate-700 dark:text-slate-300">{sectionTitles.problem}</span> {proj.problem}</p>
@@ -163,7 +163,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
             </div>
             <ul className="space-y-0.5 mb-1.5">
               {proj.features.map((f, fi) => (
-                <li key={fi} className="text-[11px] text-slate-700 dark:text-slate-300 pl-3 relative before:content-['▸'] before:absolute before:left-0 before:text-cyan-500 dark:before:text-cyan-400">
+                <li key={fi} className="text-[11px] text-slate-700 dark:text-slate-300 pl-3 relative before:content-['▸'] before:absolute before:left-0 before:text-emerald-500 dark:before:text-emerald-400">
                   {f}
                 </li>
               ))}
@@ -180,12 +180,12 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
             {education.map((edu, i) => (
               <div key={i}>
                 <h3 className="text-sm font-bold text-slate-900 dark:text-white">{edu.degree}</h3>
-                <p className="text-xs text-cyan-600 dark:text-cyan-400">{edu.institution}</p>
+                <p className="text-xs text-emerald-600 dark:text-emerald-400">{edu.institution}</p>
                 <p className="text-[11px] text-slate-500 dark:text-slate-400">{edu.period} | {edu.location}</p>
                 <span className="inline-block mt-1 text-[9px] px-1.5 py-0.5 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 rounded font-medium">{edu.status}</span>
                 <ul className="mt-2 space-y-0.5">
                   {edu.details.map((d, di) => (
-                    <li key={di} className="text-[11px] text-slate-600 dark:text-slate-400 pl-3 relative before:content-['▸'] before:absolute before:left-0 before:text-cyan-500 dark:before:text-cyan-400">{d}</li>
+                    <li key={di} className="text-[11px] text-slate-600 dark:text-slate-400 pl-3 relative before:content-['▸'] before:absolute before:left-0 before:text-emerald-500 dark:before:text-emerald-400">{d}</li>
                   ))}
                 </ul>
               </div>
@@ -208,7 +208,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
               {certifications.map((cert, i) => (
                 <div key={i} className="mb-2 last:mb-0">
                   <h4 className="text-xs font-bold text-slate-900 dark:text-white">{cert.name}</h4>
-                  <p className="text-[11px] text-cyan-600 dark:text-cyan-400">{cert.issuer}</p>
+                  <p className="text-[11px] text-emerald-600 dark:text-emerald-400">{cert.issuer}</p>
                   <p className="text-[11px] text-slate-600 dark:text-slate-400">{cert.description}</p>
                 </div>
               ))}

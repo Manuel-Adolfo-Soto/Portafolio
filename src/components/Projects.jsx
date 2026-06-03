@@ -6,12 +6,12 @@ import { useInView } from '../hooks/useInView';
 import TiltCard from './TiltCard';
 
 const gradientMap = {
-  afer: 'from-cyan-600/30 via-slate-900 to-violet-600/30',
+  afer: 'from-emerald-600/30 via-slate-900 to-teal-600/30',
   farmacia: 'from-emerald-600/30 via-slate-900 to-teal-600/30',
   hamburgueseria: 'from-amber-600/30 via-slate-900 to-orange-600/30',
   cafeteria: 'from-rose-600/30 via-slate-900 to-pink-600/30',
   tienda: 'from-blue-600/30 via-slate-900 to-indigo-600/30',
-  api: 'from-violet-600/30 via-slate-900 to-purple-600/30',
+  api: 'from-teal-600/30 via-slate-900 to-emerald-600/30',
 };
 
 function ProjectCard({ project, index, featured }) {
@@ -82,7 +82,7 @@ function ProjectCard({ project, index, featured }) {
                             key={i}
                             onClick={() => setImgIndex(i)}
                             className={`w-1.5 h-1.5 rounded-full transition-all ${
-                              i === imgIndex ? 'bg-cyan-400 w-4' : 'bg-white/40 hover:bg-white/60'
+                              i === imgIndex ? 'bg-emerald-400 w-4' : 'bg-white/40 hover:bg-white/60'
                             }`}
                           />
                         ))}
@@ -94,12 +94,12 @@ function ProjectCard({ project, index, featured }) {
                 <>
                   <div className="absolute inset-0 opacity-30 group-hover:opacity-50 transition-opacity duration-500">
                     <div className="absolute inset-0" style={{
-                      backgroundImage: `radial-gradient(circle at 30% 50%, rgba(6,182,212,0.15) 0%, transparent 50%), radial-gradient(circle at 70% 50%, rgba(139,92,246,0.15) 0%, transparent 50%)`,
+                      backgroundImage: `radial-gradient(circle at 30% 50%, rgba(16,185,129,0.15) 0%, transparent 50%), radial-gradient(circle at 70% 50%, rgba(20,184,166,0.15) 0%, transparent 50%)`,
                     }} />
                   </div>
                   <div className="relative z-10 text-center">
                     <div className="text-5xl mb-2 opacity-30 font-bold text-gradient">★</div>
-                    <span className="px-4 py-1.5 text-xs font-medium text-cyan-400 bg-cyan-500/15 rounded-full border border-cyan-500/30 backdrop-blur-sm">
+                    <span className="px-4 py-1.5 text-xs font-medium text-emerald-400 bg-emerald-500/15 rounded-full border border-emerald-500/30 backdrop-blur-sm">
                       {t('projects.featured')}
                     </span>
                   </div>
@@ -131,7 +131,7 @@ function ProjectCard({ project, index, featured }) {
                 <ul className="space-y-1.5 mb-4">
                   {p.details.map((d, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-slate-500 dark:text-slate-400">
-                      <span className="text-cyan-400 mt-0.5 shrink-0">▹</span>
+                      <span className="text-emerald-400 mt-0.5 shrink-0">▹</span>
                       {d}
                     </li>
                   ))}
@@ -139,7 +139,7 @@ function ProjectCard({ project, index, featured }) {
               )}
               <div className="flex flex-wrap gap-1.5 mb-5">
                 {project.techs.map((tech) => (
-                  <span key={tech} className="px-2.5 py-1 text-xs font-mono text-violet-400 bg-violet-500/10 rounded border border-violet-500/20">
+                  <span key={tech} className="px-2.5 py-1 text-xs font-mono text-teal-400 bg-teal-500/10 rounded border border-teal-500/20">
                     {tech}
                   </span>
                 ))}
@@ -147,28 +147,28 @@ function ProjectCard({ project, index, featured }) {
               <div className="flex gap-4">
                 {project.repoBack && (
                   <a href={project.repoBack} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400 hover:text-cyan-400 transition-colors">
+                    className="flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400 hover:text-emerald-400 transition-colors">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     {t('projects.backend')}
                   </a>
                 )}
                 {!project.repoBack && (
                 <a href={project.repo} target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400 hover:text-cyan-400 transition-colors">
+                  className="flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400 hover:text-emerald-400 transition-colors">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                   {t('projects.backend')}
                 </a>
                 )}
                 {project.repoFront && (
                   <a href={project.repoFront} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400 hover:text-cyan-400 transition-colors">
+                    className="flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400 hover:text-emerald-400 transition-colors">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     {t('projects.frontend')}
                   </a>
                 )}
                 {project.demo && (
                   <a href={project.demo} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-violet-400 transition-colors">
+                    className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-teal-400 transition-colors">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                     Demo
                   </a>
@@ -220,7 +220,7 @@ function ProjectCard({ project, index, featured }) {
           ) : (
             <>
               <div className="absolute inset-0 opacity-20" style={{
-                backgroundImage: `radial-gradient(circle at 30% 50%, rgba(6,182,212,0.1) 0%, transparent 50%)`,
+                backgroundImage: `radial-gradient(circle at 30% 50%, rgba(16,185,129,0.1) 0%, transparent 50%)`,
               }} />
               <span className="relative text-3xl font-bold text-gradient opacity-30">
                 {String(index).padStart(2, '0')}
@@ -239,7 +239,7 @@ function ProjectCard({ project, index, featured }) {
           <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-3 line-clamp-2 flex-1">{p.description}</p>
           <div className="flex flex-wrap gap-1.5 mb-3">
             {project.techs.slice(0, 4).map((tech) => (
-              <span key={tech} className="px-2 py-0.5 text-xs font-mono text-violet-400 bg-violet-500/10 rounded border border-violet-500/20">
+              <span key={tech} className="px-2 py-0.5 text-xs font-mono text-teal-400 bg-teal-500/10 rounded border border-teal-500/20">
                 {tech}
               </span>
             ))}
@@ -250,7 +250,7 @@ function ProjectCard({ project, index, featured }) {
           <div className="flex items-center gap-3 mt-auto">
             {project.repo !== '#' ? (
               <a href={project.repo} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-sm text-slate-400 dark:text-slate-500 hover:text-cyan-400 transition-colors">
+                className="flex items-center gap-1.5 text-sm text-slate-400 dark:text-slate-500 hover:text-emerald-400 transition-colors">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                 {t('projects.code')}
               </a>
@@ -262,7 +262,7 @@ function ProjectCard({ project, index, featured }) {
             )}
             {project.demo && (
               <a href={project.demo} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-sm text-slate-500 hover:text-violet-400 transition-colors">
+                className="flex items-center gap-1.5 text-sm text-slate-500 hover:text-teal-400 transition-colors">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                 Demo
               </a>
@@ -313,7 +313,7 @@ export default function Projects() {
           <h2 className="text-3xl sm:text-5xl font-bold mb-3">
             <span className="text-gradient">/</span> {t('projects.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-3" />
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mb-3" />
           <p className="text-slate-500 dark:text-slate-400 mb-6 max-w-2xl">
             {t('projects.subtitle')}
           </p>
@@ -328,7 +328,7 @@ export default function Projects() {
                 onClick={() => setFilter(tech)}
                 className={`px-3 py-1.5 text-xs font-mono rounded-lg border transition-all ${
                   filter === tech
-                    ? 'text-cyan-400 border-cyan-500/50 bg-cyan-500/10'
+                    ? 'text-emerald-400 border-emerald-500/50 bg-emerald-500/10'
                     : 'text-slate-400 dark:text-slate-500 border-slate-200 dark:border-slate-700 hover:text-slate-600 dark:hover:text-slate-300 hover:border-slate-300 dark:hover:border-slate-600 bg-slate-100 dark:bg-slate-800/50'
                 }`}
               >
@@ -359,7 +359,7 @@ export default function Projects() {
           className="text-center mt-12"
         >
           <a href="https://github.com/Manuel-Adolfo-Soto?tab=repositories" target="_blank" rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 px-8 py-3.5 bg-slate-100 dark:bg-slate-800/80 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 rounded-xl hover:border-cyan-500/50 hover:bg-slate-200 dark:hover:bg-slate-700/80 transition-all backdrop-blur-sm">
+            className="group inline-flex items-center gap-2 px-8 py-3.5 bg-slate-100 dark:bg-slate-800/80 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 rounded-xl hover:border-emerald-500/50 hover:bg-slate-200 dark:hover:bg-slate-700/80 transition-all backdrop-blur-sm">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             {t('projects.viewAll')}
             <span className="group-hover:translate-x-1 transition-transform">→</span>

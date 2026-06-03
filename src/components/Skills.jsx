@@ -4,8 +4,8 @@ import { skills } from '../data/projects';
 import { useInView } from '../hooks/useInView';
 
 const categories = [
-  { key: 'frontend', label: 'Frontend', color: '#06b6d4' },
-  { key: 'backend', label: 'Backend', color: '#8b5cf6' },
+  { key: 'frontend', label: 'Frontend', color: '#10b981' },
+  { key: 'backend', label: 'Backend', color: '#14b8a6' },
   { key: 'databases', label: 'Bases de Datos', color: '#10b981' },
   { key: 'tools', label: 'Herramientas', color: '#f59e0b' },
   { key: 'networking', label: 'Redes', color: '#f43f5e' },
@@ -40,7 +40,7 @@ export default function Skills() {
           <h2 className="text-3xl sm:text-5xl font-bold mb-3">
             <span className="text-gradient">/</span> {t('skills.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mb-6" />
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
@@ -54,12 +54,12 @@ export default function Skills() {
                 <div className="flex flex-wrap gap-2">
                   {skills[cat.key].map((skill) => (
                     <div key={skill.name} className="flex flex-col items-start">
-                      <span className="px-3 py-1.5 text-xs font-mono text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/60 rounded-lg border border-slate-200/50 dark:border-slate-700/50 hover:border-cyan-500/30 hover:text-cyan-300 transition-all">
+                      <span className="px-3 py-1.5 text-xs font-mono text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/60 rounded-lg border border-slate-200/50 dark:border-slate-700/50 hover:border-emerald-500/30 hover:text-emerald-300 transition-all">
                         {skill.name}
                       </span>
                       <div className="h-1 rounded-full bg-slate-700/30 dark:bg-slate-600/20 mt-1.5 w-full overflow-hidden">
                         <motion.div
-                          className="h-full rounded-full bg-gradient-to-r from-cyan-500 to-violet-500"
+                          className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500"
                           initial={{ width: 0 }}
                           animate={isVisible ? { width: `${skill.level}%` } : { width: 0 }}
                           transition={{ duration: 1, ease: 'easeOut' }}

@@ -45,7 +45,7 @@ export default function Contact() {
           <h2 className="text-3xl sm:text-5xl font-bold mb-3">
             <span className="text-gradient">/</span> {t('contact.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mb-6" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -59,7 +59,7 @@ export default function Contact() {
               <div className="space-y-4">
                 {contacts.map((item) => (
                   <div key={item.key} className="flex items-center gap-4 text-slate-600 dark:text-slate-300 group">
-                    <div className="w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-cyan-400 shrink-0 group-hover:bg-cyan-500/10 transition-colors">
+                    <div className="w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-emerald-400 shrink-0 group-hover:bg-emerald-500/10 transition-colors">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} />
                       </svg>
@@ -67,7 +67,7 @@ export default function Contact() {
                     <div>
                       <p className="text-xs text-slate-400 dark:text-slate-500">{item.label}</p>
                       {item.href ? (
-                        <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-sm text-cyan-400 hover:underline">
+                        <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-sm text-emerald-400 hover:underline">
                           {item.value}
                         </a>
                       ) : (
@@ -86,20 +86,20 @@ export default function Contact() {
               <div>
                 <label htmlFor="contact-name" className="sr-only">{t('contact.form.name')}</label>
                 <input id="contact-name" type="text" name="name" required placeholder={t('contact.form.name')}
-                  className="w-full px-4 py-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors" />
+                  className="w-full px-4 py-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors" />
               </div>
               <div>
                 <label htmlFor="contact-email" className="sr-only">{t('contact.form.email')}</label>
                 <input id="contact-email" type="email" name="email" required placeholder={t('contact.form.email')}
-                  className="w-full px-4 py-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors" />
+                  className="w-full px-4 py-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors" />
               </div>
               <div>
                 <label htmlFor="contact-message" className="sr-only">{t('contact.form.message')}</label>
                 <textarea id="contact-message" name="message" required rows={4} placeholder={t('contact.form.message')}
-                  className="w-full px-4 py-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors resize-none" />
+                  className="w-full px-4 py-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors resize-none" />
               </div>
               <button type="submit"
-                className="w-full py-3 bg-gradient-to-r from-cyan-500 to-violet-500 text-white font-medium rounded-lg hover:from-cyan-400 hover:to-violet-400 transition-all shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40">
+                className="w-full py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-medium rounded-lg hover:from-emerald-400 hover:to-teal-400 transition-all shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40">
                 {t('contact.form.send')}
               </button>
             </form>

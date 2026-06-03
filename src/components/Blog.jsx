@@ -41,7 +41,7 @@ export default function Blog() {
           <h2 className="text-3xl sm:text-5xl font-bold mb-3">
             <span className="text-gradient">/</span> {t('blog.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mb-6" />
         </motion.div>
 
         <motion.div
@@ -53,7 +53,7 @@ export default function Blog() {
             <div className="px-6 py-4 border-b border-slate-200/50 dark:border-slate-700/50 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-emerald-400" />
-                <span className="text-xs font-mono text-cyan-400">{post.tag}</span>
+                <span className="text-xs font-mono text-emerald-400">{post.tag}</span>
               </div>
               <span className="text-xs text-slate-400 dark:text-slate-500 font-mono">{post.date}</span>
             </div>
@@ -65,7 +65,7 @@ export default function Blog() {
               <div className="space-y-4 mb-6">
                 {post.sections.map((section, i) => (
                   <div key={i}>
-                    <h4 className="text-cyan-400 font-semibold text-sm mb-1">{section.heading}</h4>
+                    <h4 className="text-emerald-400 font-semibold text-sm mb-1">{section.heading}</h4>
                     <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{section.body}</p>
                   </div>
                 ))}
@@ -80,7 +80,7 @@ export default function Blog() {
               <div className="flex items-center justify-between pt-4 border-t border-slate-200/50 dark:border-slate-700/50">
                 <div className="flex flex-wrap gap-2">
                   {post.tags.map((tag) => (
-                    <span key={tag} className="px-2.5 py-1 text-xs font-mono text-violet-400 bg-violet-500/10 rounded-md border border-violet-500/20">
+                    <span key={tag} className="px-2.5 py-1 text-xs font-mono text-teal-400 bg-teal-500/10 rounded-md border border-teal-500/20">
                       {tag}
                     </span>
                   ))}
@@ -89,7 +89,7 @@ export default function Blog() {
                   href="https://github.com/Manuel-Adolfo-Soto/Afer-Bolivia-backend"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-xs text-cyan-400 hover:underline"
+                  className="flex items-center gap-1.5 text-xs text-emerald-400 hover:underline"
                 >
                   {t('blog.viewCode')} →
                 </a>

@@ -33,7 +33,7 @@ export default function Testimonials() {
           <h2 className="text-3xl sm:text-5xl font-bold mb-3">
             <span className="text-gradient">/</span> {t('testimonials.title')}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mb-6" />
         </motion.div>
 
         <motion.div
@@ -42,13 +42,13 @@ export default function Testimonials() {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <div className="glass rounded-xl p-8 md:p-10 card-hover relative">
-            <div className="absolute top-6 left-6 text-6xl text-cyan-500/10 font-serif leading-none select-none">"</div>
+            <div className="absolute top-6 left-6 text-6xl text-emerald-500/10 font-serif leading-none select-none">"</div>
             <div className="relative">
               <p className="text-slate-200 text-base md:text-lg leading-relaxed italic mb-8">
                 "{testimonials[0].quote}"
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-violet-500 flex items-center justify-center text-white font-bold text-sm">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold text-sm">
                   AF
                 </div>
                 <div>
