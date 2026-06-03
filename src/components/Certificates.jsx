@@ -55,11 +55,9 @@ export default function Certificates() {
           >
             <button onClick={() => openPreview(cert)} className="w-full text-left glass rounded-xl overflow-hidden card-hover border border-slate-200/50 dark:border-slate-700/50">
               <div className="flex flex-col sm:flex-row">
-                <div className="sm:w-48 h-48 sm:h-auto bg-slate-100 dark:bg-slate-800 shrink-0 flex items-center justify-center">
+                <div className="sm:w-48 h-48 sm:h-auto bg-slate-100 dark:bg-slate-800 shrink-0 flex items-center justify-center overflow-hidden">
                   {cert.link.endsWith('.pdf') ? (
-                    <svg className="w-12 h-12 text-cyan-400/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                    </svg>
+                    <embed src={cert.link} type="application/pdf" className="w-full h-full object-cover" />
                   ) : (
                     <img
                       src={cert.images?.[0] || cert.link}
