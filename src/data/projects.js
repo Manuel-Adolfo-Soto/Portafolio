@@ -136,13 +136,8 @@ export const experience = [
     techs: ["Angular", "NestJS", "TypeScript", "PostgreSQL", "Docker", "API REST", "Git", "HTML", "CSS"],
   },
   {
-    type: "internship",
-    tKey: 1,
-    techs: ["Angular", "NestJS", "TypeScript", "PostgreSQL"],
-  },
-  {
     type: "academic",
-    tKey: 2,
+    tKey: 1,
     techs: ["C#", "Vue 3", "NestJS", "SQL Server", "PostgreSQL", "Git"],
   },
 ];
@@ -170,7 +165,7 @@ export const certificates = [
     issuer: "Afer Bolivia",
     date: "2026",
     link: "/images/certificado-afer.jpg",
-    description: "Carta de recomendación laboral por desempeño como Pasante Full Stack en Afer Bolivia.",
+    description: "Certificado de conclusión de práctica laboral convenio-carrera técnico universitario superior en informática.",
     pending: false,
   },
   {

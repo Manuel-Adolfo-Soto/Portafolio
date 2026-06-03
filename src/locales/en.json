@@ -76,13 +76,7 @@
     },
     "items": [
       {
-        "title": "Full Stack Intern",
-        "company": "Afer Bolivia",
-        "period": "2024 - June 2026",
-        "description": "Active participation in the complete development of an e-commerce system for home appliances. Full stack development with Angular and NestJS, including role-based authentication, product CRUD, inventory, order management, admin panel, reports and user/client interfaces. Multidisciplinary teamwork with design (Figma), systems, commercial and economics departments. Direct coordination for inventory management, sales and system improvements. Project nearing deployment, replacing a previous system."
-      },
-      {
-        "title": "University Internship (Directed Work Modality)",
+        "title": "Convention Internship — Full Time (Higher University Technician in Computer Science)",
         "company": "Afer Bolivia",
         "period": "Mar 2026 - Jun 2026 (920 hours)",
         "description": "Mandatory last semester university internship, formalizing the full stack development work done at the company. Developing features for the e-commerce system and preparing for production deployment. Total of 920 hours completed."
