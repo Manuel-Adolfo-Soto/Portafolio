@@ -27,7 +27,7 @@ export default function Skills() {
 
   return (
     <section id="habilidades" className="relative py-16 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-100/50 to-slate-50 dark:from-slate-950 dark:via-slate-900/30 dark:to-slate-950 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-gray-100/50 to-gray-50 dark:from-gray-950 dark:via-gray-900/30 dark:to-gray-950 pointer-events-none" />
 
       <motion.div
         ref={ref}
@@ -47,17 +47,17 @@ export default function Skills() {
           {categories.map((cat) => (
             <motion.div key={cat.key} variants={item}>
               <div className="glass rounded-xl p-6 card-hover h-full">
-                <h3 className="text-slate-900 dark:text-white font-semibold mb-4 flex items-center gap-2">
+                <h3 className="text-gray-900 dark:text-white font-semibold mb-4 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full" style={{ backgroundColor: cat.color }} />
                   {t(`skills.categories.${cat.key}`)}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {skills[cat.key].map((skill) => (
                     <div key={skill.name} className="flex flex-col items-start">
-                      <span className="px-3 py-1.5 text-xs font-mono text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/60 rounded-lg border border-slate-200/50 dark:border-slate-700/50 hover:border-emerald-500/30 hover:text-emerald-300 transition-all">
+                      <span className="px-3 py-1.5 text-xs font-mono text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-800/60 rounded-lg border border-gray-200/50 dark:border-gray-700/50 hover:border-emerald-500/30 hover:text-emerald-300 transition-all">
                         {skill.name}
                       </span>
-                      <div className="h-1 rounded-full bg-slate-700/30 dark:bg-slate-600/20 mt-1.5 w-full overflow-hidden">
+                      <div className="h-1 rounded-full bg-gray-700/30 dark:bg-gray-600/20 mt-1.5 w-full overflow-hidden">
                         <motion.div
                           className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500"
                           initial={{ width: 0 }}

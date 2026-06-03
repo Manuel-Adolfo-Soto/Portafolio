@@ -32,7 +32,7 @@ export default function Contact() {
 
   return (
     <section id="contacto" className="relative py-16 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-slate-50/80 dark:bg-slate-950/60 pointer-events-none" />
+      <div className="absolute inset-0 bg-gray-50/40 dark:bg-gray-950/60 pointer-events-none" />
 
       <motion.div
         ref={ref}
@@ -51,21 +51,21 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-8">
           <motion.div variants={item} className="space-y-6">
             <div className="glass rounded-xl p-6 card-hover">
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">{t('contact.letsTalk')}</h3>
-              <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('contact.letsTalk')}</h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                 {t('contact.description')}
               </p>
 
               <div className="space-y-4">
                 {contacts.map((item) => (
-                  <div key={item.key} className="flex items-center gap-4 text-slate-600 dark:text-slate-300 group">
-                    <div className="w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-emerald-400 shrink-0 group-hover:bg-emerald-500/10 transition-colors">
+                  <div key={item.key} className="flex items-center gap-4 text-gray-600 dark:text-gray-300 group">
+                    <div className="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-emerald-400 shrink-0 group-hover:bg-emerald-500/10 transition-colors">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} />
                       </svg>
                     </div>
                     <div>
-                      <p className="text-xs text-slate-400 dark:text-slate-500">{item.label}</p>
+                      <p className="text-xs text-gray-400 dark:text-gray-500">{item.label}</p>
                       {item.href ? (
                         <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-sm text-emerald-400 hover:underline">
                           {item.value}
@@ -82,21 +82,21 @@ export default function Contact() {
 
           <motion.div variants={item}>
             <form onSubmit={handleSubmit} className="glass rounded-xl p-6 card-hover space-y-4">
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">{t('contact.form.title')}</h3>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{t('contact.form.title')}</h3>
               <div>
                 <label htmlFor="contact-name" className="sr-only">{t('contact.form.name')}</label>
                 <input id="contact-name" type="text" name="name" required placeholder={t('contact.form.name')}
-                  className="w-full px-4 py-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors" />
+                  className="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white text-sm placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-emerald-500 transition-colors" />
               </div>
               <div>
                 <label htmlFor="contact-email" className="sr-only">{t('contact.form.email')}</label>
                 <input id="contact-email" type="email" name="email" required placeholder={t('contact.form.email')}
-                  className="w-full px-4 py-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors" />
+                  className="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white text-sm placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-emerald-500 transition-colors" />
               </div>
               <div>
                 <label htmlFor="contact-message" className="sr-only">{t('contact.form.message')}</label>
                 <textarea id="contact-message" name="message" required rows={4} placeholder={t('contact.form.message')}
-                  className="w-full px-4 py-3 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors resize-none" />
+                  className="w-full px-4 py-3 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white text-sm placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-emerald-500 transition-colors resize-none" />
               </div>
               <button type="submit"
                 className="w-full py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-medium rounded-lg hover:from-emerald-400 hover:to-teal-400 transition-all shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40">

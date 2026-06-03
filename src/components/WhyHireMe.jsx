@@ -26,7 +26,7 @@ export default function WhyHireMe() {
 
   return (
     <section className="relative py-16 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-100/50 to-slate-50 dark:from-slate-950 dark:via-slate-900/30 dark:to-slate-950 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-gray-100/50 to-gray-50 dark:from-gray-950 dark:via-gray-900/30 dark:to-gray-950 pointer-events-none" />
 
       <motion.div
         ref={ref}
@@ -53,8 +53,8 @@ export default function WhyHireMe() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-slate-900 dark:text-white font-semibold mb-1">{entry.title}</h3>
-                    <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{entry.desc}</p>
+                    <h3 className="text-gray-900 dark:text-white font-semibold mb-1">{entry.title}</h3>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{entry.desc}</p>
                   </div>
                 </div>
               </div>

@@ -33,7 +33,7 @@ export default function DotNav() {
   }, []);
 
   return (
-    <nav className="fixed right-4 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-center gap-3">
+    <nav className="fixed right-4 top-1/2 -trangray-y-1/2 z-40 hidden lg:flex flex-col items-center gap-3">
       {sections.map((s) => (
         <a
           key={s.id}
@@ -46,7 +46,7 @@ export default function DotNav() {
           aria-label={s.label}
         >
           <motion.span
-            className="absolute right-full mr-3 px-2 py-1 text-xs font-mono text-slate-400 bg-slate-900/90 border border-slate-800 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none"
+            className="absolute right-full mr-3 px-2 py-1 text-xs font-mono text-gray-400 bg-gray-900/90 border border-gray-800 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none"
           >
             {s.label}
           </motion.span>
@@ -54,7 +54,7 @@ export default function DotNav() {
             className={`rounded-full transition-all duration-300 ${
               active === s.id
                 ? 'w-2.5 h-2.5 bg-emerald-400 shadow-[0_0_8px_rgba(16,185,129,0.5)]'
-                : 'w-2 h-2 bg-slate-600 hover:bg-slate-400'
+                : 'w-2 h-2 bg-gray-600 hover:bg-gray-400'
             }`}
           />
         </a>

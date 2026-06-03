@@ -25,7 +25,7 @@ export default function Experience() {
 
   return (
     <section id="experiencia" className="relative py-16 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-slate-50/80 dark:bg-slate-950/60 pointer-events-none" />
+      <div className="absolute inset-0 bg-gray-50/40 dark:bg-gray-950/60 pointer-events-none" />
 
       <motion.div
         ref={ref}
@@ -52,12 +52,12 @@ export default function Experience() {
                 <motion.div key={i} variants={item}>
                   <TiltCard intensity={5} glare={false}>
                     <div className="relative pl-0 md:pl-20 group">
-                      <div className="absolute left-0 md:left-4 top-6 w-3 h-3 rounded-full bg-emerald-500 ring-4 ring-slate-100 dark:ring-slate-950 group-hover:ring-emerald-500/30 transition-all hidden md:block shadow-lg shadow-emerald-500/50" />
+                      <div className="absolute left-0 md:left-4 top-6 w-3 h-3 rounded-full bg-emerald-500 ring-4 ring-gray-100 dark:ring-gray-950 group-hover:ring-emerald-500/30 transition-all hidden md:block shadow-lg shadow-emerald-500/50" />
 
                       <div className={`rounded-xl p-6 bg-gradient-to-br ${config.color} border card-hover ml-0 md:ml-4`}>
                         <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                           <div>
-                            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{itemText.title}</h3>
+                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{itemText.title}</h3>
                             <p className="text-emerald-400 text-sm">{itemText.company}</p>
                           </div>
                           <div className="flex items-center gap-3">
@@ -67,10 +67,10 @@ export default function Experience() {
                             >
                               {t(`experience.types.${exp.type}`)}
                             </span>
-                            <span className="text-slate-400 dark:text-slate-500 text-sm font-mono">{itemText.period}</span>
+                            <span className="text-gray-400 dark:text-gray-500 text-sm font-mono">{itemText.period}</span>
                           </div>
                         </div>
-                        <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">{itemText.description}</p>
+                        <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">{itemText.description}</p>
                         {exp.techs && (
                           <div className="flex flex-wrap gap-2">
                             {exp.techs.map((tech) => (

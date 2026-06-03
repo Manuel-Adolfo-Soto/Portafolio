@@ -228,9 +228,9 @@ export default function CVModal() {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="relative w-full max-w-4xl h-[85vh] glass rounded-2xl overflow-hidden border border-slate-700/50 flex flex-col"
+            className="relative w-full max-w-4xl h-[85vh] glass rounded-2xl overflow-hidden border border-gray-700/50 flex flex-col"
           >
-            <div className="flex items-center justify-between px-6 py-4 border-b border-slate-700/50">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-gray-700/50">
               <h3 className="text-white font-semibold">CV - Manuel Adolfo Soto</h3>
               <div className="flex items-center gap-3">
                 <button
@@ -244,7 +244,7 @@ export default function CVModal() {
                 </button>
                 <button
                   onClick={closeCV}
-                  className="p-2 text-slate-400 hover:text-white transition-colors rounded-lg hover:bg-slate-800"
+                  className="p-2 text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-gray-800"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -252,7 +252,7 @@ export default function CVModal() {
                 </button>
               </div>
             </div>
-            <div className="flex-1 overflow-y-auto bg-slate-50 dark:bg-slate-900 print:overflow-visible">
+            <div className="flex-1 overflow-y-auto bg-gray-50 dark:bg-gray-900 print:overflow-visible">
               <CVContent ref={cvRef} />
             </div>
           </motion.div>

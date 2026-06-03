@@ -16,7 +16,7 @@ export default function Testimonials() {
 
   return (
     <section className="relative py-16 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-100/50 to-slate-50 dark:from-slate-950 dark:via-slate-900/30 dark:to-slate-950 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-gray-100/50 to-gray-50 dark:from-gray-950 dark:via-gray-900/30 dark:to-gray-950 pointer-events-none" />
 
       <motion.div
         ref={ref}
@@ -44,7 +44,7 @@ export default function Testimonials() {
           <div className="glass rounded-xl p-8 md:p-10 card-hover relative">
             <div className="absolute top-6 left-6 text-6xl text-emerald-500/10 font-serif leading-none select-none">"</div>
             <div className="relative">
-              <p className="text-slate-200 text-base md:text-lg leading-relaxed italic mb-8">
+              <p className="text-gray-200 text-base md:text-lg leading-relaxed italic mb-8">
                 "{testimonials[0].quote}"
               </p>
               <div className="flex items-center gap-4">
@@ -52,8 +52,8 @@ export default function Testimonials() {
                   AF
                 </div>
                 <div>
-                  <p className="text-slate-900 dark:text-white font-semibold">{testimonials[0].author}</p>
-                  <p className="text-slate-400 dark:text-slate-500 text-sm">{testimonials[0].role}</p>
+                  <p className="text-gray-900 dark:text-white font-semibold">{testimonials[0].author}</p>
+                  <p className="text-gray-400 dark:text-gray-500 text-sm">{testimonials[0].role}</p>
                 </div>
               </div>
             </div>

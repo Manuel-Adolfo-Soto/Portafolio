@@ -23,7 +23,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <CVModalProvider>
-        <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-300">
+        <div className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-white transition-colors duration-300">
           <Navbar />
           <DotNav />
           <main>
