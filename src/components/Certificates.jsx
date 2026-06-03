@@ -57,7 +57,7 @@ export default function Certificates() {
               <div className="flex flex-col sm:flex-row">
                 <div className="sm:w-48 h-48 sm:h-auto bg-slate-100 dark:bg-slate-800 shrink-0 flex items-center justify-center overflow-hidden">
                   {cert.link.endsWith('.pdf') ? (
-                    <embed src={cert.link} type="application/pdf" className="w-full h-full object-cover" />
+                    <iframe src={`${cert.link}#toolbar=0`} className="w-full h-full pointer-events-none" title="Certificado PDF" />
                   ) : (
                     <img
                       src={cert.images?.[0] || cert.link}
@@ -109,10 +109,10 @@ export default function Certificates() {
                 </>
               )}
               {preview.images[preview.index].endsWith('.pdf') ? (
-                <embed
-                  src={preview.images[preview.index]}
-                  type="application/pdf"
+                <iframe
+                  src={`${preview.images[preview.index]}#toolbar=0`}
                   className="w-full h-[80vh] rounded-xl shadow-2xl"
+                  title="Certificado PDF"
                 />
               ) : (
                 <img
