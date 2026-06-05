@@ -1,0 +1,23 @@
+{
+  "/api/admin/stats/route": "/api/admin/stats",
+  "/api/auth/register/route": "/api/auth/register",
+  "/api/favorites/route": "/api/favorites",
+  "/api/jobs/[id]/favorite/route": "/api/jobs/[id]/favorite",
+  "/api/jobs/[id]/applied/route": "/api/jobs/[id]/applied",
+  "/api/history/route": "/api/history",
+  "/api/jobs/[id]/route": "/api/jobs/[id]",
+  "/api/jobs/recommendations/route": "/api/jobs/recommendations",
+  "/api/jobs/route": "/api/jobs",
+  "/api/profile/route": "/api/profile",
+  "/api/profile/skills/route": "/api/profile/skills",
+  "/api/providers/sync/route": "/api/providers/sync",
+  "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
+  "/_not-found/page": "/_not-found",
+  "/(auth)/login/page": "/login",
+  "/(auth)/register/page": "/register",
+  "/(dashboard)/admin/page": "/admin",
+  "/(dashboard)/favorites/page": "/favorites",
+  "/(dashboard)/history/page": "/history",
+  "/(dashboard)/page": "/",
+  "/(dashboard)/profile/page": "/profile"
+}
