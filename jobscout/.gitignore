@@ -29,3 +29,10 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# Screenshots
+screenshots/
+
+# Temp test files
+prisma/screenshots.cjs
+prisma/e2e-test.*
