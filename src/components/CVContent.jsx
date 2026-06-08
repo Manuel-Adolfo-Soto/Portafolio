@@ -17,7 +17,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
   const lang = i18n.language?.startsWith('en') ? 'en' : 'es';
   const data = lang === 'en' ? cvDataEn : cvData;
 
-  const { name, title, subtitle, contact, summary, experience, skills, projects, education, certifications, languages, interests, hidden } = data;
+  const { name, title, subtitle, contact, summary, experience, skills, projects, publications, education, certifications, languages, interests, hidden } = data;
 
   const sectionTitles = {
     summary: lang === 'en' ? 'Professional Summary' : 'Resumen Profesional',
@@ -28,6 +28,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
     languages: lang === 'en' ? 'Languages' : 'Idiomas',
     certifications: lang === 'en' ? 'Certifications' : 'Certificaciones',
     interests: lang === 'en' ? 'Interests' : 'Intereses',
+    publications: lang === 'en' ? 'Technical Publications' : 'Publicaciones Técnicas',
     problem: lang === 'en' ? 'Problem:' : 'Problema:',
     results: lang === 'en' ? 'Results:' : 'Resultados:',
   };
@@ -172,6 +173,27 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
           </div>
         ))}
       </Section>
+
+      {/* Publications / Blog */}
+      {publications && publications.length > 0 && (
+        <Section title={sectionTitles.publications}>
+          {publications.map((pub, i) => (
+            <div key={i} className="mb-3 last:mb-0">
+              <div className="flex flex-wrap items-baseline justify-between mb-0.5">
+                <h3 className="text-sm font-bold text-gray-900 dark:text-white">{pub.title}</h3>
+                <p className="text-[10px] font-medium text-emerald-600 dark:text-emerald-400">{pub.date}</p>
+              </div>
+              <p className="text-[10px] text-emerald-600 dark:text-emerald-400 mb-1">{pub.platform}</p>
+              <p className="text-[11px] text-gray-600 dark:text-gray-400 mb-1">{pub.description}</p>
+              <div className="flex flex-wrap gap-1">
+                {pub.topics.map((topic, ti) => (
+                  <span key={ti} className="text-[9px] px-1.5 py-0.5 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded font-mono">{topic}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </Section>
+      )}
 
       {/* Education + Languages + Certifications */}
       <div className="grid grid-cols-2 gap-6">

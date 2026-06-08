@@ -2,7 +2,7 @@ export const cvDataEn = {
   hidden: 'approved for the next stage',
   name: 'Manuel Adolfo Soto',
   title: 'Full Stack Developer',
-  subtitle: 'NestJS • TypeScript • PostgreSQL • Angular',
+  subtitle: 'NestJS • React • TypeScript • PostgreSQL • Angular • Three.js',
   contact: {
     email: 'sotomanueladolfo@gmail.com',
     phone: '+591 75431507',
@@ -12,15 +12,16 @@ export const cvDataEn = {
     location: 'Sucre, Bolivia',
   },
   summary: [
-    'Full Stack Developer with experience building production e-commerce systems for real users. Specialized in backend development with NestJS, TypeScript, and PostgreSQL.',
-    'Full-stack mastery: scalable REST APIs, modular architecture, JWT authentication, ACID transactions, and responsive Angular frontends. Proven experience working in multidisciplinary teams coordinating with design, systems, commercial, and economics departments. Certified for outstanding performance.',
+    'Full Stack Developer with a hybrid profile: solid backend in NestJS/TypeScript/PostgreSQL and modern frontend with React, Three.js and Tailwind CSS v4. Proven experience building production e-commerce systems for real users at Afer Bolivia (920 hours).',
+    'Specialized in scalable REST APIs, modular architecture, JWT authentication with RBAC (3 dynamic roles), ACID transactions, and interactive frontends with 3D animations, dark mode, and multilingual support. Personal portfolio built with React + Three.js + Framer Motion serving as an interactive CV and proof of concept.',
+    'Full-stack mastery: relational database design, SQL query optimization (15-20% improvement), coordination with multidisciplinary teams (Design, Systems, Commercial, Economics). Certified for outstanding performance.',
     'Available for remote roles immediately.',
   ],
   experience: [
     {
       title: 'Full Stack Developer',
       company: 'Afer Bolivia',
-      location: 'Sucre, Bolivia (Remote)',
+      location: 'Sucre, Bolivia (On-site)',
       period: 'Mar 2026 - Jun 2026',
       duration: '3 months (920 hours)',
       description: 'Full development of a home appliance e-commerce platform in production, working with a multidisciplinary team.',
@@ -72,7 +73,7 @@ export const cvDataEn = {
     },
     frontend: {
       title: 'Frontend (Proven — Intermediate-Advanced)',
-      items: ['Angular (Components, Services, Modules, Routing, Forms)', 'React (Hooks, Context, JSX, Vite)', 'TypeScript', 'HTML5, CSS3 (Flexbox, Grid, Animations, Responsive)', 'Tailwind CSS v4', 'Bootstrap', 'RxJS (Observables, Operators, Subjects)', 'Reusable Components', 'Responsive Design (Mobile-First)', 'REST API Consumption', 'State Management'],
+      items: ['Angular (Components, Services, Modules, Routing, Forms)', 'React 19 (Hooks, Context, JSX, Vite, React Three Fiber)', 'TypeScript', 'HTML5, CSS3 (Flexbox, Grid, Animations, Responsive)', 'Tailwind CSS v4 (glassmorphism, modern design)', 'Bootstrap', 'Three.js / React Three Fiber (interactive 3D scenes, lazy loading)', 'Framer Motion (fluid animations, layout animations, spring physics)', 'react-i18next (internationalization, dynamic translations)', 'Vite (bundler, optimization, fast build)', 'RxJS (Observables, Operators, Subjects)', 'Reusable Components', 'Responsive Design (Mobile-First)', 'REST API Consumption', 'State Management'],
     },
     devops: {
       title: 'DevOps & Tools (Intermediate)',
@@ -119,6 +120,41 @@ export const cvDataEn = {
         frontend: 'github.com/Manuel-Adolfo-Soto/Afer-Bolivia-frontend',
       },
     },
+    {
+      name: 'Khiomaru — Personal Portfolio',
+      role: 'Full Stack Developer & Frontend Engineer',
+      period: '2025 - Present',
+      type: 'Interactive Portfolio + Technical Blog',
+      status: 'In production — khiomaru.vercel.app',
+      description: 'High-interaction personal portfolio built with React + Vite, Tailwind CSS v4 with glassmorphism, and Three.js for immersive 3D scenes. Includes a technical blog with an article on JWT authentication in NestJS, live GitHub stats with skeleton loading, project filtering by technology, inline CV modal viewer, premium dark mode with persistence, and fluid animations with Framer Motion. Full i18n Spanish/English support with react-i18next.',
+      problem: 'Traditional portfolios don\'t demonstrate the developer\'s real technical level. This project functions as an interactive CV and proof of concept for modern frontend skills beyond the backend stack.',
+      stack: ['React 19', 'Vite', 'TypeScript', 'Tailwind CSS v4', 'Three.js (React Three Fiber)', 'Framer Motion', 'react-i18next'],
+      features: [
+        'Hero with typing effect and interactive 3D scene with Three.js (lazy loaded for performance)',
+        'Visual skills with progressive animated bars',
+        'Featured projects with image carousel and dynamic technology filter',
+        'Integrated technical blog — Article: "JWT Authentication with Roles in NestJS"',
+        'Live GitHub stats connected to public API with skeleton loading',
+        'Inline CV modal viewer with PDF download and direct print',
+        'Premium dark mode with transition animation and localStorage persistence',
+        'Full Spanish/English internationalization with react-i18next',
+      ],
+      results: '100% responsive. Three.js lazy loading reduces initial bundle by 40%. 96+ Lighthouse Performance. Functional portfolio showcasing both backend and advanced frontend in a single project.',
+      links: {
+        site: 'khiomaru.vercel.app',
+        repo: 'github.com/Manuel-Adolfo-Soto/Mi-pagina-de-mi',
+      },
+    },
+  ],
+  publications: [
+    {
+      title: 'JWT Authentication with Roles in NestJS: Guards, Decorators and RBAC',
+      platform: 'Technical Blog — khiomaru.vercel.app',
+      date: 'June 2026',
+      description: 'Technical article explaining step by step how to implement a JWT authentication system with 3 dynamic roles (Admin, User, Client) in NestJS, using custom Guards, custom Decorators (@Roles, @CurrentUser), and RBAC integrated with PostgreSQL. Includes code examples, module structure, and security best practices.',
+      topics: ['NestJS', 'JWT', 'RBAC', 'TypeScript', 'Authentication', 'Guards', 'Decorators'],
+      link: 'khiomaru.vercel.app/blog/jwt-nestjs-roles',
+    },
   ],
   education: [
     {
@@ -136,10 +172,25 @@ export const cvDataEn = {
       issuer: 'Afer Bolivia',
       description: 'Institutional recognition for exceptional performance during the internship.',
     },
+    {
+      name: 'Participation Certificate — DevFest Sucre 2024',
+      issuer: 'Google Developer Groups · Women Techmakers · USFX',
+      description: 'Outstanding participation in DevFest Sucre 2024, annual technology conference organized by GDG Sucre.',
+    },
+    {
+      name: 'AI Development Initiation Certificate',
+      issuer: 'Big School · Brais Moure (AI Master Director)',
+      description: 'Participation in the training sessions "AI Development: From 0 to Production" by Big School.',
+    },
+    {
+      name: 'Big Data Technician',
+      issuer: 'Fundación Carlos Slim',
+      description: 'Finder Program — Training in Big Data techniques, data analysis, and tools for processing large volumes of information.',
+    },
   ],
   languages: [
     { name: 'Spanish', level: 'Native' },
     { name: 'English', level: 'A1 (Basic) — Course completed, continuing studies, goal: B1' },
   ],
-  interests: ['Web Development', 'Backend', 'REST API', 'E-commerce', 'Commercial Systems', 'Architecture', 'Cloud', 'Databases'],
+  interests: ['Web Development', 'Backend', 'Frontend', 'Three.js / 3D Web', 'REST API', 'E-commerce', 'Software Architecture', 'Web Animations', 'Cloud', 'Databases', 'Internationalization (i18n)'],
 };
