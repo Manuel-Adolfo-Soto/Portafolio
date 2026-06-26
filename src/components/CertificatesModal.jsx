@@ -7,7 +7,7 @@ export default function CertificatesModal({ open, onClose }) {
 
   const openPreview = (cert) => {
     const images = cert.images || [cert.link];
-    setPreview({ images, index: 0 });
+    setPreview({ images, index: 0, pdfUrl: cert.pdfUrl });
   };
 
   const prevImage = (e) => {
@@ -62,7 +62,12 @@ export default function CertificatesModal({ open, onClose }) {
                         <h4 className="text-base font-semibold text-gray-900 dark:text-white mb-1">{cert.name}</h4>
                         <p className="text-emerald-400 text-sm mb-1">{cert.issuer}</p>
                         <p className="text-gray-500 dark:text-gray-400 text-sm line-clamp-2">{cert.description}</p>
-                        <span className="mt-2 text-xs text-emerald-400/70 hover:text-emerald-400 transition-colors">Click para ver completo →</span>
+                        <div className="flex items-center gap-2 mt-2">
+                          <span className="text-xs text-emerald-400/70 hover:text-emerald-400 transition-colors">Click para ver completo →</span>
+                          {cert.pdfUrl && (
+                            <a href={cert.pdfUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-xs text-blue-400/70 hover:text-blue-400 transition-colors">PDF</a>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </button>
@@ -107,9 +112,16 @@ export default function CertificatesModal({ open, onClose }) {
                   ))}
                 </div>
               )}
-              <a href={preview.images[preview.index]} download className="mt-4 inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg hover:from-emerald-400 hover:to-teal-400 transition-all">
-                Descargar imagen
-              </a>
+              <div className="mt-4 flex gap-2">
+                <a href={preview.images[preview.index]} download className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg hover:from-emerald-400 hover:to-teal-400 transition-all">
+                  Descargar imagen
+                </a>
+                {preview.pdfUrl && (
+                  <a href={preview.pdfUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg hover:from-blue-400 hover:to-indigo-400 transition-all">
+                    Ver PDF original
+                  </a>
+                )}
+              </div>
             </motion.div>
           </motion.div>
         )}

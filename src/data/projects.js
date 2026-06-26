@@ -222,4 +222,14 @@ export const certificates = [
     description: "Actualmente fortaleciendo inglés y formación complementaria",
     pending: true,
   },
+  {
+    name: "Get Connected",
+    issuer: "Cisco Networking Academy",
+    date: "Noviembre 2020",
+    link: "/images/certificados/get-connected-cisco.jpg",
+    pdfUrl: "/certificaciones/Get_Connected_certificate_sotomanueladolfo1-gmail-com_5162c806-b618-4880-9da2-1ec099c9bd10.pdf",
+    credentialId: "5162c806-b618-4880-9da2-1ec099c9bd10",
+    description: "Curso Get Connected completado a través del programa Cisco Networking Academy.",
+    pending: false,
+  },
 ];
