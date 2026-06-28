@@ -232,4 +232,14 @@ export const certificates = [
     description: "Curso Get Connected completado a través del programa Cisco Networking Academy.",
     pending: false,
   },
+  {
+    name: "Python Essentials 1 — Fundamentos de Python",
+    issuer: "Cisco Networking Academy · Python Institute",
+    date: "Junio 2026",
+    link: "/images/certificados/python-essentials-1-cisco.jpg",
+    pdfUrl: "/certificaciones/Python_Essentials_1_certificate_sotomanueladolfo1-gmail-com_b2a09a34-6bf8-4847-ab97-0a7eea227ab1.pdf",
+    credentialId: "b2a09a34-6bf8-4847-ab97-0a7eea227ab1",
+    description: "Fundamentos de Python 1 completado a través del programa Cisco Networking Academy.",
+    pending: false,
+  },
 ];
