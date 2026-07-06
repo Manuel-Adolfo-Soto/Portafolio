@@ -250,4 +250,13 @@ export const certificates = [
     description: "Fundamentos de Python 1 completado a través del programa Cisco Networking Academy.",
     pending: false,
   },
+  {
+    name: "Certificación Internacional en Administración de Servidores Linux",
+    issuer: "TECBA Sucre",
+    date: "Junio 2026",
+    link: "/images/certificado-tecba-linux.png",
+    description: "Certificación de 40 horas en administración de servidores Linux, configuración de servidores web, seguridad perimetral y virtualización con Docker. Certificación con validez internacional avalada por TÜV Rheinland.",
+    skills: ["Linux", "Linux Server Administration", "Docker", "Virtualización", "Administración de Servidores", "Seguridad Informática", "Servidores Web", "Redes", "DevOps", "Nginx"],
+    pending: false,
+  },
 ];

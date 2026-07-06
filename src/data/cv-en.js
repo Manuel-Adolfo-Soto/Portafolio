@@ -192,6 +192,11 @@ export const cvDataEn = {
       issuer: 'Fundación Carlos Slim',
       description: 'Finder Program — Training in Big Data techniques, data analysis, and tools for processing large volumes of information.',
     },
+    {
+      name: 'International Certification in Linux Server Administration',
+      issuer: 'TECBA Sucre',
+      description: '40-hour certification in Linux server administration, web server configuration, perimeter security, and Docker virtualization. Endorsed by TÜV Rheinland.',
+    },
   ],
   languages: [
     { name: 'Spanish', level: 'Native' },

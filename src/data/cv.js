@@ -192,6 +192,11 @@ export const cvData = {
       issuer: 'Fundación Carlos Slim',
       description: 'Programa Finder — Capacitación en técnicas de Big Data, análisis de datos y herramientas para procesamiento de grandes volúmenes de información.',
     },
+    {
+      name: 'Certificación Internacional en Administración de Servidores Linux',
+      issuer: 'TECBA Sucre',
+      description: 'Certificación de 40 horas en administración de servidores Linux, configuración de servidores web, seguridad perimetral y virtualización con Docker. Avalada por TÜV Rheinland.',
+    },
   ],
   languages: [
     { name: 'Español', level: 'Nativo' },
