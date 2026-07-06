@@ -178,9 +178,9 @@ export const cvDataEn = {
       description: 'Outstanding participation in DevFest Sucre 2024, annual technology conference organized by GDG Sucre.',
     },
     {
-      name: 'AI Development Initiation Certificate',
+      name: 'AI Development Initiation Certificate — AI Development with Specialized Agents',
       issuer: 'Big School · Brais Moure (AI Master Director)',
-      description: 'Participation in the training sessions "AI Development: From 0 to Production" by Big School.',
+      description: 'Certificate of initiation to AI development with specialized agents. 6 hours. 05/07/2026. Tutor: Brais Moure.',
     },
     {
       name: 'Big Data Technician',

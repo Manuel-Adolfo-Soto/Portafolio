@@ -178,9 +178,9 @@ export const cvData = {
       description: 'Participación destacada en DevFest Sucre 2024, conferencia anual de tecnología organizada por GDG Sucre.',
     },
     {
-      name: 'Certificado de iniciación al desarrollo con IA',
+      name: 'Certificado de Iniciación al Desarrollo con IA — Desarrollo de IA con Agentes Especializados',
       issuer: 'Big School · Brais Moure (Director Máster en IA)',
-      description: 'Participación en las jornadas formativas "Desarrollo con IA: De 0 a Producción" de Big School.',
+      description: 'Certificado de iniciación al desarrollo con IA con agentes especializados. 6 horas. 05/07/2026. Tutor: Brais Moure.',
     },
     {
       name: 'Técnico en Big Data',
