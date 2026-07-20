@@ -54,7 +54,7 @@ export default function Hero() {
             <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-500 rounded-full opacity-60 group-hover:opacity-100 blur-xl transition-all duration-700" />
             <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-emerald-500/30 group-hover:border-emerald-400/60 transition-all duration-500">
               <img
-                src="/images/Mi%20foto%20de%20perfil/Mi%20foto%20de%20perfil.jpeg"
+                src="/images/Mi%20foto%20de%20perfil/Mi%20foto%20de%20perfil.png"
                 alt="Manuel Adolfo Soto"
                 className="w-full h-full object-cover"
                 loading="lazy"

@@ -41,7 +41,7 @@ const CVContent = forwardRef(function CVContent(_props, ref) {
         <div className="flex items-center gap-6">
           <div className="shrink-0">
             <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-2 border-emerald-500/30">
-              <img src="/images/Mi%20foto%20de%20perfil/Mi%20foto%20de%20perfil.jpeg" alt={name} className="w-full h-full object-cover" />
+              <img src="/images/Mi%20foto%20de%20perfil/Mi%20foto%20de%20perfil.png" alt={name} className="w-full h-full object-cover" />
             </div>
           </div>
           <div className="min-w-0">

@@ -98,7 +98,7 @@ li::before{content:"▸";position:absolute;left:0;color:#10b981}
 <header style="margin-bottom:22px">
 <div style="display:flex;align-items:center;gap:20px">
 <div style="flex-shrink:0">
-<img src="${location.origin}/images/Mi%20foto%20de%20perfil/Mi%20foto%20de%20perfil.jpeg" alt="${data.name}" style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:2px solid rgba(16,185,129,0.3)">
+<img src="${location.origin}/images/Mi%20foto%20de%20perfil/Mi%20foto%20de%20perfil.png" alt="${data.name}" style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:2px solid rgba(16,185,129,0.3)">
 </div>
 <div>
 <h1>${data.name}</h1>
